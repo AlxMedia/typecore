@@ -67,7 +67,7 @@ table { border-collapse: collapse; border-spacing: 0; }
 /* ------------------------------------------------------------------------- *
  *  Base Styles
 /* ------------------------------------------------------------------------- */
-body { font-size: 16px; line-height: 1.5em; color: #555; font-weight: 300; }
+body { background: #fff; font-size: 16px; line-height: 1.5em; color: #555; font-weight: 300; }
 ::selection { background: #e64338; color: #fff; }
 ::-moz-selection { background: #e64338; color: #fff; }
 a { color: #e64338; text-decoration: none; outline: 0; }
