@@ -1079,6 +1079,14 @@ function custom_theme_options() {
 					'label' => 'Ubuntu, Latin / Cyrillic-Ext'
 				),
 				array( 
+					'value' => 'roboto',
+					'label' => 'Roboto, Latin-Ext'
+				),
+				array( 
+					'value' => 'roboto-cyr',
+					'label' => 'Roboto, Latin / Cyrillic-Ext'
+				),
+				array( 
 					'value' => 'roboto-condensed',
 					'label' => 'Roboto Condensed, Latin-Ext'
 				),
