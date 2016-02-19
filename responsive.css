@@ -233,11 +233,6 @@
 	.post-byline { font-size: 13px; }
 	.post-format { margin-bottom: 20px; }
 	.format-gallery .post-format .flexslider .slides img { max-height: 240px; }
-	.format-quote .post-format blockquote,
-	.format-link .post-format p { font-size: 18px; }
-	.format-link .post-format p { margin-bottom: 10px; }
-	.single .format-status .entry { font-size: 20px; line-height: 1.4em; }
-	.post-format .format-container .fa { font-size: 28px; }
 	
 	.entry.share { padding-right: 0; }
 	.sharrre-container { position: relative; float: left; width: auto; padding: 0; margin: 20px 0 0; }
@@ -303,7 +298,6 @@
 	
 	.post-standard .post-inner { padding-left: 82px; }
 	.post-standard .post-thumbnail { margin-left: -82px; max-width: 72px; }
-	.format-link .post-format p { margin-bottom: 5px; }
 
 }
 
