@@ -1,77 +1,16 @@
+<?php $format = get_post_format(); ?>
 <?php $meta = get_post_custom($post->ID); ?>
 
 <?php if ( has_post_format( 'audio' ) ): // Audio ?>
 	
-	<?php $formats = array();
-		foreach ( explode('|','mp3|ogg') as $format ) {
-			if ( isset($meta['_audio_'.$format.'_url']) ) {
-				$format = ($format=='ogg')?'oga':$format;
-				// Change mp3 to m4a if necessary
-				if ( $format == 'mp3' ) {
-					if ( strstr($meta['_audio_mp3_url'][0],'.m4a') ) {
-						$format = 'm4a';
-					}
-				}
-				$formats[] = $format;
+	<div class="post-format">	
+		<?php 
+			if ( isset($meta['_audio_url'][0]) && !empty($meta['_audio_url'][0]) ) {
+				global $wp_embed;
+				$audio = $wp_embed->run_shortcode('[embed]'.$meta['_audio_url'][0].'[/embed]');
+				echo $audio;
 			}
-		}
-	?>
-
-	<?php if ( !empty($formats) ): ?>
-	<script type="text/javascript"> 
-	jQuery(document).ready(function(){
-		if(jQuery().jPlayer) {
-			jQuery("#jquery-jplayer-<?php the_ID(); ?>").jPlayer({
-				ready: function () {
-					jQuery(this).jPlayer("setMedia", {
-						<?php if(in_array('mp3',$formats)) { echo 'mp3: "'.$meta['_audio_mp3_url'][0].'",'."\n"; } ?>
-						<?php if(in_array('m4a',$formats)) { echo 'm4a: "'.$meta['_audio_mp3_url'][0].'",'."\n"; } ?>
-						<?php if(in_array('oga',$formats)) { echo 'oga: "'.$meta['_audio_ogg_url'][0].'",'."\n"; } ?>
-					});
-				},
-				swfPath: "<?php echo get_template_directory_uri() ?>/js",
-				cssSelectorAncestor: "#jp-interface-<?php the_ID(); ?>",
-				supplied: "<?php echo implode(',',$formats); ?>"
-			});
-		}
-	});
-	</script>
-	<?php endif; ?>
-
-	<div class="post-format">		
-		<div class="image-container">
-			<?php if ( has_post_thumbnail() ) {	
-				the_post_thumbnail('thumb-large'); 
-				$caption = get_post(get_post_thumbnail_id())->post_excerpt;
-				if ( isset($caption) && $caption ) echo '<div class="image-caption">'.$caption.'</div>';
-			} ?>
-		</div>
-		
-		<div id="jquery-jplayer-<?php the_ID(); ?>" class="jp-jplayer"></div>
-		
-		<div class="jp-audio">
-			<div id="jp-interface-<?php the_ID(); ?>" class="jp-interface">
-				<ul class="jp-controls">
-					<li><a href="#" class="jp-play" tabindex="1"><i class="fa fa-play"></i></a></li>
-					<li><a href="#" class="jp-pause" tabindex="1"><i class="fa fa-pause"></i></a></li>
-					<li><a href="#" class="jp-mute" tabindex="1"><i class="fa fa-volume-up"></i></a></li>
-					<li><a href="#" class="jp-unmute" tabindex="1"><i class="fa fa-volume-down"></i></a></li>
-				</ul>
-				<div class="jp-progress-container">
-					<div class="jp-progress">
-						<div class="jp-seek-bar">
-							<div class="jp-play-bar"></div>
-						</div>
-					</div>
-				</div>
-				<div class="jp-volume-bar-container">
-					<div class="jp-volume-bar">
-						<div class="jp-volume-bar-value"></div>
-					</div>
-				</div>
-			</div>
-		</div>
-		
+		?>
 	</div>
 	
 <?php endif; ?>
@@ -90,9 +29,9 @@
 						clearInterval(checkforloaded);
 						jQuery('#flexslider-<?php echo the_ID(); ?>').flexslider({
 							animation: "fade",
-							slideshow: true,
+							slideshow: false,
 							directionNav: true,
-							controlNav: true,
+							controlNav: false,
 							pauseOnHover: true,
 							slideshowSpeed: 7000,
 							animationSpeed: 600,
@@ -127,13 +66,11 @@
 <?php if ( has_post_format( 'image' ) ): // Image ?>
 
 	<div class="post-format">
-		<div class="image-container">
 			<?php if ( has_post_thumbnail() ) {	
 				the_post_thumbnail('thumb-large'); 
 				$caption = get_post(get_post_thumbnail_id())->post_excerpt;
 				if ( isset($caption) && $caption ) echo '<div class="image-caption">'.$caption.'</div>';
 			} ?>
-		</div>
 	</div>
 	
 <?php endif; ?>
@@ -147,45 +84,19 @@
 				$video = $wp_embed->run_shortcode('[embed]'.$meta['_video_url'][0].'[/embed]');
 				echo $video;
 			}
-		?>	
+		?>
 	</div>
 	
 <?php endif; ?>
 
 <?php if ( has_post_format( 'quote' ) ): // Quote ?>
-
-	<div class="post-format">
-		<div class="format-container pad">
-			<i class="fa fa-quote-right"></i>
-			<blockquote><?php echo isset($meta['_quote'][0])?wpautop($meta['_quote'][0]):''; ?></blockquote>
-			<p class="quote-author"><?php echo (isset($meta['_quote_author'][0])?'&mdash; '.$meta['_quote_author'][0]:''); ?></p>
-		</div>
-	</div>
 	
 <?php endif; ?>
 
 <?php if ( has_post_format( 'chat' ) ): // Chat ?>
 
-	<div class="post-format">
-		<div class="format-container pad">
-			<i class="fa fa-comments-o"></i>
-			<blockquote>
-				<?php echo (isset($meta['_chat'][0])?wpautop($meta['_chat'][0]):''); ?>
-			</blockquote>
-		</div>
-	</div>
-	
 <?php endif; ?>
 
 <?php if ( has_post_format( 'link' ) ): // Link ?>
 
-	<div class="post-format">
-		<div class="format-container pad">
-			<p><a href="<?php echo (isset($meta['_link_url'][0])?$meta['_link_url'][0]:'#'); ?>">
-				<i class="fa fa-link"></i>
-				<?php echo (isset($meta['_link_title'][0])?$meta['_link_title'][0]:get_the_title()); ?> &rarr;
-			</a></p>
-		</div>
-	</div>
-	
 <?php endif; ?>

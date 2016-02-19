@@ -2,6 +2,6 @@
 Version : 1.0.0
  Author : Alexander "Alx" Agnarson - http://alxmedia.se
 
-January 27 2016 - 1.0.0
+February 29 2016 - 1.0.0
 ===========================================================
 - Theme released

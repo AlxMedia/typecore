@@ -100,6 +100,16 @@ jQuery(document).ready(function($) {
 		}
 	);
 	
+/*  Fitvids
+/* ------------------------------------ */
+	function responsiveVideo() {
+			if ( $().fitVids ) {
+				$('#wrapper').fitVids();
+			}	
+		}
+		
+	responsiveVideo();
+	
 /*  Mobile menu smooth toggle height
 /* ------------------------------------ */	
 	$('.nav-toggle').on('click', function() {

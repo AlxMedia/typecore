@@ -152,28 +152,6 @@ $post_options = array(
 	)
 );
 
-$post_format_audio = array(
-	'id'          => 'format-audio',
-	'title'       => 'Format: Audio',
-	'desc'        => 'These settings enable you to embed audio into your posts. You must provide both .mp3 and .ogg/.oga file formats in order for self hosted audio to function accross all browsers.',
-	'pages'       => array( 'post' ),
-	'context'     => 'normal',
-	'priority'    => 'high',
-	'fields'      => array(
-		array(
-			'label'		=> 'MP3 File URL',
-			'id'		=> '_audio_mp3_url',
-			'type'		=> 'upload',
-			'desc'		=> 'The URL to the .mp3 or .m4a audio file'
-		),
-		array(
-			'label'		=> 'OGA File URL',
-			'id'		=> '_audio_ogg_url',
-			'type'		=> 'upload',
-			'desc'		=> 'The URL to the .oga, .ogg audio file'
-		)
-	)
-);
 $post_format_gallery = array(
 	'id'          => 'format-gallery',
 	'title'       => 'Format: Gallery',
@@ -184,60 +162,19 @@ $post_format_gallery = array(
 	'priority'    => 'high',
 	'fields'      => array()
 );
-$post_format_chat = array(
-	'id'          => 'format-chat',
-	'title'       => 'Format: Chat',
-	'desc'        => 'Input chat dialogue.',
+$post_format_audio = array(
+	'id'          => 'format-audio',
+	'title'       => 'Format: Audio',
+	'desc'        => 'These settings enable you to embed audio into your posts.',
 	'pages'       => array( 'post' ),
 	'context'     => 'normal',
 	'priority'    => 'high',
 	'fields'      => array(
 		array(
-			'label'		=> 'Chat Text',
-			'id'		=> '_chat',
-			'type'		=> 'textarea',
-			'rows'		=> '2'
-		)
-	)
-);
-$post_format_link = array(
-	'id'          => 'format-link',
-	'title'       => 'Format: Link',
-	'desc'        => 'Input your link.',
-	'pages'       => array( 'post' ),
-	'context'     => 'normal',
-	'priority'    => 'high',
-	'fields'      => array(
-		array(
-			'label'		=> 'Link Title',
-			'id'		=> '_link_title',
-			'type'		=> 'text'
-		),
-		array(
-			'label'		=> 'Link URL',
-			'id'		=> '_link_url',
-			'type'		=> 'text'
-		)
-	)
-);
-$post_format_quote = array(
-	'id'          => 'format-quote',
-	'title'       => 'Format: Quote',
-	'desc'        => 'Input your quote.',
-	'pages'       => array( 'post' ),
-	'context'     => 'normal',
-	'priority'    => 'high',
-	'fields'      => array(
-		array(
-			'label'		=> 'Quote',
-			'id'		=> '_quote',
-			'type'		=> 'textarea',
-			'rows'		=> '2'
-		),
-		array(
-			'label'		=> 'Quote Author',
-			'id'		=> '_quote_author',
-			'type'		=> 'text'
+			'label'		=> 'Audio URL',
+			'id'		=> '_audio_url',
+			'type'		=> 'text',
+			'desc'		=> ''
 		)
 	)
 );
@@ -261,11 +198,8 @@ $post_format_video = array(
 /*  Register meta boxes
 /* ------------------------------------ */
 	ot_register_meta_box( $page_options );
-	ot_register_meta_box( $post_format_audio );
-	ot_register_meta_box( $post_format_chat );
 	ot_register_meta_box( $post_format_gallery );
-	ot_register_meta_box( $post_format_link );
-	ot_register_meta_box( $post_format_quote );
+	ot_register_meta_box( $post_format_audio );
 	ot_register_meta_box( $post_format_video );
 	ot_register_meta_box( $post_options );
 }
