@@ -548,20 +548,6 @@ if ( ! function_exists( 'alx_feed_link' ) ) {
 add_filter( 'feed_link', 'alx_feed_link', 10, 2 );
 
 
-/*  Custom favicon
-/* ------------------------------------ */
-if ( ! function_exists( 'alx_favicon' ) ) {
-
-	function alx_favicon() {
-		if ( ot_get_option('favicon') ) {
-			echo '<link rel="shortcut icon" href="'.ot_get_option('favicon').'" />'."\n";
-		}
-	}
-	
-}
-add_filter( 'wp_head', 'alx_favicon' );
-
-
 /*  Excerpt ending
 /* ------------------------------------ */
 if ( ! function_exists( 'alx_excerpt_more' ) ) {

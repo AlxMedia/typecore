@@ -120,14 +120,6 @@ function custom_theme_options() {
 				)
 			)
 		),
-		// General: Favicon
-		array(
-			'id'		=> 'favicon',
-			'label'		=> 'Favicon',
-			'desc'		=> 'Upload a 16x16px Png/Gif image that will be your favicon',
-			'type'		=> 'upload',
-			'section'	=> 'general'
-		),
 		// General: RSS Feed
 		array(
 			'id'		=> 'rss-feed',
