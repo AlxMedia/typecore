@@ -14,7 +14,7 @@
 	add_filter( 'ot_show_pages', '__return_false' );
 	add_filter( 'ot_show_new_layout', '__return_false' );
 	add_filter( 'ot_theme_mode', '__return_true' );
-	load_template( get_template_directory() . '/option-tree/ot-loader.php' );
+	include( get_template_directory() . '/option-tree/ot-loader.php' );
 
 
 /* ------------------------------------------------------------------------- *
@@ -28,22 +28,22 @@ if ( ! function_exists( 'alx_load' ) ) {
 		load_theme_textdomain( 'typecore', get_template_directory().'/languages' );
 		
 		// Load theme options and meta boxes
-		load_template( get_template_directory() . '/functions/theme-options.php' );
-		load_template( get_template_directory() . '/functions/meta-boxes.php' );
+		include( get_template_directory() . '/functions/theme-options.php' );
+		include( get_template_directory() . '/functions/meta-boxes.php' );
 		
 		// Load custom widgets
-		load_template( get_template_directory() . '/functions/widgets/alx-tabs.php' );
-		load_template( get_template_directory() . '/functions/widgets/alx-video.php' );
-		load_template( get_template_directory() . '/functions/widgets/alx-posts.php' );
+		include( get_template_directory() . '/functions/widgets/alx-tabs.php' );
+		include( get_template_directory() . '/functions/widgets/alx-video.php' );
+		include( get_template_directory() . '/functions/widgets/alx-posts.php' );
 		
 		// Load custom shortcodes
-		load_template( get_template_directory() . '/functions/shortcodes.php' );
+		include( get_template_directory() . '/functions/shortcodes.php' );
 
 		// Load dynamic styles
-		load_template( get_template_directory() . '/functions/dynamic-styles.php' );
+		include( get_template_directory() . '/functions/dynamic-styles.php' );
 		
 		// Load TGM plugin activation
-		load_template( get_template_directory() . '/functions/class-tgm-plugin-activation.php' );
+		include( get_template_directory() . '/functions/class-tgm-plugin-activation.php' );
 	}
 	
 }
