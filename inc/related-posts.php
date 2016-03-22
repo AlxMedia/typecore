@@ -3,7 +3,7 @@
 <?php if ( $related->have_posts() ): ?>
 
 <h4 class="heading">
-	<i class="fa fa-hand-o-right"></i><?php _e('You may also like...','typecore'); ?>
+	<i class="fa fa-hand-o-right"></i><?php esc_html_e('You may also like...','typecore'); ?>
 </h4>
 
 <ul class="related-posts group">

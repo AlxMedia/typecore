@@ -7,9 +7,9 @@
 	<div class="pad group">
 		
 		<div class="notebox">
-			<?php _e('For the term','typecore'); ?> "<span><?php echo get_search_query(); ?></span>".
+			<?php esc_html_e('For the term','typecore'); ?> "<span><?php echo get_search_query(); ?></span>".
 			<?php if ( !have_posts() ): ?>
-				<?php _e('Please try another search:','typecore'); ?>
+				<?php esc_html_e('Please try another search:','typecore'); ?>
 			<?php endif; ?>
 			<div class="search-again">
 				<?php get_search_form(); ?>

@@ -15,7 +15,7 @@ $picks = new WP_Query(
 <?php if ( ( ot_get_option('picks') !='off')&& $picks->have_posts() ): ?>
 	
 		<div class="picks group">
-			<h2><i class="fa fa-bookmark"></i> <?php _e('Editor Picks','typecore'); ?></h2>
+			<h2><i class="fa fa-bookmark"></i> <?php esc_html_e('Editor Picks','typecore'); ?></h2>
 			<div class="picks-row group">
 				<?php while ( $picks->have_posts() ): $picks->the_post(); ?>
 					<?php get_template_part('content-picks'); ?>

@@ -4,11 +4,11 @@
 	
 	<?php if ( have_comments() ) : global $wp_query; ?>
 	
-		<h3 class="heading"><?php comments_number( __( 'No Responses', 'typecore' ), __( '1 Response', 'typecore' ), __( '% Responses', 'typecore' ) ); ?></h3>
+		<h3 class="heading"><?php comments_number( esc_html__( 'No Responses', 'typecore' ), esc_html__( '1 Response', 'typecore' ), esc_html__( '% Responses', 'typecore' ) ); ?></h3>
 	
 		<ul class="comment-tabs group">
-			<li class="active"><a href="#commentlist-container"><i class="fa fa-comments-o"></i><?php _e( 'Comments', 'typecore' ); ?><span><?php echo count($wp_query->comments_by_type['comment']); ?></span></a></li>
-			<li><a href="#pinglist-container"><i class="fa fa-share"></i><?php _e( 'Pingbacks', 'typecore' ); ?><span><?php echo count($wp_query->comments_by_type['pings']); ?></span></a></li>
+			<li class="active"><a href="#commentlist-container"><i class="fa fa-comments-o"></i><?php esc_html_e( 'Comments', 'typecore' ); ?><span><?php echo count($wp_query->comments_by_type['comment']); ?></span></a></li>
+			<li><a href="#pinglist-container"><i class="fa fa-share"></i><?php esc_html_e( 'Pingbacks', 'typecore' ); ?><span><?php echo count($wp_query->comments_by_type['pings']); ?></span></a></li>
 		</ul>
 
 		<?php if ( ! empty( $comments_by_type['comment'] ) ) { ?>

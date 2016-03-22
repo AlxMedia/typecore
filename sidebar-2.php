@@ -2,7 +2,7 @@
 
 <div class="sidebar s2">
 	
-	<a class="sidebar-toggle" title="<?php _e('Expand Sidebar','typecore'); ?>"><i class="fa icon-sidebar-toggle"></i></a>
+	<a class="sidebar-toggle" title="<?php esc_html_e('Expand Sidebar','typecore'); ?>"><i class="fa icon-sidebar-toggle"></i></a>
 	
 	<div class="sidebar-content">
 			
