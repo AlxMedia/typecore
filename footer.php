@@ -36,7 +36,7 @@
 					<?php $i = 0; while ( $i < $total ) { $i++; ?>
 						<?php if ( is_active_sidebar( 'footer-' . $i ) ) { ?>
 					
-					<div class="footer-widget-<?php echo $i; ?> grid <?php echo $class; ?> <?php if ( $i == $total ) { echo 'last'; } ?>">
+					<div class="footer-widget-<?php echo esc_attr( $i ); ?> grid <?php echo esc_attr( $class ); ?> <?php if ( $i == $total ) { echo 'last'; } ?>">
 						<?php dynamic_sidebar( 'footer-' . $i ); ?>
 					</div>
 					
