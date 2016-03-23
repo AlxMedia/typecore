@@ -307,7 +307,7 @@ if ( ! function_exists( 'alx_social_links' ) ) {
 					if ( isset($item['social-link']) && !empty($item['social-link']) ) 
 						{ $link = 'href="' .esc_attr( $item['social-link'] ). '"'; } else $link = '';
 					if ( isset($item['social-target']) && !empty($item['social-target']) ) 
-						{ $target = 'target="' .$item['social-target']. '"'; } else $target = '';
+						{ $target = 'target="_blank"'; } else $target = '';
 					if ( isset($item['social-icon']) && !empty($item['social-icon']) ) 
 						{ $icon = 'class="fa ' .esc_attr( $item['social-icon'] ). '"'; } else $icon = '';
 					if ( isset($item['social-color']) && !empty($item['social-color']) ) 
