@@ -70,7 +70,7 @@ class AlxPosts extends WP_Widget {
 			<div class="post-item-inner group">
 				<?php if($instance['posts_category']) { ?><p class="post-item-category"><?php the_category(' / '); ?></p><?php } ?>
 				<p class="post-item-title"><a href="<?php the_permalink(); ?>" rel="bookmark" title="<?php the_title(); ?>"><?php the_title(); ?></a></p>
-				<?php if($instance['posts_date']) { ?><p class="post-item-date"><?php the_time('j M, Y'); ?></p><?php } ?>
+				<?php if($instance['posts_date']) { ?><p class="post-item-date"><?php the_time('M j, Y'); ?></p><?php } ?>
 			</div>
 			
 		</li>
