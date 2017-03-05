@@ -34,7 +34,7 @@ class AlxVideo extends WP_Widget {
 		// The widget
 		if ( !empty($instance['video_url']) ) {
 			global $wp_embed;
-			$video = $wp_embed->run_shortcode('[embed]'.$instance['video_url'].'[/embed]');
+			$video = $wp_embed->run_shortcode('[embed]'.esc_attr($instance['video_url']).'[/embed]');
 		} 
 		else {
 			$video = '';

@@ -7,7 +7,7 @@
 		<?php 
 			if ( isset($meta['_audio_url'][0]) && !empty($meta['_audio_url'][0]) ) {
 				global $wp_embed;
-				$audio = $wp_embed->run_shortcode('[embed]'.$meta['_audio_url'][0].'[/embed]');
+				$audio = $wp_embed->run_shortcode('[embed]'.esc_attr($meta['_audio_url'][0]).'[/embed]');
 				echo $audio;
 			}
 		?>
@@ -81,7 +81,7 @@
 		<?php 
 			if ( isset($meta['_video_url'][0]) && !empty($meta['_video_url'][0]) ) {
 				global $wp_embed;
-				$video = $wp_embed->run_shortcode('[embed]'.$meta['_video_url'][0].'[/embed]');
+				$video = $wp_embed->run_shortcode('[embed]'.esc_attr($meta['_video_url'][0]).'[/embed]');
 				echo $video;
 			}
 		?>
