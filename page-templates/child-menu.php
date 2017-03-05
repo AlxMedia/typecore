@@ -5,7 +5,7 @@ Template Name: Child Menu
 ?>
 <?php get_header(); ?>
 
-<section class="content">
+<div class="content">
 	
 	<?php get_template_part('inc/page-title'); ?>
 	
@@ -30,7 +30,7 @@ Template Name: Child Menu
 		
 	</div><!--/.pad-->
 	
-</section><!--/.content-->
+</div><!--/.content-->
 
 <?php get_sidebar(); ?>
 

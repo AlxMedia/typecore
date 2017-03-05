@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<section class="content">
+<div class="content">
 
 	<?php get_template_part('inc/page-title'); ?>
 	
@@ -36,7 +36,7 @@
 		
 	</div><!--/.pad-->
 	
-</section><!--/.content-->
+</div><!--/.content-->
 
 <?php get_sidebar(); ?>
 	

@@ -1,6 +1,6 @@
 <?php if ( post_password_required() ) { return; } ?>
 
-<section id="comments" class="themeform">
+<div id="comments" class="themeform">
 	
 	<?php if ( have_comments() ) : global $wp_query; ?>
 	
@@ -58,4 +58,4 @@
 	
 	<?php if ( comments_open() ) { comment_form(); } ?>
 
-</section><!--/#comments-->
+</div><!--/#comments-->

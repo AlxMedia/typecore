@@ -773,12 +773,12 @@ add_action( 'tgmpa_register', 'alx_plugins' );
 /*  WooCommerce basic support
 /* ------------------------------------ */
 function alx_wc_wrapper_start() {
-	echo '<section class="content">';
+	echo '<div class="content">';
 	echo '<div class="pad">';
 }
 function alx_wc_wrapper_end() {
 	echo '</div>';
-	echo '</section>';
+	echo '</div>';
 }
 remove_action( 'woocommerce_before_main_content', 'woocommerce_output_content_wrapper', 10);
 remove_action( 'woocommerce_after_main_content', 'woocommerce_output_content_wrapper_end', 10);

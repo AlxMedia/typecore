@@ -6,11 +6,11 @@
 	<footer id="footer">
 		
 		<?php if ( ot_get_option('footer-ads') == 'on' ): ?>
-		<section class="container" id="footer-ads">
+		<div class="container" id="footer-ads">
 			<div class="container-inner">
 				<?php dynamic_sidebar( 'footer-ads' ); ?>
 			</div><!--/.container-inner-->
-		</section><!--/.container-->
+		</div><!--/.container-->
 		<?php endif; ?>
 		
 		<?php // footer widgets
@@ -29,7 +29,7 @@
 					   is_active_sidebar( 'footer-3' ) ||
 					   is_active_sidebar( 'footer-4' ) ) && $total > 0 ) 
 		{ ?>		
-		<section class="container dark" id="footer-widgets">
+		<div class="container dark" id="footer-widgets">
 			<div class="container-inner">
 				
 				<div class="pad group">
@@ -45,7 +45,7 @@
 				</div><!--/.pad-->
 				
 			</div><!--/.container-inner-->
-		</section><!--/.container-->	
+		</div><!--/.container-->	
 		<?php } ?>
 		
 		<?php if ( has_nav_menu( 'footer' ) ): ?>
@@ -56,7 +56,7 @@
 			</nav><!--/#nav-footer-->
 		<?php endif; ?>
 		
-		<section class="container" id="footer-bottom">
+		<div class="container" id="footer-bottom">
 			<div class="container-inner">
 				
 				<a id="back-to-top" href="#"><i class="fa fa-angle-up"></i></a>
@@ -92,7 +92,7 @@
 				</div><!--/.pad-->
 				
 			</div><!--/.container-inner-->
-		</section><!--/.container-->
+		</div><!--/.container-->
 		
 	</footer><!--/#footer-->
 
