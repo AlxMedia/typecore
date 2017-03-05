@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Typecore\n"
-"POT-Creation-Date: 2016-03-22 18:55+0100\n"
-"PO-Revision-Date: 2016-03-22 18:55+0100\n"
+"POT-Creation-Date: 2017-03-05 20:36+0100\n"
+"PO-Revision-Date: 2017-03-05 20:36+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: English\n"
@@ -158,4 +158,20 @@ msgstr ""
 
 #: ../inc/sharrre.php:2
 msgid "Share"
+msgstr ""
+
+#: ../inc/sharrre.php:3
+msgid "Tweet"
+msgstr ""
+
+#: ../inc/sharrre.php:4
+msgid "Like"
+msgstr ""
+
+#: ../inc/sharrre.php:5
+msgid "+1"
+msgstr ""
+
+#: ../inc/sharrre.php:6
+msgid "Pin It"
 msgstr ""
