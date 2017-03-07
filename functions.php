@@ -584,23 +584,6 @@ if ( ! function_exists( 'alx_excerpt_length' ) ) {
 add_filter( 'excerpt_length', 'alx_excerpt_length', 999 );
 
 
-/*  Add wmode transparent to media embeds
-/* ------------------------------------ */
-if ( ! function_exists( 'alx_embed_wmode_transparent' ) ) {
-	
-	function alx_embed_wmode_transparent( $html, $url, $attr ) {
-		if ( strpos( $html, "<embed src=" ) !== false )
-		   { return str_replace('</param><embed', '</param><param name="wmode" value="opaque"></param><embed wmode="opaque" ', $html); }
-		elseif ( strpos ( $html, 'feature=oembed' ) !== false )
-		   { return str_replace( 'feature=oembed', 'feature=oembed&wmode=opaque', $html ); }
-		else
-		   { return $html; }
-	}
-	
-}
-add_filter( 'embed_oembed_html', 'alx_embed_wmode_transparent', 10, 3 );
-
-
 /*  Add responsive container to embeds
 /* ------------------------------------ */	
 if ( ! function_exists( 'alx_embed_html' ) ) {
