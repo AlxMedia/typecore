@@ -610,6 +610,7 @@ box-shadow: -1px 0 0 rgba(255,255,255,0.1);
 -moz-transition: all 0.2s ease; -webkit-transition: all 0.2s ease; transition: all 0.2s ease; }
 .toggle-search:hover,
 .toggle-search.active { background: rgba(0,0,0,0.15); color: #fff; }
+.toggle-search.active .fa.fa-search:before { content: "\f00d"; font-size: 22px; }
 .search-expand { display: none; background: #e64338; position: absolute; top: 0; right: 0; width: 340px;
 -webkit-box-shadow: 0 1px 0 rgba(255,255,255,0.1);
 box-shadow: 0 1px 0 rgba(255,255,255,0.1); }
