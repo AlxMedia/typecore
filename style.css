@@ -1067,6 +1067,7 @@ transition: all 0.2s ease-out; }
 .widget > h3 a:hover { color: #222; }
 .widget > h3 a img { display: none; float: left; margin: 3px 7px 0 0; }
 .widget select { border: 1px solid #ddd; color: #777; font-size: 15px; padding: 7px; width: 100%; max-width: 100%; }
+.widget label.screen-reader-text { display: none; }
 
 .sidebar .widget { padding: 30px 30px 20px; }
 #footer-widgets .widget { padding: 30px 0 20px; }
@@ -1127,6 +1128,12 @@ transition: all 0.2s ease-out; }
 .widget_pages ul ul ul,
 .widget_nav_menu ul ul, 
 .widget_nav_menu  ul ul ul { border: 0; }
+
+/*  widget : categories
+/* ------------------------------------ */
+.widget_categories li li { padding-left: 15px; border-bottom: 0; padding-bottom: 0; }
+.widget_categories li li li { padding-left: 15px; border-bottom: 0; }
+.widget_categories li li a { font-size: 13px; }
 
 /*  widget : rss
 /* ------------------------------------ */
