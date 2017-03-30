@@ -13,7 +13,7 @@ jQuery(document).ready(function($) {
 
 /*  Toggle header search
 /* ------------------------------------ */
-	$('.toggle-search').click(function(){
+	$('.toggle-search').on('click', function() {
 		$('.toggle-search').toggleClass('active');
 		$('.search-expand').fadeToggle(250);
             setTimeout(function(){
@@ -23,7 +23,7 @@ jQuery(document).ready(function($) {
 	
 /*  Scroll to top
 /* ------------------------------------ */
-	$('a#back-to-top').click(function() {
+	$('a#back-to-top').on('click', function() {
 		$('html, body').animate({scrollTop:0},'slow');
 		return false;
 	});
@@ -57,7 +57,7 @@ jQuery(document).ready(function($) {
 	
 /*  Comments / pingbacks tabs
 /* ------------------------------------ */	
-    $(".comment-tabs li").click(function() {
+	$('.comment-tabs li').on('click', function() {
         $(".comment-tabs li").removeClass('active');
         $(this).addClass("active");
         $(".comment-tab").hide();
@@ -75,13 +75,13 @@ jQuery(document).ready(function($) {
 	$('body').addClass('s1-collapse');
 	$('body').addClass('s2-collapse');
 	
-	$('.s1 .sidebar-toggle').click(function(){
+	$('.s1 .sidebar-toggle').on('click', function() {
 		$('body').toggleClass('s1-collapse').toggleClass('s1-expand');
 		if ($('body').is('.s2-expand')) { 
 			$('body').toggleClass('s2-expand').toggleClass('s2-collapse');
 		}
 	});
-	$('.s2 .sidebar-toggle').click(function(){
+	$('.s2 .sidebar-toggle').on('click', function() {
 		$('body').toggleClass('s2-collapse').toggleClass('s2-expand');
 		if ($('body').is('.s1-expand')) { 
 			$('body').toggleClass('s1-expand').toggleClass('s1-collapse');
