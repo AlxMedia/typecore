@@ -58,13 +58,13 @@ jQuery(document).ready(function($) {
 /*  Comments / pingbacks tabs
 /* ------------------------------------ */	
 	$('.comment-tabs li').on('click', function() {
-        $(".comment-tabs li").removeClass('active');
-        $(this).addClass("active");
-        $(".comment-tab").hide();
-        var selected_tab = $(this).find("a").attr("href");
-        $(selected_tab).fadeIn();
-        return false;
-    });
+		$('.comment-tabs li').removeClass('active');
+		$(this).addClass('active');
+		$('.comment-tab').hide();
+		var selected_tab = $(this).find('a').attr('href');
+		$(selected_tab).fadeIn();
+		return false;
+	});
 
 /*  Table odd row class
 /* ------------------------------------ */
