@@ -51,7 +51,7 @@ jQuery(document).ready(function($) {
 			$this.parent().next().children('.alx-tab').stop(true,true).hide()
 			.siblings( $this.find('a').attr('href') ).fadeIn();
 			e.preventDefault();
-		}).children( window.location.hash ? 'a[href=' + window.location.hash + ']' : 'a:first' ).trigger('click');
+		}).children( window.location.hash ? 'a[href="' + window.location.hash + '"]' : 'a:first' ).trigger('click');
 
 	})();
 	
