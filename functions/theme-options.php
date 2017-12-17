@@ -881,7 +881,7 @@ Kirki::add_field( 'alx_typecore', array(
 	),
 ) );
 // Styling: Sidebar Width
-Kirki::add_field( 'alx_blogline', array(
+Kirki::add_field( 'alx_typecore', array(
 	'type'			=> 'radio',
 	'settings'		=> 'sidebar-padding',
 	'label'			=> esc_attr__( 'Sidebar Width', 'typecore' ),
