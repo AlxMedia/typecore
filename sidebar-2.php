@@ -6,7 +6,7 @@
 	
 	<div class="sidebar-content">
 			
-		<?php if ( ot_get_option( 'post-nav' ) == 's2') { get_template_part('inc/post-nav'); } ?>
+		<?php if ( get_theme_mod( 'post-nav','s1' ) == 's2') { get_template_part('inc/post-nav'); } ?>
 		
 		<?php dynamic_sidebar($sidebar); ?>
 		

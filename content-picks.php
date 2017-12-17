@@ -5,7 +5,7 @@
 			<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
 				<?php if ( has_post_thumbnail() ): ?>
 					<?php the_post_thumbnail('thumb-small'); ?>
-				<?php elseif ( ot_get_option('placeholder') != 'off' ): ?>
+				<?php elseif ( get_theme_mod('placeholder','on') == 'on' ): ?>
 					<img src="<?php echo get_template_directory_uri(); ?>/img/thumb-small.png" alt="<?php the_title(); ?>" />
 				<?php endif; ?>
 				<?php if ( has_post_format('video') && !is_sticky() ) echo'<span class="thumb-icon small"><i class="fa fa-play"></i></span>'; ?>

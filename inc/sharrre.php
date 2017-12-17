@@ -16,7 +16,7 @@
 			template: '<a class="box" href="#"><div class="count" href="#"><i class="fa fa-plus"></i></div><div class="share"><i class="fa fa-twitter"></i></div></a>',
 			enableHover: false,
 			enableTracking: true,
-			buttons: { twitter: {via: '<?php echo esc_attr( ot_get_option('twitter-username') ); ?>'}},
+			buttons: { twitter: {via: '<?php echo esc_attr( get_theme_mod('twitter-username') ); ?>'}},
 			click: function(api, options){
 				api.simulateClick();
 				api.openPopup('twitter');
@@ -67,7 +67,7 @@
 			}
 		});
 		
-		<?php if ( ot_get_option( 'sharrre-scrollable' ) == 'on' ): ?>		
+		<?php if ( get_theme_mod( 'sharrre-scrollable' ) == 'on' ): ?>		
 			// Scrollable sharrre bar, contributed by Erik Frye. Awesome!
 			var shareContainer = jQuery(".sharrre-container"),
 			header = jQuery('#header'),

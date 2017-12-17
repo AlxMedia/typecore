@@ -5,7 +5,7 @@
 
 	<footer id="footer">
 		
-		<?php if ( ot_get_option('footer-ads') == 'on' ): ?>
+		<?php if ( get_theme_mod('footer-ads','off') == 'on' ): ?>
 		<div class="container" id="footer-ads">
 			<div class="container-inner">
 				<?php dynamic_sidebar( 'footer-ads' ); ?>
@@ -15,9 +15,9 @@
 		
 		<?php // footer widgets
 			$total = 4;
-			if ( ot_get_option( 'footer-widgets' ) != '' ) {
+			if ( get_theme_mod( 'footer-widgets','0' ) != '' ) {
 				
-				$total = ot_get_option( 'footer-widgets' );
+				$total = get_theme_mod( 'footer-widgets' );
 				if( $total == 1) $class = 'one-full';
 				if( $total == 2) $class = 'one-half';
 				if( $total == 3) $class = 'one-third';
@@ -65,19 +65,19 @@
 					
 					<div class="grid one-half">
 						
-						<?php if ( ot_get_option('footer-logo') ): ?>
-							<img id="footer-logo" src="<?php echo ot_get_option('footer-logo'); ?>" alt="<?php get_bloginfo('name'); ?>">
+						<?php if ( get_theme_mod('footer-logo') ): ?>
+							<img id="footer-logo" src="<?php echo get_theme_mod('footer-logo'); ?>" alt="<?php get_bloginfo('name'); ?>">
 						<?php endif; ?>
 						
 						<div id="copyright">
-							<?php if ( ot_get_option( 'copyright' ) ): ?>
-								<p><?php echo esc_attr( ot_get_option( 'copyright' ) ); ?></p>
+							<?php if ( get_theme_mod( 'copyright' ) ): ?>
+								<p><?php echo esc_attr( get_theme_mod( 'copyright' ) ); ?></p>
 							<?php else: ?>
 								<p><?php bloginfo(); ?> &copy; <?php echo date( 'Y' ); ?>. <?php esc_html_e( 'All Rights Reserved.', 'typecore' ); ?></p>
 							<?php endif; ?>
 						</div><!--/#copyright-->
 						
-						<?php if ( ot_get_option( 'credit' ) != 'off' ): ?>
+						<?php if ( get_theme_mod( 'credit', 'on' ) == 'on' ): ?>
 						<div id="credit">
 							<p><?php esc_html_e('Powered by','typecore'); ?> <a href="<?php echo esc_url( 'http://wordpress.org' ); ?>" rel="nofollow">WordPress</a>. <?php esc_html_e('Theme by','typecore'); ?> <a href="<?php echo esc_url( 'http://alxmedia.se' ); ?>" rel="nofollow">Alx</a>.</p>
 						</div><!--/#credit-->

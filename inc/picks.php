@@ -7,12 +7,12 @@ $picks = new WP_Query(
 		'update_post_term_cache'	=> false,
 		'ignore_sticky_posts'		=> 1,
 		'posts_per_page'			=> 2,
-		'cat'						=> ot_get_option('picks-category')
+		'cat'						=> get_theme_mod('picks-category','')
 	)
 );
 ?>
 
-<?php if ( ( ot_get_option('picks') !='off')&& $picks->have_posts() ): ?>
+<?php if ( ( get_theme_mod('picks','on') =='on')&& $picks->have_posts() ): ?>
 	
 		<div class="picks group">
 			<h2><i class="fa fa-bookmark"></i> <?php esc_html_e('Editor Picks','typecore'); ?></h2>

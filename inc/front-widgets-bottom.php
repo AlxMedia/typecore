@@ -1,4 +1,4 @@
-<?php if ( is_home() && !is_paged() && ot_get_option('frontpage-widgets-bottom') == 'on' ): ?>
+<?php if ( is_home() && !is_paged() && get_theme_mod('frontpage-widgets-bottom') == 'on' ): ?>
 	<div class="front-widgets group">
 
 		<div class="front-widget-col">

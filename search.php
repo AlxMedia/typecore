@@ -18,7 +18,7 @@
 		
 		<?php if ( have_posts() ) : ?>
 		
-			<?php if ( ot_get_option('blog-standard') == 'on' ): ?>
+			<?php if ( get_theme_mod('blog-standard','off') == 'on' ): ?>
 				<?php while ( have_posts() ): the_post(); ?>
 					<?php get_template_part('content-standard'); ?>
 				<?php endwhile; ?>

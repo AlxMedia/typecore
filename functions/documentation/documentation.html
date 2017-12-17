@@ -375,8 +375,8 @@ Your browser does not support the video tag.
 			
 <pre><code>function alx_styles() {
 	wp_enqueue_style( 'style', get_stylesheet_uri() );
-	if ( !ot_get_option('responsive') ) { wp_enqueue_style( 'responsive', get_template_directory_uri().'/responsive.css' ); }
-	if ( ot_get_option('custom') ) { wp_enqueue_style( 'custom', get_template_directory_uri().'/custom.css' ); }
+	if ( !get_theme_mod('responsive') ) { wp_enqueue_style( 'responsive', get_template_directory_uri().'/responsive.css' ); }
+	if ( get_theme_mod('custom') ) { wp_enqueue_style( 'custom', get_template_directory_uri().'/custom.css' ); }
 	wp_enqueue_style( 'font-awesome', get_template_directory_uri().'/fonts/font-awesome.min.css' );
 }</code></pre>
 			
@@ -384,8 +384,8 @@ Your browser does not support the video tag.
 
 <pre><code>function alx_styles() {
 	wp_enqueue_style( 'style', get_stylesheet_uri() );
-	if ( !ot_get_option('responsive') ) { wp_enqueue_style( 'responsive', get_stylesheet_directory_uri().'/responsive.css' ); }
-	if ( ot_get_option('custom') ) { wp_enqueue_style( 'custom', get_template_directory_uri().'/custom.css' ); }
+	if ( !get_theme_mod('responsive') ) { wp_enqueue_style( 'responsive', get_stylesheet_directory_uri().'/responsive.css' ); }
+	if ( get_theme_mod('custom') ) { wp_enqueue_style( 'custom', get_template_directory_uri().'/custom.css' ); }
 	wp_enqueue_style( 'font-awesome', get_template_directory_uri().'/fonts/font-awesome.min.css' );
 }</code></pre>
 			
@@ -442,7 +442,7 @@ load_theme_textdomain( 'themename', get_stylesheet_directory().'/languages' );</
 				<li><strong>/js/</strong> - Theme javascript. All custom theme scripts are in scripts.js</li>
 				<li><strong>/js/ie/</strong> - Javascript used for Internet Explorer compatibility</li>
 				<li><strong>/languages/</strong> - Contains a language file that you can use to translate or change texts in the theme</li>
-				<li><strong>/option-tree/</strong> - This folder is the OptionTree framework plugin running in fully-integrated theme mode. It ties in with <i>/functions/meta-boxes.php</i> and <i>/functions/theme-options.php</i> and the <i>ot_get_option()</i> function used in template files. Relates to the admin panel, to create theme options. It's best to leave this folder alone.</li>
+				<li><strong>/option-tree/</strong> - This folder is the OptionTree framework plugin running in fully-integrated theme mode. It ties in with <i>/functions/meta-boxes.php</i> and <i>/functions/theme-options.php</i> and the <i>get_theme_mod()</i> function used in template files. Relates to the admin panel, to create theme options. It's best to leave this folder alone.</li>
 				<li><strong>/page-templates/</strong> - Contains all page templates for the theme, such as Child Menu</li>
 			</ul>
 			<hr>

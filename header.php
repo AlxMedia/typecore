@@ -38,20 +38,20 @@
 		
 		<div class="container group">
 			<div class="container-inner">
-				<?php if ( ot_get_option('header-image') == '' ): ?>
+				<?php if ( get_theme_mod('header-image','') == '' ): ?>
 				<div class="group pad">
 					<?php echo alx_site_title(); ?>
-					<?php if ( ot_get_option('site-description') != 'off' ): ?><p class="site-description"><?php bloginfo( 'description' ); ?></p><?php endif; ?>
-					<?php if ( ot_get_option('header-ads') == 'on' ): ?>
+					<?php if ( get_theme_mod( 'site-description', 'on' ) == 'on' ): ?><p class="site-description"><?php bloginfo( 'description' ); ?></p><?php endif; ?>
+					<?php if ( get_theme_mod('header-ads','off') == 'on' ): ?>
 					<div id="header-ads">
 						<?php dynamic_sidebar( 'header-ads' ); ?>
 					</div><!--/#header-ads-->
 					<?php endif; ?>
 				</div>
 				<?php endif; ?>
-				<?php if ( ot_get_option('header-image') ): ?>
+				<?php if ( get_theme_mod('header-image','') ): ?>
 					<a href="<?php echo home_url('/'); ?>" rel="home">
-						<img class="site-image" src="<?php echo ot_get_option('header-image'); ?>" alt="<?php get_bloginfo('name'); ?>">
+						<img class="site-image" src="<?php echo get_theme_mod('header-image'); ?>" alt="<?php get_bloginfo('name'); ?>">
 					</a>
 				<?php endif; ?>
 
