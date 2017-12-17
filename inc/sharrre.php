@@ -2,8 +2,8 @@
 	<span><?php esc_html_e('Share','typecore'); ?></span>
 	<div id="twitter" data-url="<?php echo the_permalink(); ?>" data-text="<?php echo the_title(); ?>" data-title="<?php esc_html_e('Tweet', 'typecore'); ?>"></div>
 	<div id="facebook" data-url="<?php echo the_permalink(); ?>" data-text="<?php echo the_title(); ?>" data-title="<?php esc_html_e('Like', 'typecore'); ?>"></div>
-	<div id="googleplus" data-url="<?php echo the_permalink(); ?>" data-text="<?php echo the_title(); ?>" data-title="<?php esc_html_e('+1', 'typecore'); ?>"></div>
 	<div id="pinterest" data-url="<?php echo the_permalink(); ?>" data-text="<?php echo the_title(); ?>" data-title="<?php esc_html_e('Pin It', 'typecore'); ?>"></div>
+	<div id="linkedin" data-url="<?php echo the_permalink(); ?>" data-text="<?php echo the_title(); ?>" data-title="<?php esc_html_e('Share on LinkedIn', 'typecore'); ?>"></div>
 </div><!--/.sharrre-container-->
 
 <script type="text/javascript">
@@ -35,25 +35,11 @@
 				api.openPopup('facebook');
 			}
 		});
-		jQuery('#googleplus').sharrre({
-			share: {
-				googlePlus: true
-			},
-			template: '<a class="box" href="#"><div class="count" href="#">{total}</div><div class="share"><i class="fa fa-google-plus-square"></i></div></a>',
-			enableHover: false,
-			enableTracking: true,
-			buttons:{size: 'tall'},
-			urlCurl: '<?php echo get_template_directory_uri() .'/js/sharrre.php'; ?>',
-			click: function(api, options){
-				api.simulateClick();
-				api.openPopup('googlePlus');
-			}
-		});
 		jQuery('#pinterest').sharrre({
 			share: {
 				pinterest: true
 			},
-			template: '<a class="box" href="#" rel="nofollow"><div class="count" href="#">{total}</div><div class="share"><i class="fa fa-pinterest"></i></div></a>',
+			template: '<a class="box group" href="#"><div class="count" href="#">{total}</div><div class="share"><i class="fa fa-pinterest"></i></div></a>',
 			enableHover: false,
 			enableTracking: true,
 			buttons: {
@@ -64,6 +50,23 @@
 			click: function(api, options){
 				api.simulateClick();
 				api.openPopup('pinterest');
+			}
+		});
+		jQuery('#linkedin').sharrre({
+			share: {
+				linkedin: true
+			},
+			template: '<a class="box group" href="#"><div class="count" href="#">{total}</div><div class="share"><i class="fa fa-linkedin-square"></i></div></a>',
+			enableHover: false,
+			enableTracking: true,
+			buttons: {
+			linkedin: {
+				description: '<?php echo the_title(); ?>'<?php if( has_post_thumbnail() ){ ?>,media: '<?php echo wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>'<?php } ?>
+				}
+			},
+			click: function(api, options){
+				api.simulateClick();
+				api.openPopup('linkedin');
 			}
 		});
 		
