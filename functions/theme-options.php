@@ -200,6 +200,7 @@ Kirki::add_field( 'alx_typecore', array(
 	'section'		=> 'blog',
 	'default'		=> '',
 	'choices'		=> Kirki_Helper::get_terms( 'category' ),
+	'placeholder'	=> esc_attr__( 'Select a category', 'typecore' ),
 ) );
 // Blog: Featured Post Count
 Kirki::add_field( 'alx_typecore', array(
@@ -233,6 +234,7 @@ Kirki::add_field( 'alx_typecore', array(
 	'section'		=> 'blog',
 	'default'		=> '',
 	'choices'		=> Kirki_Helper::get_terms( 'category' ),
+	'placeholder'	=> esc_attr__( 'Select a category', 'typecore' ),
 ) );
 // Blog: Picks
 Kirki::add_field( 'alx_typecore', array(
@@ -252,6 +254,7 @@ Kirki::add_field( 'alx_typecore', array(
 	'section'		=> 'blog',
 	'default'		=> '',
 	'choices'		=> Kirki_Helper::get_terms( 'category' ),
+	'placeholder'	=> esc_attr__( 'Select a category', 'typecore' ),
 ) );
 // Blog: Frontpage Widgets Top
 Kirki::add_field( 'alx_typecore', array(
@@ -624,7 +627,7 @@ Kirki::add_field( 'alx_typecore', array(
 ) );
 
 
-function kirki_sidebars_select_example() { 
+function alx_kirki_sidebars_select() { 
  	$sidebars = array(); 
  	if ( isset( $GLOBALS['wp_registered_sidebars'] ) ) { 
  		$sidebars = $GLOBALS['wp_registered_sidebars']; 
@@ -645,6 +648,7 @@ function kirki_sidebars_select_example() {
 		'section'		=> 'sidebars',
 		'choices'		=> $sidebars_choices, 
 		'default'		=> '',
+		'placeholder'	=> esc_attr__( 'Select a sidebar', 'typecore' ),
 	) );
 	Kirki::add_field( 'alx_typecore', array(
 		'type'			=> 'select',
@@ -654,6 +658,7 @@ function kirki_sidebars_select_example() {
 		'section'		=> 'sidebars',
 		'choices'		=> $sidebars_choices, 
 		'default'		=> '',
+		'placeholder'	=> esc_attr__( 'Select a sidebar', 'typecore' ),
 	) );
 	Kirki::add_field( 'alx_typecore', array(
 		'type'			=> 'select',
@@ -663,6 +668,7 @@ function kirki_sidebars_select_example() {
 		'section'		=> 'sidebars',
 		'choices'		=> $sidebars_choices, 
 		'default'		=> '',
+		'placeholder'	=> esc_attr__( 'Select a sidebar', 'typecore' ),
 	) );
 	Kirki::add_field( 'alx_typecore', array(
 		'type'			=> 'select',
@@ -672,6 +678,7 @@ function kirki_sidebars_select_example() {
 		'section'		=> 'sidebars',
 		'choices'		=> $sidebars_choices, 
 		'default'		=> '',
+		'placeholder'	=> esc_attr__( 'Select a sidebar', 'typecore' ),
 	) );
 	Kirki::add_field( 'alx_typecore', array(
 		'type'			=> 'select',
@@ -681,6 +688,7 @@ function kirki_sidebars_select_example() {
 		'section'		=> 'sidebars',
 		'choices'		=> $sidebars_choices, 
 		'default'		=> '',
+		'placeholder'	=> esc_attr__( 'Select a sidebar', 'typecore' ),
 	) );
 	Kirki::add_field( 'alx_typecore', array(
 		'type'			=> 'select',
@@ -690,6 +698,7 @@ function kirki_sidebars_select_example() {
 		'section'		=> 'sidebars',
 		'choices'		=> $sidebars_choices, 
 		'default'		=> '',
+		'placeholder'	=> esc_attr__( 'Select a sidebar', 'typecore' ),
 	) );
 	Kirki::add_field( 'alx_typecore', array(
 		'type'			=> 'select',
@@ -699,6 +708,7 @@ function kirki_sidebars_select_example() {
 		'section'		=> 'sidebars',
 		'choices'		=> $sidebars_choices, 
 		'default'		=> '',
+		'placeholder'	=> esc_attr__( 'Select a sidebar', 'typecore' ),
 	) );
 	Kirki::add_field( 'alx_typecore', array(
 		'type'			=> 'select',
@@ -708,6 +718,7 @@ function kirki_sidebars_select_example() {
 		'section'		=> 'sidebars',
 		'choices'		=> $sidebars_choices, 
 		'default'		=> '',
+		'placeholder'	=> esc_attr__( 'Select a sidebar', 'typecore' ),
 	) );
 	Kirki::add_field( 'alx_typecore', array(
 		'type'			=> 'select',
@@ -717,6 +728,7 @@ function kirki_sidebars_select_example() {
 		'section'		=> 'sidebars',
 		'choices'		=> $sidebars_choices, 
 		'default'		=> '',
+		'placeholder'	=> esc_attr__( 'Select a sidebar', 'typecore' ),
 	) );
 	Kirki::add_field( 'alx_typecore', array(
 		'type'			=> 'select',
@@ -726,6 +738,7 @@ function kirki_sidebars_select_example() {
 		'section'		=> 'sidebars',
 		'choices'		=> $sidebars_choices, 
 		'default'		=> '',
+		'placeholder'	=> esc_attr__( 'Select a sidebar', 'typecore' ),
 	) );
 	Kirki::add_field( 'alx_typecore', array(
 		'type'			=> 'select',
@@ -735,6 +748,7 @@ function kirki_sidebars_select_example() {
 		'section'		=> 'sidebars',
 		'choices'		=> $sidebars_choices, 
 		'default'		=> '',
+		'placeholder'	=> esc_attr__( 'Select a sidebar', 'typecore' ),
 	) );
 	Kirki::add_field( 'alx_typecore', array(
 		'type'			=> 'select',
@@ -744,6 +758,7 @@ function kirki_sidebars_select_example() {
 		'section'		=> 'sidebars',
 		'choices'		=> $sidebars_choices, 
 		'default'		=> '',
+		'placeholder'	=> esc_attr__( 'Select a sidebar', 'typecore' ),
 	) );
 	Kirki::add_field( 'alx_typecore', array(
 		'type'			=> 'select',
@@ -753,6 +768,7 @@ function kirki_sidebars_select_example() {
 		'section'		=> 'sidebars',
 		'choices'		=> $sidebars_choices, 
 		'default'		=> '',
+		'placeholder'	=> esc_attr__( 'Select a sidebar', 'typecore' ),
 	) );
 	Kirki::add_field( 'alx_typecore', array(
 		'type'			=> 'select',
@@ -762,10 +778,11 @@ function kirki_sidebars_select_example() {
 		'section'		=> 'sidebars',
 		'choices'		=> $sidebars_choices, 
 		'default'		=> '',
+		'placeholder'	=> esc_attr__( 'Select a sidebar', 'typecore' ),
 	) );
 	
  } 
-add_action( 'init', 'kirki_sidebars_select_example', 999 ); 
+add_action( 'init', 'alx_kirki_sidebars_select', 999 ); 
 
 // Social Links: List
 Kirki::add_field( 'alx_typecore', array(

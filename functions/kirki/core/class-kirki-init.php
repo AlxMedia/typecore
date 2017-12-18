@@ -83,7 +83,7 @@ class Kirki_Init {
 		$this->control_types = array(
 			'checkbox'              => 'WP_Customize_Control',
 			'kirki-background'      => 'Kirki_Control_Background',
-			'kirki-code'            => 'Kirki_Control_Code',
+			'code_editor'           => 'Kirki_Control_Code',
 			'kirki-color'           => 'Kirki_Control_Color',
 			'kirki-color-palette'   => 'Kirki_Control_Color_Palette',
 			'kirki-custom'          => 'Kirki_Control_Custom',
@@ -277,7 +277,7 @@ class Kirki_Init {
 	 */
 	public static function get_variables() {
 		// Log error for developers.
-		_doing_it_wrong( __METHOD__, esc_attr__( 'We detected you\'re using Kirki_Init::get_variables(). Please use Kirki_Util::get_variables() instead.', 'typecore' ), '3.0.10' );
+		_doing_it_wrong( __METHOD__, esc_attr__( 'We detected you\'re using Kirki_Init::get_variables(). Please use Kirki_Util::get_variables() instead.', 'kirki' ), '3.0.10' );
 		// Return result using the Kirki_Util class.
 		return Kirki_Util::get_variables();
 	}
