@@ -59,20 +59,20 @@ class Kirki_Control_Image extends Kirki_Control_Base {
 				</div>
 			<# } else { #>
 				<div class="placeholder">
-					<?php esc_attr_e( 'No File Selected', 'kirki' ); ?>
+					<?php esc_attr_e( 'No File Selected', 'typecore' ); ?>
 				</div>
 			<# } #>
 			<div class="actions">
 				<button class="button image-upload-remove-button<# if ( '' === url ) { #> hidden <# } #>">
-					<?php esc_attr_e( 'Remove', 'kirki' ); ?>
+					<?php esc_attr_e( 'Remove', 'typecore' ); ?>
 				</button>
 				<# if ( data.default && '' !== data.default ) { #>
 					<button type="button" class="button image-default-button"<# if ( data.default === data.value || ( ! _.isUndefined( data.value.url ) && data.default === data.value.url ) ) { #> style="display:none;"<# } #>>
-						<?php esc_attr_e( 'Default', 'kirki' ); ?>
+						<?php esc_attr_e( 'Default', 'typecore' ); ?>
 					</button>
 				<# } #>
 				<button type="button" class="button image-upload-button">
-					<?php esc_attr_e( 'Select File', 'kirki' ); ?>
+					<?php esc_attr_e( 'Select File', 'typecore' ); ?>
 				</button>
 			</div>
 		</div>

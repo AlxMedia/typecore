@@ -67,7 +67,7 @@ class Kirki_Control_Repeater extends Kirki_Control_Base {
 		// Set up defaults for row labels.
 		$this->row_label = array(
 			'type' => 'text',
-			'value' => esc_attr__( 'row', 'kirki' ),
+			'value' => esc_attr__( 'row', 'typecore' ),
 			'field' => false,
 		);
 
@@ -76,7 +76,7 @@ class Kirki_Control_Repeater extends Kirki_Control_Base {
 
 		if ( empty( $this->button_label ) ) {
 			/* translators: %s represents the label of the row. */
-			$this->button_label = sprintf( esc_attr__( 'Add new %s', 'kirki' ), $this->row_label['value'] );
+			$this->button_label = sprintf( esc_attr__( 'Add new %s', 'typecore' ), $this->row_label['value'] );
 		}
 
 		if ( empty( $args['fields'] ) || ! is_array( $args['fields'] ) ) {
@@ -111,7 +111,7 @@ class Kirki_Control_Repeater extends Kirki_Control_Base {
 							array(
 								'name'              => '',
 								'echo'              => 0,
-								'show_option_none'  => esc_attr__( 'Select a Page', 'kirki' ),
+								'show_option_none'  => esc_attr__( 'Select a Page', 'typecore' ),
 								'option_none_value' => '0',
 								'selected'          => '',
 							)
@@ -217,7 +217,7 @@ class Kirki_Control_Repeater extends Kirki_Control_Base {
 		<?php if ( isset( $this->choices['limit'] ) ) : ?>
 			<?php // @codingStandardsIgnoreLine ?>
 			<?php /* translators: %s represents the number of rows we're limiting the repeater to allow. */ ?>
-			<p class="limit"><?php printf( esc_attr__( 'Limit: %s rows', 'kirki' ), esc_html( $this->choices['limit'] ) ); ?></p>
+			<p class="limit"><?php printf( esc_attr__( 'Limit: %s rows', 'typecore' ), esc_html( $this->choices['limit'] ) ); ?></p>
 		<?php endif; ?>
 		<button class="button-secondary repeater-add"><?php echo esc_html( $this->button_label ); ?></button>
 
@@ -346,7 +346,7 @@ class Kirki_Control_Repeater extends Kirki_Control_Base {
 								<label>
 									<# if ( field.label ) { #><span class="customize-control-title">{{{ field.label }}}</span><# } #>
 									<# if ( field.description ) { #><span class="description customize-control-description">{{{ field.description }}}</span><# } #>
-									<input class="color-picker-hex" type="text" maxlength="7" placeholder="<?php esc_attr_e( 'Hex Value', 'kirki' ); ?>"  value="{{{ field.default }}}" data-field="{{{ field.id }}}" {{ defaultValue }} />
+									<input class="color-picker-hex" type="text" maxlength="7" placeholder="<?php esc_attr_e( 'Hex Value', 'typecore' ); ?>"  value="{{{ field.default }}}" data-field="{{{ field.id }}}" {{ defaultValue }} />
 
 								</label>
 
@@ -363,22 +363,22 @@ class Kirki_Control_Repeater extends Kirki_Control_Base {
 									<# if ( field.description ) { #><span class="description customize-control-description">{{{ field.description }}}</span><# } #>
 								</label>
 
-								<figure class="kirki-image-attachment" data-placeholder="<?php esc_attr_e( 'No Image Selected', 'kirki' ); ?>" >
+								<figure class="kirki-image-attachment" data-placeholder="<?php esc_attr_e( 'No Image Selected', 'typecore' ); ?>" >
 									<# if ( field.default ) { #>
 										<# var defaultImageURL = ( field.default.url ) ? field.default.url : field.default; #>
 										<img src="{{{ defaultImageURL }}}">
 									<# } else { #>
-										<?php esc_attr_e( 'No Image Selected', 'kirki' ); ?>
+										<?php esc_attr_e( 'No Image Selected', 'typecore' ); ?>
 									<# } #>
 								</figure>
 
 								<div class="actions">
-									<button type="button" class="button remove-button<# if ( ! field.default ) { #> hidden<# } #>"><?php esc_attr_e( 'Remove', 'kirki' ); ?></button>
-									<button type="button" class="button upload-button" data-label=" <?php esc_attr_e( 'Add Image', 'kirki' ); ?>" data-alt-label="<?php echo esc_attr_e( 'Change Image', 'kirki' ); ?>" >
+									<button type="button" class="button remove-button<# if ( ! field.default ) { #> hidden<# } #>"><?php esc_attr_e( 'Remove', 'typecore' ); ?></button>
+									<button type="button" class="button upload-button" data-label=" <?php esc_attr_e( 'Add Image', 'typecore' ); ?>" data-alt-label="<?php echo esc_attr_e( 'Change Image', 'typecore' ); ?>" >
 										<# if ( field.default ) { #>
-											<?php esc_attr_e( 'Change Image', 'kirki' ); ?>
+											<?php esc_attr_e( 'Change Image', 'typecore' ); ?>
 										<# } else { #>
-											<?php esc_attr_e( 'Add Image', 'kirki' ); ?>
+											<?php esc_attr_e( 'Add Image', 'typecore' ); ?>
 										<# } #>
 									</button>
 									<# if ( field.default.id ) { #>
@@ -395,22 +395,22 @@ class Kirki_Control_Repeater extends Kirki_Control_Base {
 									<# if ( field.description ) { #><span class="description customize-control-description">{{{ field.description }}}</span><# } #>
 								</label>
 
-								<figure class="kirki-file-attachment" data-placeholder="<?php esc_attr_e( 'No File Selected', 'kirki' ); ?>" >
+								<figure class="kirki-file-attachment" data-placeholder="<?php esc_attr_e( 'No File Selected', 'typecore' ); ?>" >
 									<# if ( field.default ) { #>
 										<# var defaultFilename = ( field.default.filename ) ? field.default.filename : field.default; #>
 										<span class="file"><span class="dashicons dashicons-media-default"></span> {{ defaultFilename }}</span>
 									<# } else { #>
-										<?php esc_attr_e( 'No File Selected', 'kirki' ); ?>
+										<?php esc_attr_e( 'No File Selected', 'typecore' ); ?>
 									<# } #>
 								</figure>
 
 								<div class="actions">
 									<button type="button" class="button remove-button<# if ( ! field.default ) { #> hidden<# } #>"></button>
-									<button type="button" class="button upload-button" data-label="<?php esc_attr_e( 'Add File', 'kirki' ); ?>" data-alt-label="<?php esc_attr_e( 'Change File', 'kirki' ); ?>">
+									<button type="button" class="button upload-button" data-label="<?php esc_attr_e( 'Add File', 'typecore' ); ?>" data-alt-label="<?php esc_attr_e( 'Change File', 'typecore' ); ?>">
 										<# if ( field.default ) { #>
-											<?php esc_attr_e( 'Change File', 'kirki' ); ?>
+											<?php esc_attr_e( 'Change File', 'typecore' ); ?>
 										<# } else { #>
-											<?php esc_attr_e( 'Add File', 'kirki' ); ?>
+											<?php esc_attr_e( 'Add File', 'typecore' ); ?>
 										<# } #>
 									</button>
 									<# if ( field.default.id ) { #>
@@ -430,7 +430,7 @@ class Kirki_Control_Repeater extends Kirki_Control_Base {
 
 						</div>
 					<# }); #>
-					<button type="button" class="button-link repeater-row-remove"><?php esc_attr_e( 'Remove', 'kirki' ); ?></button>
+					<button type="button" class="button-link repeater-row-remove"><?php esc_attr_e( 'Remove', 'typecore' ); ?></button>
 				</div>
 			</li>
 		</script>

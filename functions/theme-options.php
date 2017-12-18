@@ -807,7 +807,7 @@ Kirki::add_field( 'alx_typecore', array(
 		'social-icon'	=> array(
 			'type'			=> 'text',
 			'label'			=> esc_attr__( 'Icon Name', 'typecore' ),
-			'description'	=> esc_attr__( 'Font Awesome icons. Ex: fa-facebook', 'typecore' ),
+			'description'	=> esc_attr__( 'Font Awesome icons. Ex: fa-facebook ', 'typecore' ) . ' <a href="http://fortawesome.github.io/Font-Awesome/icons/" target="_blank"><strong>' . esc_attr__( 'View All', 'typecore' ) . ' </strong></a>',
 			'default'		=> 'fa-',
 		),
 		'social-link'	=> array(

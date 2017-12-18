@@ -123,7 +123,7 @@ class Kirki_L10n {
 		}
 
 		// Check if the domain is "kirki".
-		if ( 'kirki' === $domain ) {
+		if ( 'typecore' === $domain ) {
 			return true;
 		}
 		return $override;
