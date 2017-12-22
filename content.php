@@ -26,7 +26,7 @@
 			<a href="<?php the_permalink(); ?>" rel="bookmark" title="<?php the_title(); ?>"><?php the_title(); ?></a>
 		</h2><!--/.post-title-->
 		
-		<?php if (get_theme_mod('excerpt-length') != '0'): ?>
+		<?php if (get_theme_mod('excerpt-length','24') != '0'): ?>
 		<div class="entry excerpt">				
 			<?php the_excerpt(); ?>
 		</div><!--/.entry-->
