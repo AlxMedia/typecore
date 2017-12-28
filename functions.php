@@ -641,7 +641,7 @@ if ( ! function_exists( 'alx_pre_get_posts' ) ) {
 		if ( $query->is_home() ) {
 
 			// Featured posts enabled
-			if ( get_theme_mod('featured-posts-count') != '0' ) {
+			if ( get_theme_mod('featured-posts-count','3') != '0' ) {
 				// Get featured post ids
 				$featured_post_ids = alx_get_featured_post_ids();
 				// Exclude posts

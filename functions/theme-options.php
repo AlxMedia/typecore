@@ -209,7 +209,7 @@ Kirki::add_field( 'alx_theme', array(
 	'label'			=> esc_attr__( 'Featured Post Count', 'typecore' ),
 	'description'	=> esc_attr__( 'Max number of featured posts to display. Set to 1 and it will show it without any slider script. Set it to 0 to disable', 'typecore' ),
 	'section'		=> 'blog',
-	'default'		=> '1',
+	'default'		=> '3',
 	'choices'     => array(
 		'min'	=> '0',
 		'max'	=> '10',
