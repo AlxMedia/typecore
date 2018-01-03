@@ -522,9 +522,9 @@ if ( ! function_exists( 'alx_body_class' ) ) {
 		if ( get_theme_mod( 'boxed','off' ) != 'on' ) { $classes[] = 'full-width'; }
 		if ( get_theme_mod( 'boxed','off' ) == 'on' ) { $classes[] = 'boxed'; }
 		if ( has_nav_menu('topbar') ) {	$classes[] = 'topbar-enabled'; }
-		if ( get_theme_mod( 'mobile-sidebar-hide','s1' ) == 's1' ) { $classes[] = 'mobile-sidebar-hide-s1'; }
-		if ( get_theme_mod( 'mobile-sidebar-hide','s1' ) == 's2' ) { $classes[] = 'mobile-sidebar-hide-s2'; }
-		if ( get_theme_mod( 'mobile-sidebar-hide','s1' ) == 's1-s2' ) { $classes[] = 'mobile-sidebar-hide'; }
+		if ( get_theme_mod( 'mobile-sidebar-hide','1' ) == 's1' ) { $classes[] = 'mobile-sidebar-hide-s1'; }
+		if ( get_theme_mod( 'mobile-sidebar-hide','1' ) == 's2' ) { $classes[] = 'mobile-sidebar-hide-s2'; }
+		if ( get_theme_mod( 'mobile-sidebar-hide','1' ) == 's1-s2' ) { $classes[] = 'mobile-sidebar-hide'; }
 		return $classes;
 	}
 	
