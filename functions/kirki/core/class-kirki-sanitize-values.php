@@ -22,21 +22,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 class Kirki_Sanitize_Values {
 
 	/**
-	 * Fallback for non-existing methods.
-	 *
-	 * @static
-	 * @access public
-	 * @param string $name The method we're trying to access.
-	 * @param mixed  $arguments The arguments the method we're trying to call accepts.
-	 * @return mixed The $arguments provided.
-	 */
-	public static function __callStatic( $name, $arguments ) {
-		/* translators: %s represents the method that was called and does not exist. */
-		_doing_it_wrong( __METHOD__, sprintf( esc_attr__( 'Kirki_Sanitize_Values::%s does not exist', 'typecore' ), esc_attr( $name ) ), '3.0.10' );
-		return $arguments;
-	}
-
-	/**
 	 * Checkbox sanitization callback.
 	 *
 	 * Sanitization callback for 'checkbox' type controls.
@@ -117,7 +102,7 @@ class Kirki_Sanitize_Values {
 		}
 
 		// If auto, inherit or initial, return the value.
-		if ( 'auto' === $value || 'initial' === $value || 'inherit' === $value ) {
+		if ( 'auto' === $value || 'initial' === $value || 'inherit' === $value || 'normal' === $value ) {
 			return $value;
 		}
 
@@ -136,7 +121,7 @@ class Kirki_Sanitize_Values {
 		$unit_used = '';
 
 		// An array of all valid CSS units. Their order was carefully chosen for this evaluation, don't mix it up!!!
-		$units = array( 'rem', 'em', 'ex', '%', 'px', 'cm', 'mm', 'in', 'pt', 'pc', 'ch', 'vh', 'vw', 'vmin', 'vmax' );
+		$units = array( 'fr', 'rem', 'em', 'ex', '%', 'px', 'cm', 'mm', 'in', 'pt', 'pc', 'ch', 'vh', 'vw', 'vmin', 'vmax' );
 		foreach ( $units as $unit ) {
 			if ( false !== strpos( $value, $unit ) ) {
 				$unit_used = $unit;

@@ -142,8 +142,8 @@ class Kirki extends Kirki_Init {
 	 */
 	public static function add_config( $config_id, $args = array() ) {
 
-		$config = Kirki_Config::get_instance( $config_id, $args );
-		$config_args = $config->get_config();
+		$config                             = Kirki_Config::get_instance( $config_id, $args );
+		$config_args                        = $config->get_config();
 		self::$config[ $config_args['id'] ] = $config_args;
 	}
 
@@ -158,8 +158,8 @@ class Kirki extends Kirki_Init {
 	public static function add_panel( $id = '', $args = array() ) {
 
 		$args['id']          = esc_attr( $id );
-		$args['description'] = ( isset( $args['description'] ) ) ? esc_textarea( $args['description'] ) : '';
-		$args['priority']    = ( isset( $args['priority'] ) ) ? esc_attr( $args['priority'] ) : 10;
+		$args['description'] = ( isset( $args['description'] ) ) ? $args['description'] : '';
+		$args['priority']    = ( isset( $args['priority'] ) ) ? absint( $args['priority'] ) : 10;
 		$args['type']        = ( isset( $args['type'] ) ) ? $args['type'] : 'default';
 		$args['type']        = 'kirki-' . $args['type'];
 
@@ -192,8 +192,8 @@ class Kirki extends Kirki_Init {
 
 		$args['id']          = esc_attr( $id );
 		$args['panel']       = ( isset( $args['panel'] ) ) ? esc_attr( $args['panel'] ) : '';
-		$args['description'] = ( isset( $args['description'] ) ) ? esc_textarea( $args['description'] ) : '';
-		$args['priority']    = ( isset( $args['priority'] ) ) ? esc_attr( $args['priority'] ) : 10;
+		$args['description'] = ( isset( $args['description'] ) ) ? $args['description'] : '';
+		$args['priority']    = ( isset( $args['priority'] ) ) ? absint( $args['priority'] ) : 10;
 		$args['type']        = ( isset( $args['type'] ) ) ? $args['type'] : 'default';
 		$args['type']        = 'kirki-' . $args['type'];
 
@@ -225,7 +225,7 @@ class Kirki extends Kirki_Init {
 	public static function add_field( $config_id, $args ) {
 
 		if ( doing_action( 'customize_register' ) ) {
-			_doing_it_wrong( __METHOD__, esc_attr__( 'Kirki fields should not be added on customize_register. Please add them directly, or on init.', 'typecore' ), '3.0.10' );
+			_doing_it_wrong( __METHOD__, esc_attr__( 'Kirki fields should not be added on customize_register. Please add them directly, or on init.', 'kirki' ), '3.0.10' );
 		}
 
 		// Early exit if 'type' is not defined.
@@ -233,7 +233,12 @@ class Kirki extends Kirki_Init {
 			return;
 		}
 
-		$str = str_replace( array( '-', '_' ), ' ', $args['type'] );
+		// If the field is font-awesome, enqueue the icons on the frontend.
+		if ( class_exists( 'Kirki_Modules_CSS' ) && ( 'fontawesome' === $args['type'] || 'kirki-fontawesome' === $args['type'] ) ) {
+			Kirki_Modules_CSS::add_fontawesome_script();
+		}
+
+		$str       = str_replace( array( '-', '_' ), ' ', $args['type'] );
 		$classname = 'Kirki_Field_' . str_replace( ' ', '_', ucwords( $str ) );
 		if ( class_exists( $classname ) ) {
 			new $classname( $config_id, $args );

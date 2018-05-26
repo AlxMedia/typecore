@@ -59,6 +59,16 @@ class Kirki_Modules_CSS {
 	protected $css_to_file;
 
 	/**
+	 * Should we enqueue font-awesome?
+	 *
+	 * @static
+	 * @access protected
+	 * @since 3.0.26
+	 * @var bool
+	 */
+	protected static $enqueue_fa = false;
+
+	/**
 	 * Constructor
 	 *
 	 * @access protected
@@ -117,7 +127,7 @@ class Kirki_Modules_CSS {
 
 		global $wp_customize;
 
-		$config   = apply_filters( 'kirki/config', array() );
+		$config   = apply_filters( 'kirki_config', array() );
 		$priority = 999;
 		if ( isset( $config['styles_priority'] ) ) {
 			$priority = absint( $config['styles_priority'] );
@@ -128,7 +138,7 @@ class Kirki_Modules_CSS {
 			return;
 		}
 
-		$method = apply_filters( 'kirki/dynamic_css/method', 'inline' );
+		$method = apply_filters( 'kirki_dynamic_css_method', 'inline' );
 		if ( $wp_customize ) {
 			// If we're in the customizer, load inline no matter what.
 			add_action( 'wp_enqueue_scripts', array( $this, 'inline_dynamic_css' ), $priority );
@@ -190,13 +200,22 @@ class Kirki_Modules_CSS {
 					continue;
 				}
 				$styles = self::loop_controls( $config_id );
-				$styles = apply_filters( "kirki/{$config_id}/dynamic_css", $styles );
+				$styles = apply_filters( "kirki_{$config_id}_dynamic_css", $styles );
 				if ( ! empty( $styles ) ) {
+					$stylesheet = apply_filters( "kirki_{$config_id}_stylesheet", false );
+					if ( $stylesheet ) {
+						wp_add_inline_style( $stylesheet, $styles );
+						continue;
+					}
 					wp_enqueue_style( 'kirki-styles-' . $config_id, trailingslashit( Kirki::$url ) . 'assets/css/kirki-styles.css', array(), KIRKI_VERSION );
 					wp_add_inline_style( 'kirki-styles-' . $config_id, $styles );
 				}
 			}
 			$this->processed = true;
+		}
+
+		if ( self::$enqueue_fa && apply_filters( 'kirki_load_fontawesome', true ) ) {
+			wp_enqueue_script( 'kirki-fontawesome-font', 'https://use.fontawesome.com/30858dc40a.js', array(), '4.0.7', true );
 		}
 	}
 
@@ -247,7 +266,7 @@ class Kirki_Modules_CSS {
 				continue;
 			}
 
-			if ( true === apply_filters( "kirki/{$config_id}/css/skip_hidden", true ) ) {
+			if ( true === apply_filters( "kirki_{$config_id}_css_skip_hidden", true ) ) {
 				// Only continue if field dependencies are met.
 				if ( ! empty( $field['required'] ) ) {
 					$valid = true;
@@ -278,10 +297,23 @@ class Kirki_Modules_CSS {
 			}
 		}
 
-		$css = apply_filters( "kirki/{$config_id}/styles", $css );
+		$css = apply_filters( "kirki_{$config_id}_styles", $css );
 
 		if ( is_array( $css ) ) {
 			return Kirki_Modules_CSS_Generator::styles_parse( Kirki_Modules_CSS_Generator::add_prefixes( $css ) );
 		}
+	}
+
+	/**
+	 * Runs when we're adding a font-awesome field to allow enqueueing the
+	 * fontawesome script on the frontend.
+	 *
+	 * @static
+	 * @since 3.0.26
+	 * @access public
+	 * @return void
+	 */
+	public static function add_fontawesome_script() {
+		self::$enqueue_fa = true;
 	}
 }

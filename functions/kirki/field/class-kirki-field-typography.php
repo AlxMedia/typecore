@@ -57,11 +57,6 @@ class Kirki_Field_Typography extends Kirki_Field {
 		if ( isset( $this->default['letter-spacing'] ) && is_numeric( $this->default['letter-spacing'] ) && $this->default['letter-spacing'] ) {
 			$this->default['letter-spacing'] .= 'px';
 		}
-
-		// Make sure we use "subsets" instead of "subset".
-		if ( isset( $this->default['subset'] ) && ! empty( $this->default['subset'] ) && ( ! isset( $this->default['subsets'] ) || empty( $this->default['subsets'] ) ) ) {
-			$this->default['subsets'] = $this->default['subset'];
-		}
 	}
 
 	/**
@@ -173,47 +168,29 @@ class Kirki_Field_Typography extends Kirki_Field {
 						$value['font-style'] = ( false === strpos( $value['variant'], 'italic' ) ) ? 'normal' : 'italic';
 					}
 					break;
-				case 'subset':
-					// Make sure the saved value is "subsets" (plural) and not "subset".
-					// This is for compatibility with older versions.
-					if ( ! empty( $value['subset'] ) && ! isset( $value['subsets'] ) || empty( $value['subset'] ) ) {
-						$value['subsets'] = $value['subset'];
-					}
-					unset( $value['subset'] );
-					// Make sure we're using a valid subset.
-					$valid_subsets = Kirki_Fonts::get_google_font_subsets();
-					$subsets_ok = array();
-					$value['subsets'] = (array) $value['subsets'];
-					foreach ( $value['subsets'] as $subset ) {
-						if ( array_key_exists( $subset, $valid_subsets ) ) {
-							$subsets_ok[] = $subset;
-						}
-					}
-					$value['subsets'] = $subsets_ok;
-					break;
 				case 'font-size':
 				case 'letter-spacing':
 				case 'word-spacing':
 				case 'line-height':
-					$value[ $key ] = Kirki_Sanitize_Values::css_dimension( $val );
+					$value[ $key ] = '' === trim( $value[ $key ] ) ? '' : sanitize_text_field( $val );
 					break;
 				case 'text-align':
-					if ( ! in_array( $val, array( 'inherit', 'left', 'center', 'right', 'justify' ), true ) ) {
-						$value['text-align'] = 'inherit';
+					if ( ! in_array( $val, array( '', 'inherit', 'left', 'center', 'right', 'justify' ), true ) ) {
+						$value['text-align'] = '';
 					}
 					break;
 				case 'text-transform':
-					if ( ! in_array( $val, array( 'none', 'capitalize', 'uppercase', 'lowercase', 'initial', 'inherit' ), true ) ) {
-						$value['text-transform'] = 'none';
+					if ( ! in_array( $val, array( '', 'none', 'capitalize', 'uppercase', 'lowercase', 'initial', 'inherit' ), true ) ) {
+						$value['text-transform'] = '';
 					}
 					break;
 				case 'text-decoration':
-					if ( ! in_array( $val, array( 'none', 'underline', 'overline', 'line-through', 'initial', 'inherit' ), true ) ) {
-						$value['text-transform'] = 'none';
+					if ( ! in_array( $val, array( ''. 'none', 'underline', 'overline', 'line-through', 'initial', 'inherit' ), true ) ) {
+						$value['text-transform'] = '';
 					}
 					break;
 				case 'color':
-					$value['color'] = ariColor::newColor( $val )->toCSS( 'hex' );
+					$value['color'] = '' === $value['color'] ? '' : ariColor::newColor( $val )->toCSS( 'hex' );
 					break;
 			} // End switch().
 		} // End foreach().

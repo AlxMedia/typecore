@@ -27,6 +27,15 @@ final class Kirki_Fonts_Google {
 	private static $instance = null;
 
 	/**
+	 * DUMMY. DOESN'T DO ANYTHING, SIMPLY BACKWARDS-COMPATIBILITY.
+	 *
+	 * @static
+	 * @access public
+	 * @var bool
+	 */
+	public static $force_load_all_subsets = false;
+
+	/**
 	 * If set to true, forces loading ALL variants.
 	 *
 	 * @static
@@ -34,15 +43,6 @@ final class Kirki_Fonts_Google {
 	 * @var bool
 	 */
 	public static $force_load_all_variants = false;
-
-	/**
-	 * If set to true, forces loading ALL subsets.
-	 *
-	 * @static
-	 * @access public
-	 * @var bool
-	 */
-	public static $force_load_all_subsets = false;
 
 	/**
 	 * The array of fonts
@@ -61,19 +61,20 @@ final class Kirki_Fonts_Google {
 	private $google_fonts = array();
 
 	/**
-	 * The array of subsets
+	 * An array of fonts that should be hosted locally instead of served via the google-CDN.
 	 *
-	 * @access public
+	 * @access protected
+	 * @since 3.0.32
 	 * @var array
 	 */
-	public $subsets = array();
+	protected $hosted_fonts = array();
 
 	/**
 	 * The class constructor.
 	 */
 	private function __construct() {
 
-		$config = apply_filters( 'kirki/config', array() );
+		$config = apply_filters( 'kirki_config', array() );
 
 		// If we have set $config['disable_google_fonts'] to true then do not proceed any further.
 		if ( isset( $config['disable_google_fonts'] ) && true === $config['disable_google_fonts'] ) {
@@ -81,13 +82,12 @@ final class Kirki_Fonts_Google {
 		}
 
 		add_action( 'wp_ajax_kirki_fonts_google_all_get', array( $this, 'get_googlefonts_json' ) );
-		add_action( 'wp_ajax_noprinv_kirki_fonts_google_all_get', array( $this, 'get_googlefonts_json' ) );
-		add_action( 'wp_ajax_kirki_fonts_standard_all_get', array( $this, 'get_strandardfonts_json' ) );
-		add_action( 'wp_ajax_noprinv_kirki_fonts_standard_all_get', array( $this, 'get_strandardfonts_json' ) );
+		add_action( 'wp_ajax_nopriv_kirki_fonts_google_all_get', array( $this, 'get_googlefonts_json' ) );
+		add_action( 'wp_ajax_kirki_fonts_standard_all_get', array( $this, 'get_standardfonts_json' ) );
+		add_action( 'wp_ajax_nopriv_kirki_fonts_standard_all_get', array( $this, 'get_standardfonts_json' ) );
 
 		// Populate the array of google fonts.
 		$this->google_fonts = Kirki_Fonts::get_google_fonts();
-
 	}
 
 	/**
@@ -112,14 +112,20 @@ final class Kirki_Fonts_Google {
 	 */
 	public function generate_google_font( $args ) {
 
+		global $wp_customize;
+
 		// Process typography fields.
 		if ( isset( $args['type'] ) && 'kirki-typography' === $args['type'] ) {
 
 			// Get the value.
 			$value = Kirki_Values::get_sanitized_field_value( $args );
 
+			if ( isset( $value['downloadFont'] ) && $value['downloadFont'] ) {
+				$this->hosted_fonts[] = $value['font-family'];
+			}
+
 			// If we don't have a font-family then we can skip this.
-			if ( ! isset( $value['font-family'] ) ) {
+			if ( ! $wp_customize && ( ! isset( $value['font-family'] ) || in_array( $value['font-family'], $this->hosted_fonts ) ) ) {
 				return;
 			}
 
@@ -132,18 +138,6 @@ final class Kirki_Fonts_Google {
 			if ( ! isset( $value['variant'] ) ) {
 				$value['variant'] = 'regular';
 			}
-			if ( isset( $value['subsets'] ) ) {
-
-				// Add the subset directly to the array of subsets in the Kirki_GoogleFonts_Manager object.
-				// Subsets must be applied to ALL fonts if possible.
-				if ( ! is_array( $value['subsets'] ) ) {
-					$this->subsets[] = $value['subsets'];
-				} else {
-					foreach ( $value['subsets'] as $subset ) {
-						$this->subsets[] = $subset;
-					}
-				}
-			}
 
 			// Add the requested google-font.
 			if ( ! isset( $this->fonts[ $value['font-family'] ] ) ) {
@@ -154,7 +148,7 @@ final class Kirki_Fonts_Google {
 			}
 			// Are we force-loading all variants?
 			if ( true === self::$force_load_all_variants ) {
-				$all_variants = Kirki_Fonts::get_all_variants();
+				$all_variants               = Kirki_Fonts::get_all_variants();
 				$args['choices']['variant'] = array_keys( $all_variants );
 			}
 
@@ -163,47 +157,35 @@ final class Kirki_Fonts_Google {
 					$this->fonts[ $value['font-family'] ][] = $extra_variant;
 				}
 			}
-		} else {
+			return;
+		}
 
-			// Process non-typography fields.
-			if ( isset( $args['output'] ) && is_array( $args['output'] ) ) {
-				foreach ( $args['output'] as $output ) {
+		// Process non-typography fields.
+		if ( isset( $args['output'] ) && is_array( $args['output'] ) ) {
+			foreach ( $args['output'] as $output ) {
 
-					// If we don't have a typography-related output argument we can skip this.
-					if ( ! isset( $output['property'] ) || ! in_array( $output['property'], array( 'font-family', 'font-weight', 'font-subset', 'subset', 'subsets' ), true ) ) {
-						continue;
-					}
+				// If we don't have a typography-related output argument we can skip this.
+				if ( ! isset( $output['property'] ) || ! in_array( $output['property'], array( 'font-family', 'font-weight' ), true ) ) {
+					continue;
+				}
 
-					// Get the value.
-					$value = Kirki_Values::get_sanitized_field_value( $args );
+				// Get the value.
+				$value = Kirki_Values::get_sanitized_field_value( $args );
 
-					if ( is_string( $value ) ) {
-						if ( 'font-family' === $output['property'] ) {
-							if ( ! array_key_exists( $value, $this->fonts ) ) {
-								$this->fonts[ $value ] = array();
-							}
-						} elseif ( 'font-weight' === $output['property'] ) {
-							foreach ( $this->fonts as $font => $variants ) {
-								if ( ! in_array( $value, $variants, true ) ) {
-									$this->fonts[ $font ][] = $value;
-								}
-							}
-						} elseif ( 'font-subset' === $output['property'] || 'subset' === $output['property'] || 'subsets' === $output['property'] ) {
-							if ( ! is_array( $value ) ) {
-								if ( ! in_array( $value, $this->subsets, true ) ) {
-									$this->subsets[] = $value;
-								}
-							} else {
-								foreach ( $value as $subset ) {
-									if ( ! in_array( $subset, $this->subsets, true ) ) {
-										$this->subsets[] = $subset;
-									}
-								}
+				if ( is_string( $value ) ) {
+					if ( 'font-family' === $output['property'] ) {
+						if ( ! array_key_exists( $value, $this->fonts ) ) {
+							$this->fonts[ $value ] = array();
+						}
+					} elseif ( 'font-weight' === $output['property'] ) {
+						foreach ( $this->fonts as $font => $variants ) {
+							if ( ! in_array( $value, $variants, true ) ) {
+								$this->fonts[ $font ][] = $value;
 							}
 						}
 					}
-				} // End foreach().
-			} // End if().
+				}
+			} // End foreach().
 		} // End if().
 	}
 
@@ -219,7 +201,6 @@ final class Kirki_Fonts_Google {
 			return;
 		}
 
-		$valid_subsets = array();
 		foreach ( $this->fonts as $font => $variants ) {
 
 			// Determine if this is indeed a google font or not.
@@ -244,18 +225,7 @@ final class Kirki_Fonts_Google {
 					continue;
 				}
 			}
-
-			// Check if the selected subsets exist, even in one of the selected fonts.
-			// If they don't, then they have to be removed otherwise the link will fail.
-			if ( isset( $this->google_fonts[ $font ]['subsets'] ) ) {
-				foreach ( $this->subsets as $subset ) {
-					if ( in_array( $subset, $this->google_fonts[ $font ]['subsets'], true ) ) {
-						$valid_subsets[] = $subset;
-					}
-				}
-			}
 		}
-		$this->subsets = $valid_subsets;
 	}
 
 	/**
@@ -275,8 +245,19 @@ final class Kirki_Fonts_Google {
 	 * @since 3.0.17
 	 * @return void
 	 */
-	public function get_strandardfonts_json() {
+	public function get_standardfonts_json() {
 		echo wp_json_encode( Kirki_Fonts::get_standard_fonts() ); // WPCS: XSS ok.
 		wp_die();
+	}
+
+	/**
+	 * Gets $this->hosted_fonts.
+	 *
+	 * @access public
+	 * @since 3.0.32
+	 * @return array
+	 */
+	public function get_hosted_fonts() {
+		return $this->hosted_fonts;
 	}
 }

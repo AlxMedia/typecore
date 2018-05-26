@@ -71,7 +71,7 @@ final class Kirki_Fonts {
 		$standard_fonts = self::get_standard_fonts();
 		$google_fonts   = self::get_google_fonts();
 
-		return apply_filters( 'kirki/fonts/all', array_merge( $standard_fonts, $google_fonts ) );
+		return apply_filters( 'kirki_fonts_all', array_merge( $standard_fonts, $google_fonts ) );
 	}
 
 	/**
@@ -81,20 +81,20 @@ final class Kirki_Fonts {
 	 */
 	public static function get_standard_fonts() {
 		$standard_fonts = array(
-			'serif' => array(
+			'serif'      => array(
 				'label' => 'Serif',
 				'stack' => 'Georgia,Times,"Times New Roman",serif',
 			),
 			'sans-serif' => array(
-				'label'  => 'Sans Serif',
-				'stack'  => '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif',
+				'label' => 'Sans Serif',
+				'stack' => '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif',
 			),
-			'monospace' => array(
+			'monospace'  => array(
 				'label' => 'Monospace',
 				'stack' => 'Monaco,"Lucida Sans Typewriter","Lucida Typewriter","Courier New",Courier,monospace',
 			),
 		);
-		return apply_filters( 'kirki/fonts/standard_fonts', $standard_fonts );
+		return apply_filters( 'kirki_fonts_standard_fonts', $standard_fonts );
 	}
 
 	/**
@@ -110,7 +110,7 @@ final class Kirki_Fonts {
 			'handwriting' => '"Comic Sans MS", cursive, sans-serif',
 			'monospace'   => '"Lucida Console", Monaco, monospace',
 		);
-		return apply_filters( 'kirki/fonts/backup_fonts', $backup_fonts );
+		return apply_filters( 'kirki_fonts_backup_fonts', $backup_fonts );
 	}
 
 	/**
@@ -120,38 +120,46 @@ final class Kirki_Fonts {
 	 */
 	public static function get_google_fonts() {
 
-		if ( null === self::$google_fonts || empty( self::$google_fonts ) ) {
+		// Get fonts from cache.
+		self::$google_fonts = get_site_transient( 'kirki_googlefonts_cache' );
 
-			$fonts = include_once wp_normalize_path( dirname( __FILE__ ) . '/webfonts.php' );
-
-			$google_fonts = array();
-			if ( is_array( $fonts ) ) {
-				foreach ( $fonts['items'] as $font ) {
-					$google_fonts[ $font['family'] ] = array(
-						'label'    => $font['family'],
-						'variants' => $font['variants'],
-						'subsets'  => $font['subsets'],
-						'category' => $font['category'],
-					);
-				}
-			}
-
-			self::$google_fonts = apply_filters( 'kirki/fonts/google_fonts', $google_fonts );
-
+		// If we're debugging, don't use cached.
+		if ( defined( 'WP_DEBUG' ) && WP_DEBUG ) {
+			self::$google_fonts = false;
 		}
 
+		// If cache is populated, return cached fonts array.
+		if ( self::$google_fonts ) {
+			return self::$google_fonts;
+		}
+
+		// If we got this far, cache was empty so we need to get from JSON.
+		ob_start();
+		include wp_normalize_path( dirname( __FILE__ ) . '/webfonts.json' );
+
+		$fonts_json = ob_get_clean();
+		$fonts      = json_decode( $fonts_json, true );
+
+		$google_fonts = array();
+		if ( is_array( $fonts ) ) {
+			foreach ( $fonts['items'] as $font ) {
+				$google_fonts[ $font['family'] ] = array(
+					'label'    => $font['family'],
+					'variants' => $font['variants'],
+					'category' => $font['category'],
+				);
+			}
+		}
+
+		// Apply the 'kirki_fonts_google_fonts' filter.
+		self::$google_fonts = apply_filters( 'kirki_fonts_google_fonts', $google_fonts );
+
+		// Save the array in cache.
+		$cache_time = apply_filters( 'kirki_googlefonts_transient_time', HOUR_IN_SECONDS );
+		set_site_transient( 'kirki_googlefonts_cache', self::$google_fonts, $cache_time );
+
 		return self::$google_fonts;
-
 	}
-
-	/**
-	 * Dummy function to avoid issues with backwards-compatibility.
-	 * This is not functional, but it will prevent PHP Fatal errors.
-	 *
-	 * @static
-	 * @access public
-	 */
-	public static function get_google_font_uri() {}
 
 	/**
 	 * Returns an array of all available subsets.
@@ -182,6 +190,15 @@ final class Kirki_Fonts {
 	}
 
 	/**
+	 * Dummy function to avoid issues with backwards-compatibility.
+	 * This is not functional, but it will prevent PHP Fatal errors.
+	 *
+	 * @static
+	 * @access public
+	 */
+	public static function get_google_font_uri() {}
+
+	/**
 	 * Returns an array of all available variants.
 	 *
 	 * @static
@@ -190,29 +207,29 @@ final class Kirki_Fonts {
 	 */
 	public static function get_all_variants() {
 		return array(
-			'100'       => esc_attr__( 'Ultra-Light 100', 'typecore' ),
-			'100light'  => esc_attr__( 'Ultra-Light 100', 'typecore' ),
-			'100italic' => esc_attr__( 'Ultra-Light 100 Italic', 'typecore' ),
-			'200'       => esc_attr__( 'Light 200', 'typecore' ),
-			'200italic' => esc_attr__( 'Light 200 Italic', 'typecore' ),
-			'300'       => esc_attr__( 'Book 300', 'typecore' ),
-			'300italic' => esc_attr__( 'Book 300 Italic', 'typecore' ),
-			'400'       => esc_attr__( 'Normal 400', 'typecore' ),
-			'regular'   => esc_attr__( 'Normal 400', 'typecore' ),
-			'italic'    => esc_attr__( 'Normal 400 Italic', 'typecore' ),
-			'500'       => esc_attr__( 'Medium 500', 'typecore' ),
-			'500italic' => esc_attr__( 'Medium 500 Italic', 'typecore' ),
-			'600'       => esc_attr__( 'Semi-Bold 600', 'typecore' ),
-			'600bold'   => esc_attr__( 'Semi-Bold 600', 'typecore' ),
-			'600italic' => esc_attr__( 'Semi-Bold 600 Italic', 'typecore' ),
-			'700'       => esc_attr__( 'Bold 700', 'typecore' ),
-			'700italic' => esc_attr__( 'Bold 700 Italic', 'typecore' ),
-			'800'       => esc_attr__( 'Extra-Bold 800', 'typecore' ),
-			'800bold'   => esc_attr__( 'Extra-Bold 800', 'typecore' ),
-			'800italic' => esc_attr__( 'Extra-Bold 800 Italic', 'typecore' ),
-			'900'       => esc_attr__( 'Ultra-Bold 900', 'typecore' ),
-			'900bold'   => esc_attr__( 'Ultra-Bold 900', 'typecore' ),
-			'900italic' => esc_attr__( 'Ultra-Bold 900 Italic', 'typecore' ),
+			'100'       => esc_attr__( 'Ultra-Light 100', 'kirki' ),
+			'100light'  => esc_attr__( 'Ultra-Light 100', 'kirki' ),
+			'100italic' => esc_attr__( 'Ultra-Light 100 Italic', 'kirki' ),
+			'200'       => esc_attr__( 'Light 200', 'kirki' ),
+			'200italic' => esc_attr__( 'Light 200 Italic', 'kirki' ),
+			'300'       => esc_attr__( 'Book 300', 'kirki' ),
+			'300italic' => esc_attr__( 'Book 300 Italic', 'kirki' ),
+			'400'       => esc_attr__( 'Normal 400', 'kirki' ),
+			'regular'   => esc_attr__( 'Normal 400', 'kirki' ),
+			'italic'    => esc_attr__( 'Normal 400 Italic', 'kirki' ),
+			'500'       => esc_attr__( 'Medium 500', 'kirki' ),
+			'500italic' => esc_attr__( 'Medium 500 Italic', 'kirki' ),
+			'600'       => esc_attr__( 'Semi-Bold 600', 'kirki' ),
+			'600bold'   => esc_attr__( 'Semi-Bold 600', 'kirki' ),
+			'600italic' => esc_attr__( 'Semi-Bold 600 Italic', 'kirki' ),
+			'700'       => esc_attr__( 'Bold 700', 'kirki' ),
+			'700italic' => esc_attr__( 'Bold 700 Italic', 'kirki' ),
+			'800'       => esc_attr__( 'Extra-Bold 800', 'kirki' ),
+			'800bold'   => esc_attr__( 'Extra-Bold 800', 'kirki' ),
+			'800italic' => esc_attr__( 'Extra-Bold 800 Italic', 'kirki' ),
+			'900'       => esc_attr__( 'Ultra-Bold 900', 'kirki' ),
+			'900bold'   => esc_attr__( 'Ultra-Bold 900', 'kirki' ),
+			'900italic' => esc_attr__( 'Ultra-Bold 900 Italic', 'kirki' ),
 		);
 	}
 
@@ -236,7 +253,7 @@ final class Kirki_Fonts {
 	 * @return array
 	 */
 	public static function get_font_choices() {
-		$fonts = self::get_all_fonts();
+		$fonts       = self::get_all_fonts();
 		$fonts_array = array();
 		foreach ( $fonts as $key => $args ) {
 			$fonts_array[ $key ] = $key;

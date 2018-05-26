@@ -2,10 +2,10 @@
 Contributors: aristath, fovoc, igmoweb
 Tags: customizer,options framework, theme, mods, toolkit
 Donate link: https://aristath.github.io/donate
-Requires at least: 4.8.2
-Tested up to: 4.9.1
-Stable tag: 3.0.21
-License: GPLv2 or later
+Requires at least: 4.9
+Tested up to: 4.9.2
+Stable tag: 3.0.33
+License: MIT
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 The ultimate framework for theme developers using the WordPress Customizer
@@ -19,7 +19,7 @@ Using Kirki theme developers can create rich experiences for the WordPress Custo
 
 Included are more than 30 custom control types ranging from simple sliders to complex typography controls with Google-Fonts integration, automatic CSS generation, `postMessage` scripts automatically generated, tooltips and a lot of extras that make developing themes a lot faster for developers and meaningful for users.
 
-We advise you to familiarize yourself with the Customizer API before you start writing your theme using Kirki. An excellent handbook for the WordPress Customizer can be found on the [developer.wordpress.org](https://developer.wordpress.org/themes/customize-api/) website.
+We advise you to familiarise yourself with the Customizer API before you start writing your theme using Kirki. An excellent handbook for the WordPress Customizer can be found on the [developer.wordpress.org](https://developer.wordpress.org/themes/customize-api/) website.
 
 You can find detailed documentation on how to use Kirki on [https://aristath.github.io/kirki/](https://aristath.github.io/kirki/)
 
@@ -32,6 +32,131 @@ Simply install as a normal WordPress plugin and activate.
 If you want to integrate Kirki in your theme or plugin, please read the instructions on [our documentation site](https://aristath.github.io/kirki/docs/integration).
 
 == Changelog ==
+
+= 3.0.33 =
+
+May 17 2018
+
+* Fix: Google-Fonts folder permissions improperly set in v3.0.28.
+* Fix: Select issues in repeater controls [#1892](https://github.com/aristath/kirki/issues/1892), [#1888](https://github.com/aristath/kirki/issues/1888) props @asilcetin.
+* Fix: Updated Google Fonts to include latest font-family additions.
+
+= 3.0.32 =
+
+May 16 2018
+
+* Fix: Reverted some google-fonts changes. Fixes loading issues on some environments.
+* New: Added option per-typography-control to allow users to host Google Fonts on their own servers (GDPR compliance).
+
+= 3.0.31 =
+
+May 16 2018
+
+* Fix: Added fallback to google-CDN if locally-hosted google-fonts can't be found.
+* Fix: Updated google-fonts list.
+
+= 3.0.30 =
+
+May 15 2018
+
+* Fix: Fixed caching for locally-downloaded google-fonts (GDPR compliance helper).
+
+= 3.0.29 =
+
+May 15 2018
+
+* Fix: PHP error in some PHP versions because of the "do" method-name.
+
+= 3.0.28 =
+
+May 15 2018, dev time: 12 hours.
+
+* Fix: Repeater control JS issue if saved value is malformatted [#1879](https://github.com/aristath/kirki/issues/1879) - props @asilcetin.
+* Fix: Preset control bug [#1882](https://github.com/aristath/kirki/issues/1882).
+* Fix: JS error if an SVG is uploaded to an image control [#1883](https://github.com/aristath/kirki/issues/1883) Props @seantjohnson-dev
+* New: GDPR-Compliance: Google-Fonts are now downloaded server-side bypassing the google-CDN which collects user's IP addresses and personal data without their consent.
+* New: Added support for css-variables.
+
+= 3.0.27 =
+
+April 30 2018, dev time: 1 hour.
+
+* Fix: multiselect in repeaters. Props @asilcetin [#1876](https://github.com/aristath/kirki/issues/1876).
+* Fix: CSS output on numeric values. [issue link](https://wordpress.org/support/topic/all-css-output-from-kirki-stop-working-on-version-3-0-26/).
+
+= 3.0.26
+
+April 27 2018, dev time: 43 hours.
+
+* Fix: Color Palette: material colors 'light-blue' doesn't work [#1783](https://github.com/aristath/kirki/issues/1783).
+* Fix: Google Fonts switch error [#1791](https://github.com/aristath/kirki/issues/1791).
+* Fix: FontAwesome JS is being loaded even if you don't need it on front end [#1786](https://github.com/aristath/kirki/issues/1786).
+* Fix: Color Palette: Active color before section title [#1782](https://github.com/aristath/kirki/issues/1782).
+* Fix: Removed version from the webfont script.
+* Fix: Validation error for dimension fields.
+* Fix: `button_label` argument for repeater fields (props @felipeelia).
+* Fix: Allow html on radio-buttonset choices [#1818](https://github.com/aristath/kirki/issues/1818).
+* Fix: `Kirki_Helper::compare_values` vs. `field-dependencies.js` boolean issue (props @CaptJiggly) [#1825](https://github.com/aristath/kirki/issues/1825).
+* Fix: `active_callback` not working for checkboxes [#1809](https://github.com/aristath/kirki/issues/1809).
+* Fix: Nested `active_callback` args not working properly (AND|OR relations) [#1809](https://github.com/aristath/kirki/issues/1809).
+* Fix: Updated google-fonts.
+* Fix: Display typography with no default values [#1797](https://github.com/aristath/kirki/issues/1797).
+* Fix: Define "normal" as a valid css-value for sanitizations [#1814](https://github.com/aristath/kirki/issues/1814).
+* Fix: `background` controls now output `background-color` as simply `background` if no `background-image` is defined in the value [#1808](https://github.com/aristath/kirki/issues/1808).
+* Fix: @media-queries fix due to minimized CSS. [#1787](https://github.com/aristath/kirki/issues/1787).
+* Fix: `Kirki_Helper::compare_values` contains/in PHP warning if value doesn't exist in array [#1828](https://github.com/aristath/kirki/issues/1828).
+* Fix: Invalid Value in the Dimension control [#1844](https://github.com/aristath/kirki/issues/1844).
+* Fix: Add `fr` to the array of valid units used in validations [
+86adedb](https://github.com/aristath/kirki/pull/1784/commits/86adedb8cd4c06c7e6538c3087233a6840dee562)
+* Fix: Updated webfonts.
+* New: Migrated `number` control to new structure.
+
+= 3.0.25 =
+
+January 23 2018, dev time: 1 hour.
+
+Please note that the typography controls since v3.0.23 no longer require subsets. This is not a bug or omission, subsets are simply no longer necessary because there's an implementation now that loads them properly without requiring the user to define it.
+
+* Fix: partial reversion of webfontloader improvements in order to resolve an issue with incorect font-weights loading.
+
+= 3.0.24 =
+
+January 23 2018, dev time: 10 minutes.
+
+* Fix: Added back the `get_google_font_subsets()` method. Although it was always meant just to be used internally apparently a couple of themes out there use it and its removal caused a fatal error.
+
+= 3.0.23 =
+
+January 22 2018, dev time: 23 hours.
+
+* Fix: clear button on color controls [#1720](https://github.com/aristath/kirki/issues/1720)
+* Fix: PHP mode in code controls.
+* Fix: `active_callback` not working for upload fields [#1732](https://github.com/aristath/kirki/issues/1732)
+* Fix: accessibility issue on radio-buttonset controls [#1722](https://github.com/aristath/kirki/issues/1722)
+* Fix: `active_callback` not working for cropped-image controls [#1752](https://github.com/aristath/kirki/issues/1752)
+* Fix: added support for `button_labels` in image fields [#1173](https://github.com/aristath/kirki/issues/1173)
+* Fix: Support for adding inline CSS to an already defined stylesheet.
+* Fix: Sanitization in section & panel descriptions and priorities [#1759](https://github.com/aristath/kirki/issues/1759)
+* Fix: `active_callback` support when using serialized options [#1745](https://github.com/aristath/kirki/issues/1745)
+* Fix: Remove timepicker from date control [#1750](https://github.com/aristath/kirki/issues/1750)
+* Fix: WebfontLoader improvements.
+* Fix: Now using a datepicker for the `date` control [#1767](https://github.com/aristath/kirki/issues/1767)
+* New: Added "inherit" in the typography control's font-family option [w.org ticket](https://wordpress.org/support/topic/inherit-and-typography-control/)
+* New: Added googlefonts resource hints. Props @aryaprakasa.
+* New: Now loading fontawesome from a CDN. smaller footprint for the plugin and async loading will improve performance for everyone [#1763](https://github.com/aristath/kirki/issues/1763)
+* Tweak: Removed legacy code.
+* Tweak: Code cleanups.
+* Deprecated: Typography controls no longer require the "subset" dropdown.
+
+= 3.0.22 =
+
+December 20 2017, dev time: 3.5 hours.
+
+* Fix: Files cleanup. Removed webfonts.php and now use the json file.
+* Fix: WordPress Coding Standards fixes.
+* New: Converted all filter names to use `_` instead of `/` (WPCS). Fallback methods included.
+* New: Removed inline methods for webfonts and now use [typekit/webfontloader](https://github.com/typekit/webfontloader).
+* New: Update GoogleFonts list.
 
 = 3.0.21 =
 
