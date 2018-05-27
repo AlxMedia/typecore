@@ -45,7 +45,7 @@
 
 	<div class="post-format">
 			<?php if ( has_post_thumbnail() ) {	
-				the_post_thumbnail('thumb-large'); 
+				the_post_thumbnail('typecore-large'); 
 				$caption = get_post(get_post_thumbnail_id())->post_excerpt;
 				if ( isset($caption) && $caption ) echo '<div class="image-caption">'.$caption.'</div>';
 			} ?>

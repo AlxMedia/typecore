@@ -56,7 +56,7 @@ class AlxPosts extends WP_Widget {
 			<div class="post-item-thumbnail">
 				<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
 					<?php if ( has_post_thumbnail() ): ?>
-						<?php the_post_thumbnail('thumb-medium'); ?>
+						<?php the_post_thumbnail('typecore-medium'); ?>
 					<?php else: ?>
 						<img src="<?php echo get_template_directory_uri(); ?>/img/thumb-medium.png" alt="<?php the_title(); ?>" />
 					<?php endif; ?>

@@ -4,7 +4,7 @@
 		<div class="post-thumbnail">
 			<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
 				<?php if ( has_post_thumbnail() ): ?>
-					<?php the_post_thumbnail('thumb-large'); ?>
+					<?php the_post_thumbnail('typecore-large'); ?>
 				<?php elseif ( get_theme_mod('placeholder','on') == 'on' ): ?>
 					<img src="<?php echo get_template_directory_uri(); ?>/img/thumb-medium.png" alt="<?php the_title(); ?>" />
 				<?php endif; ?>
