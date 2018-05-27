@@ -66,12 +66,12 @@
 					<div class="grid one-half">
 						
 						<?php if ( get_theme_mod('footer-logo') ): ?>
-							<img id="footer-logo" src="<?php echo get_theme_mod('footer-logo'); ?>" alt="<?php get_bloginfo('name'); ?>">
+							<img id="footer-logo" src="<?php echo esc_url( get_theme_mod('footer-logo') ); ?>" alt="<?php get_bloginfo('name'); ?>">
 						<?php endif; ?>
 						
 						<div id="copyright">
 							<?php if ( get_theme_mod( 'copyright' ) ): ?>
-								<p><?php echo esc_attr( get_theme_mod( 'copyright' ) ); ?></p>
+								<p><?php echo esc_html( get_theme_mod( 'copyright' ) ); ?></p>
 							<?php else: ?>
 								<p><?php bloginfo(); ?> &copy; <?php echo date( 'Y' ); ?>. <?php esc_html_e( 'All Rights Reserved.', 'typecore' ); ?></p>
 							<?php endif; ?>
@@ -79,7 +79,7 @@
 						
 						<?php if ( get_theme_mod( 'credit', 'on' ) == 'on' ): ?>
 						<div id="credit">
-							<p><?php esc_html_e('Powered by','typecore'); ?> <a href="<?php echo esc_url( 'http://wordpress.org' ); ?>" rel="nofollow">WordPress</a>. <?php esc_html_e('Theme by','typecore'); ?> <a href="<?php echo esc_url( 'http://alxmedia.se' ); ?>" rel="nofollow">Alx</a>.</p>
+							<p><?php esc_html_e('Powered by','typecore'); ?> <a href="http://wordpress.org" rel="nofollow">WordPress</a>. <?php esc_html_e('Theme by','typecore'); ?> <a href="http://alxmedia.se" rel="nofollow">Alx</a>.</p>
 						</div><!--/#credit-->
 						<?php endif; ?>
 						

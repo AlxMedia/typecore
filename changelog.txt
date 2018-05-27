@@ -1,7 +1,0 @@
-  Theme : Typecore
-Version : 1.0.0
- Author : Alexander "Alx" Agnarson - http://alxmedia.se
-
-February 29 2016 - 1.0.0
-===========================================================
-- Theme released

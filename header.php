@@ -51,7 +51,7 @@
 				<?php endif; ?>
 				<?php if ( get_theme_mod('header-image','') ): ?>
 					<a href="<?php echo home_url('/'); ?>" rel="home">
-						<img class="site-image" src="<?php echo get_theme_mod('header-image'); ?>" alt="<?php get_bloginfo('name'); ?>">
+						<img class="site-image" src="<?php echo esc_url( get_theme_mod('header-image') ); ?>" alt="<?php get_bloginfo('name'); ?>">
 					</a>
 				<?php endif; ?>
 

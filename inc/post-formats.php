@@ -19,29 +19,7 @@
 	
 	<div class="post-format">
 		<?php $images = alx_post_images(); if ( !empty($images) ): ?>
-		<script type="text/javascript">
-			// Check if first slider image is loaded, and load flexslider on document ready
-			jQuery(document).ready(function(){
-			 var firstImage = jQuery('#flexslider-<?php echo the_ID(); ?>').find('img').filter(':first'),
-				checkforloaded = setInterval(function() {
-					var image = firstImage.get(0);
-					if (image.complete || image.readyState == 'complete' || image.readyState == 4) {
-						clearInterval(checkforloaded);
-						jQuery('#flexslider-<?php echo the_ID(); ?>').flexslider({
-							animation: "fade",
-							slideshow: false,
-							directionNav: true,
-							controlNav: false,
-							pauseOnHover: true,
-							slideshowSpeed: 7000,
-							animationSpeed: 600,
-							smoothHeight: true,
-							touch: false
-						});
-					}
-				}, 20);
-			});
-		</script>
+		
 		<div class="flex-container">
 			<div class="flexslider" id="flexslider-<?php the_ID(); ?>">
 				<ul class="slides">

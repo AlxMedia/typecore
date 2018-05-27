@@ -13,7 +13,7 @@
 		<article <?php post_class(); ?>>
 
 			<div class="post-thumbnail">
-				<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+				<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
 					<?php if ( has_post_thumbnail() ): ?>
 						<?php the_post_thumbnail('thumb-medium'); ?>
 					<?php elseif ( get_theme_mod('placeholder','on') == 'on' ): ?>
@@ -31,7 +31,7 @@
 			<div class="related-inner">
 				
 				<h4 class="post-title">
-					<a href="<?php the_permalink(); ?>" rel="bookmark" title="<?php the_title(); ?>"><?php the_title(); ?></a>
+					<a href="<?php the_permalink(); ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>
 				</h4><!--/.post-title-->
 				
 				<div class="post-meta group">
