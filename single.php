@@ -17,12 +17,12 @@
 					
 					<div class="clear"></div>
 					
-					<div class="entry themeform <?php if ( get_theme_mod('sharrre','on') == 'on' ) { echo 'share'; }; ?>">	
+					<div class="entry themeform <?php if( function_exists( 'alx_ext_sharrre_template' ) ) { echo 'share'; } ?>">	
 						<div class="entry-inner">
 							<?php the_content(); ?>
 							<?php wp_link_pages(array('before'=>'<div class="post-pages">'.esc_html__('Pages:','typecore'),'after'=>'</div>')); ?>
 						</div>
-						<?php if ( get_theme_mod( 'sharrre', 'on' ) == 'on' ) { get_template_part('inc/sharrre'); } ?>
+						<?php do_action( 'alx_ext_sharrre' ); ?>
 						<div class="clear"></div>				
 					</div><!--/.entry-->
 					

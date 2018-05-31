@@ -2,7 +2,7 @@
 Contributors: alxmedia
 Requires at least: 4.9
 Tested up to: 4.9
-Version: 1.0.1
+Version: 1.0.2
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Tags: one-column, two-columns, three-columns, right-sidebar, left-sidebar, custom-colors, custom-menu, featured-images, flexible-header, full-width-template, post-formats, sticky-post, theme-options, threaded-comments, translation-ready
@@ -47,6 +47,9 @@ License: CC0 1.0 Universal (CC0 1.0)
 Source: http://pixabay.com/
 
 == Changelog ==
+
+= 1.0.2 - 2018-05-30 =
+* Moved social share bar to a plugin
 
 = 1.0.1 - 2018-05-25 =
 * Numerous required fixes for wordpress.org
