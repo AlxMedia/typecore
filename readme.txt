@@ -46,6 +46,32 @@ Screenshot images
 License: CC0 1.0 Universal (CC0 1.0)
 Source: http://pixabay.com/
 
+Left sidebar images
+1. Pixabay ID 95032 - https://pixabay.com/en/utah-mountain-biking-bike-biking-95032/ - CC0 1.0 Universal (CC0 1.0)
+2. Pixabay ID 690547 - https://pixabay.com/en/people-hat-toque-jacket-warm-690547/ - CC0 1.0 Universal (CC0 1.0)
+3. Pixabay ID 77552 - https://pixabay.com/en/motorcycle-zero-s-action-77552/ - CC0 1.0 Universal (CC0 1.0)
+4. Pixabay ID 677770 - https://pixabay.com/en/person-male-man-looking-sitting-677770/ - CC0 1.0 Universal (CC0 1.0)
+5. Pixabay ID 690230 - https://pixabay.com/en/grapes-bunch-fruit-person-holding-690230/ - CC0 1.0 Universal (CC0 1.0)
+6. Pixabay ID 593155 - https://pixabay.com/en/scooter-italy-vintage-old-green-593155/ - CC0 1.0 Universal (CC0 1.0)
+7. Pixabay ID 407108 - https://pixabay.com/en/smartphone-movie-taking-pictures-407108/ - CC0 1.0 Universal (CC0 1.0)
+8. Pixabay ID 77552 - https://pixabay.com/en/motorcycle-zero-s-action-77552/ - CC0 1.0 Universal (CC0 1.0)
+
+Content images
+1. Pixabay ID 95032 - https://pixabay.com/en/utah-mountain-biking-bike-biking-95032/ - CC0 1.0 Universal (CC0 1.0)
+2. Pixabay ID 690230 - https://pixabay.com/en/grapes-bunch-fruit-person-holding-690230/ - CC0 1.0 Universal (CC0 1.0)
+3. Pixabay ID 801924 - https://pixabay.com/en/camera-photography-lens-equipment-801924/ - CC0 1.0 Universal (CC0 1.0)
+4. Pixabay ID 930715 - https://pixabay.com/en/superbike-motorsport-fast-speed-930715/ - CC0 1.0 Universal (CC0 1.0)
+5. Pixabay ID 95032 - https://pixabay.com/en/utah-mountain-biking-bike-biking-95032/ - CC0 1.0 Universal (CC0 1.0)
+6. Pixabay ID 642118 - https://pixabay.com/en/woman-photo-taking-picture-642118/ - CC0 1.0 Universal (CC0 1.0)
+7. Pixabay ID 77552 - https://pixabay.com/en/motorcycle-zero-s-action-77552/ - CC0 1.0 Universal (CC0 1.0)
+8. Pixabay ID 677770 - https://pixabay.com/en/person-male-man-looking-sitting-677770/ - CC0 1.0 Universal (CC0 1.0)
+
+Right sidebar images
+1. Pixabay ID 642118 - https://pixabay.com/en/woman-photo-taking-picture-642118/ - CC0 1.0 Universal (CC0 1.0)
+2. Pixabay ID 90051 - https://pixabay.com/en/peacock-bird-feather-close-up-90051/ - CC0 1.0 Universal (CC0 1.0)
+3. Pixabay ID 593155 - https://pixabay.com/en/scooter-italy-vintage-old-green-593155/ - CC0 1.0 Universal (CC0 1.0)
+4. Pixabay ID 407108 - https://pixabay.com/en/smartphone-movie-taking-pictures-407108/ - CC0 1.0 Universal (CC0 1.0)
+
 == Changelog ==
 
 = 1.0.2 - 2018-05-30 =
