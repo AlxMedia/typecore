@@ -2,7 +2,7 @@
 Contributors: alxmedia
 Requires at least: 4.9
 Tested up to: 4.9
-Version: 1.0.2
+Version: 1.0.3
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Tags: one-column, two-columns, three-columns, right-sidebar, left-sidebar, custom-colors, custom-menu, featured-images, flexible-header, full-width-template, post-formats, sticky-post, theme-options, threaded-comments, translation-ready
@@ -93,6 +93,11 @@ Right sidebar images
 4. Pixabay ID 407108 - https://pixabay.com/en/smartphone-movie-taking-pictures-407108/ - CC0 1.0 Universal (CC0 1.0)
 
 == Changelog ==
+
+= 1.0.3 - 2018-06-25 =
+* Added screenshot images to readme
+* Added javascript sources to readme
+* Changed esc_html_e to esc_attr_e in searchform.php
 
 = 1.0.2 - 2018-05-30 =
 * Moved social share bar to a plugin
