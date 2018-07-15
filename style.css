@@ -629,28 +629,6 @@ box-shadow: 0 1px 0 rgba(255,255,255,0.1); }
 box-shadow: inset 1px 0 0 rgba(255,255,255,0.1); }
 #nav-mobile .nav-text { color: #fff; color: rgba(255,255,255,0.7); }
 
-@media only screen and (min-width: 720px) {
-
-	/* common */
-	#nav-mobile .nav {  }
-	#nav-mobile .nav li a { color: #fff; font-weight: 400; color: rgba(255,255,255,0.8); }	
-	/* level 1 */
-	#nav-mobile .nav > li { border-right: none; }
-	#nav-mobile .nav > li:first-child { margin-left: 15px; } 
-	#nav-mobile .nav > li > a:hover, 
-	#nav-mobile .nav > li:hover > a { background-color: rgba(0,0,0,0.1); }
-	#nav-mobile .nav li > a:hover, 
-	#nav-mobile .nav li:hover > a, 
-	#nav-mobile .nav li.current_page_item > a, 
-	#nav-mobile .nav li.current-menu-item > a,
-	#nav-mobile .nav li.current-menu-ancestor > a,
-	#nav-mobile .nav li.current-post-parent > a { color: #fff; }
-	/* level 2 & 3 */
-	#nav-mobile .nav ul { background: #e64338 url(img/opacity-10.png) repeat; }
-	#nav-mobile .nav ul li { -webkit-box-shadow: 0 1px 0 rgba(255,255,255,0.15); box-shadow: 0 1px 0 rgba(255,255,255,0.15); }
-	#nav-mobile .nav ul li:last-child { box-shadow: none; -webkit-box-shadow: none; }
-	
-}
 @media only screen and (max-width: 719px) {
 	
 	/* common */
