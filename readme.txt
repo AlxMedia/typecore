@@ -2,7 +2,7 @@
 Contributors: alxmedia
 Requires at least: 4.9
 Tested up to: 4.9
-Version: 1.0.3
+Version: 1.0.4
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Tags: one-column, two-columns, three-columns, right-sidebar, left-sidebar, custom-colors, custom-menu, featured-images, flexible-header, full-width-template, post-formats, sticky-post, theme-options, threaded-comments, translation-ready
@@ -67,32 +67,40 @@ License: CC0 1.0 Universal (CC0 1.0)
 Source: http://pixabay.com/
 
 Left sidebar images
-1. Pixabay ID 95032 - https://pixabay.com/en/utah-mountain-biking-bike-biking-95032/ - CC0 1.0 Universal (CC0 1.0)
-2. Pixabay ID 690547 - https://pixabay.com/en/people-hat-toque-jacket-warm-690547/ - CC0 1.0 Universal (CC0 1.0)
-3. Pixabay ID 77552 - https://pixabay.com/en/motorcycle-zero-s-action-77552/ - CC0 1.0 Universal (CC0 1.0)
-4. Pixabay ID 677770 - https://pixabay.com/en/person-male-man-looking-sitting-677770/ - CC0 1.0 Universal (CC0 1.0)
-5. Pixabay ID 690230 - https://pixabay.com/en/grapes-bunch-fruit-person-holding-690230/ - CC0 1.0 Universal (CC0 1.0)
-6. Pixabay ID 593155 - https://pixabay.com/en/scooter-italy-vintage-old-green-593155/ - CC0 1.0 Universal (CC0 1.0)
-7. Pixabay ID 407108 - https://pixabay.com/en/smartphone-movie-taking-pictures-407108/ - CC0 1.0 Universal (CC0 1.0)
-8. Pixabay ID 77552 - https://pixabay.com/en/motorcycle-zero-s-action-77552/ - CC0 1.0 Universal (CC0 1.0)
+1. ID 95032 - https://pixabay.com/en/utah-mountain-biking-bike-biking-95032/ - CC0 1.0 Universal (CC0 1.0)
+2. ID 690547 - https://pixabay.com/en/people-hat-toque-jacket-warm-690547/ - CC0 1.0 Universal (CC0 1.0)
+3. ID 77552 - https://pixabay.com/en/motorcycle-zero-s-action-77552/ - CC0 1.0 Universal (CC0 1.0)
+4. ID 677770 - https://pixabay.com/en/person-male-man-looking-sitting-677770/ - CC0 1.0 Universal (CC0 1.0)
+5. ID 690230 - https://pixabay.com/en/grapes-bunch-fruit-person-holding-690230/ - CC0 1.0 Universal (CC0 1.0)
+6. ID 593155 - https://pixabay.com/en/scooter-italy-vintage-old-green-593155/ - CC0 1.0 Universal (CC0 1.0)
+7. ID 407108 - https://pixabay.com/en/smartphone-movie-taking-pictures-407108/ - CC0 1.0 Universal (CC0 1.0)
+8. ID 77552 - https://pixabay.com/en/motorcycle-zero-s-action-77552/ - CC0 1.0 Universal (CC0 1.0)
 
 Content images
-1. Pixabay ID 95032 - https://pixabay.com/en/utah-mountain-biking-bike-biking-95032/ - CC0 1.0 Universal (CC0 1.0)
-2. Pixabay ID 690230 - https://pixabay.com/en/grapes-bunch-fruit-person-holding-690230/ - CC0 1.0 Universal (CC0 1.0)
-3. Pixabay ID 801924 - https://pixabay.com/en/camera-photography-lens-equipment-801924/ - CC0 1.0 Universal (CC0 1.0)
-4. Pixabay ID 930715 - https://pixabay.com/en/superbike-motorsport-fast-speed-930715/ - CC0 1.0 Universal (CC0 1.0)
-5. Pixabay ID 95032 - https://pixabay.com/en/utah-mountain-biking-bike-biking-95032/ - CC0 1.0 Universal (CC0 1.0)
-6. Pixabay ID 642118 - https://pixabay.com/en/woman-photo-taking-picture-642118/ - CC0 1.0 Universal (CC0 1.0)
-7. Pixabay ID 77552 - https://pixabay.com/en/motorcycle-zero-s-action-77552/ - CC0 1.0 Universal (CC0 1.0)
-8. Pixabay ID 677770 - https://pixabay.com/en/person-male-man-looking-sitting-677770/ - CC0 1.0 Universal (CC0 1.0)
+1. ID 95032 - https://pixabay.com/en/utah-mountain-biking-bike-biking-95032/ - CC0 1.0 Universal (CC0 1.0)
+2. ID 690230 - https://pixabay.com/en/grapes-bunch-fruit-person-holding-690230/ - CC0 1.0 Universal (CC0 1.0)
+3. ID 801924 - https://pixabay.com/en/camera-photography-lens-equipment-801924/ - CC0 1.0 Universal (CC0 1.0)
+4. ID 930715 - https://pixabay.com/en/superbike-motorsport-fast-speed-930715/ - CC0 1.0 Universal (CC0 1.0)
+5. ID 95032 - https://pixabay.com/en/utah-mountain-biking-bike-biking-95032/ - CC0 1.0 Universal (CC0 1.0)
+6. ID 642118 - https://pixabay.com/en/woman-photo-taking-picture-642118/ - CC0 1.0 Universal (CC0 1.0)
+7. ID 77552 - https://pixabay.com/en/motorcycle-zero-s-action-77552/ - CC0 1.0 Universal (CC0 1.0)
+8. ID 677770 - https://pixabay.com/en/person-male-man-looking-sitting-677770/ - CC0 1.0 Universal (CC0 1.0)
 
 Right sidebar images
-1. Pixabay ID 642118 - https://pixabay.com/en/woman-photo-taking-picture-642118/ - CC0 1.0 Universal (CC0 1.0)
-2. Pixabay ID 90051 - https://pixabay.com/en/peacock-bird-feather-close-up-90051/ - CC0 1.0 Universal (CC0 1.0)
-3. Pixabay ID 593155 - https://pixabay.com/en/scooter-italy-vintage-old-green-593155/ - CC0 1.0 Universal (CC0 1.0)
-4. Pixabay ID 407108 - https://pixabay.com/en/smartphone-movie-taking-pictures-407108/ - CC0 1.0 Universal (CC0 1.0)
+1. ID 642118 - https://pixabay.com/en/woman-photo-taking-picture-642118/ - CC0 1.0 Universal (CC0 1.0)
+2. ID 90051 - https://pixabay.com/en/peacock-bird-feather-close-up-90051/ - CC0 1.0 Universal (CC0 1.0)
+3. ID 593155 - https://pixabay.com/en/scooter-italy-vintage-old-green-593155/ - CC0 1.0 Universal (CC0 1.0)
+4. ID 407108 - https://pixabay.com/en/smartphone-movie-taking-pictures-407108/ - CC0 1.0 Universal (CC0 1.0)
 
 == Changelog ==
+
+= 1.0.4 - 2018-07-15 =
+* Added option for mobile menu
+* Added styling option for mobile menu color
+* Added on/off option for header search button
+* Added on/off option for header social links
+* Added on/off option for footer social links
+* Fixed styling option for website max-widths above 1460px
 
 = 1.0.3 - 2018-06-25 =
 * Added screenshot images to readme

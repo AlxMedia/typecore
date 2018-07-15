@@ -1,7 +1,7 @@
 /*
 Theme Name: Typecore
 Theme URI: http://alxmedia.se/themes/typecore/
-Version: 1.0.3
+Version: 1.0.4
 Description: <a href="http://alxmedia.se/themes/typecore/">Typecore</a> is a responsive 100% high resolution theme for blogs and magazines. Unique toggle sidebars give a great browsing and reading experience on both tablet and mobile. The feature list is long: Unlimited topbar, header, footer and accent colors, unlimited widget areas, 0-2 sidebars to the left or right that can be uniquely specified for each page or post, 300px / 220px fixed width sidebars, 0-4 footer widget columns, almost zero layout images, related posts and post nav, featured story or slider, 10 post formats, good SEO, 3 flexible custom widgets, localisation support, social links, logo upload and many more useful admin panel features.
 Author: Alexander Agnarson
 Author URI: http://alxmedia.se
@@ -311,7 +311,7 @@ h1, h2, h3, h4, h5, h6 { color: #444; font-weight: 600; -ms-word-wrap: break-wor
 #wrapper { min-width: 1024px; height: 100%; }
 .container { margin: 0 auto; }
 .container-inner { max-width: 1460px; min-width: 100%; width: 100%; margin: 0; left: 0; }
-.main { background-color: #eee!important; max-width: 1380px; margin-left: 80px; position: relative; }
+.main { background-color: #eee!important; margin-left: 80px; position: relative; }
 .main-inner { position: relative; min-height: 600px; /* instead of sticky footer */ }
 .content { width: 100%; position: relative; }
 .pad { padding: 30px 30px 20px; }
@@ -401,6 +401,9 @@ box-shadow: inset 0 1px 1px rgba(255,255,255,0.1), -1px -1px 0 rgba(0,0,0,0.1); 
 .s3 .social-links .social-tooltip:hover { color: #fff; text-decoration: none; }
 .s3 .social-links .social-tooltip:hover:after,
 .s3 .social-links .social-tooltip:hover:before { display: none; }
+
+.header-social-hide .main { margin-left: 0; }
+.header-social-hide .s3 { display: none; }
 
 /*  base : grid
 /* ------------------------------------ */
@@ -617,6 +620,58 @@ box-shadow: 0 1px 0 rgba(255,255,255,0.1); }
 .search-expand-inner { background: rgba(0,0,0,0.15); padding: 15px; }
 .search-expand .themeform input { width: 100%; border: 0; border-radius: 0; }
 .search-expand .themeform input:focus {  }
+
+/*  header : nav mobile
+/* ------------------------------------ */
+#nav-mobile.nav-container { background: #e64338; }
+#nav-mobile .nav-toggle { background: transparent; color: #fff;
+-webkit-box-shadow: inset 1px 0 0 rgba(255,255,255,0.1);
+box-shadow: inset 1px 0 0 rgba(255,255,255,0.1); }
+#nav-mobile .nav-text { color: #fff; color: rgba(255,255,255,0.7); }
+
+@media only screen and (min-width: 720px) {
+
+	/* common */
+	#nav-mobile .nav {  }
+	#nav-mobile .nav li a { color: #fff; font-weight: 400; color: rgba(255,255,255,0.8); }	
+	/* level 1 */
+	#nav-mobile .nav > li { border-right: none; }
+	#nav-mobile .nav > li:first-child { margin-left: 15px; } 
+	#nav-mobile .nav > li > a:hover, 
+	#nav-mobile .nav > li:hover > a { background-color: rgba(0,0,0,0.1); }
+	#nav-mobile .nav li > a:hover, 
+	#nav-mobile .nav li:hover > a, 
+	#nav-mobile .nav li.current_page_item > a, 
+	#nav-mobile .nav li.current-menu-item > a,
+	#nav-mobile .nav li.current-menu-ancestor > a,
+	#nav-mobile .nav li.current-post-parent > a { color: #fff; }
+	/* level 2 & 3 */
+	#nav-mobile .nav ul { background: #e64338 url(img/opacity-10.png) repeat; }
+	#nav-mobile .nav ul li { -webkit-box-shadow: 0 1px 0 rgba(255,255,255,0.15); box-shadow: 0 1px 0 rgba(255,255,255,0.15); }
+	#nav-mobile .nav ul li:last-child { box-shadow: none; -webkit-box-shadow: none; }
+	
+}
+@media only screen and (max-width: 719px) {
+	
+	/* common */
+	#nav-mobile .container { padding-left: 0; }
+	#nav-mobile .nav li a { color: #fff; color: rgba(255,255,255,0.8); border-top: 1px solid rgba(255,255,255,0.2); }
+	/* level 1 */
+	#nav-mobile .nav li > a:hover { background: rgba(0,0,0,0.15); color: #fff; }
+	#nav-mobile .nav li.current_page_item > a, 
+	#nav-mobile .nav li.current-menu-item > a,
+	#nav-mobile .nav li.current-post-parent > a { background: rgba(0,0,0,0.15); color: #fff; }
+	
+}
+
+/* hide and display */
+@media only screen and (min-width: 720px) {
+	.mobile-menu #nav-mobile { display: none; }
+}
+@media only screen and (max-width: 719px) {
+	.mobile-menu #nav-topbar,
+	.mobile-menu #nav-header { display: none; } 
+}
 
 /*  header : nav topbar
 /* ------------------------------------ */

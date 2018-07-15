@@ -180,17 +180,27 @@ a,
 .post-comments span:before,
 .page-title .meta-single li.comments a:before { border-right-color: '.esc_attr( get_theme_mod('color-bubble') ).'; border-top-color: '.esc_attr( get_theme_mod('color-bubble') ).'; }				
 				'."\n";
-			}	
-			// topbar color
-			if ( get_theme_mod('color-topbar','#e64338') != '#e64338' ) {
+			}
+			// mobile menu color
+			if ( get_theme_mod('color-mobile-menu','#e64338') != '#e64338' ) {
 				$styles .= '
-.search-expand,
-#nav-topbar.nav-container { background-color: '.esc_attr( get_theme_mod('color-topbar') ).'; }
+#nav-mobile .search-expand,
+#nav-mobile.nav-container { background-color: '.esc_attr( get_theme_mod('color-mobile-menu') ).'; }
 @media only screen and (min-width: 720px) {
-	#nav-topbar .nav ul { background-color: '.esc_attr( get_theme_mod('color-topbar') ).'; }
+	#nav-mobile .nav ul { background-color: '.esc_attr( get_theme_mod('color-mobile-menu') ).'; }
 }			
 				'."\n";
 			}			
+			// topbar menu color
+			if ( get_theme_mod('color-topbar-menu','#e64338') != '#e64338' ) {
+				$styles .= '
+#nav-topbar .search-expand,
+#nav-topbar.nav-container { background-color: '.esc_attr( get_theme_mod('color-topbar-menu') ).'; }
+@media only screen and (min-width: 720px) {
+	#nav-topbar .nav ul { background-color: '.esc_attr( get_theme_mod('color-topbar-menu') ).'; }
+}			
+				'."\n";
+			}
 			// header color
 			if ( get_theme_mod('color-header','#23282d') != '#23282d' ) {
 				$styles .= '
