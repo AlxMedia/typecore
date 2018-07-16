@@ -850,6 +850,15 @@ Kirki::add_field( 'alx_theme', array(
 	'section'		=> 'styling',
 	'default'		=> 'on',
 ) );
+// Styling: Centered Layout
+Kirki::add_field( 'alx_theme', array(
+	'type'			=> 'switch',
+	'settings'		=> 'center',
+	'label'			=> esc_attr__( 'Center Layout', 'typecore' ),
+	'description'	=> esc_attr__( 'Center the layout', 'typecore' ),
+	'section'		=> 'styling',
+	'default'		=> 'off',
+) );
 // Styling: Boxed Layout
 Kirki::add_field( 'alx_theme', array(
 	'type'			=> 'switch',

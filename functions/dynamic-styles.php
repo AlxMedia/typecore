@@ -205,7 +205,8 @@ a,
 			if ( get_theme_mod('color-header','#23282d') != '#23282d' ) {
 				$styles .= '
 #header,
-.s3 { background-color: '.esc_attr( get_theme_mod('color-header','') ).'; }
+.s3,
+.center #page .container-inner:after { background-color: '.esc_attr( get_theme_mod('color-header','') ).'; }
 @media only screen and (min-width: 720px) {
 	#nav-header .nav ul { background-color: '.esc_attr( get_theme_mod('color-header') ).'; }
 }			
