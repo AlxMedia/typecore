@@ -1,22 +1,22 @@
 <?php
 /*
-	AlxTabs Widget
+	TypecoreTabs Widget
 	
 	License: GNU General Public License v3.0
 	License URI: http://www.gnu.org/licenses/gpl-3.0.html
 	
 	Copyright: (c) 2013 Alexander "Alx" Agnarson - http://alxmedia.se
 	
-		@package AlxTabs
+		@package TypecoreTabs
 		@version 1.0
 */
 
-class AlxTabs extends WP_Widget {
+class TypecoreTabs extends WP_Widget {
 
 /*  Constructor
 /* ------------------------------------ */
 	function __construct() {
-		parent::__construct( false, 'AlxTabs', array('description' => 'List posts, comments, and/or tags with or without tabs.', 'classname' => 'widget_typecore_tabs') );;	
+		parent::__construct( false, 'Typecore Tabs', array('description' => 'List posts, comments, and/or tags with or without tabs.', 'classname' => 'widget_typecore_tabs') );;	
 	}
 
 /*  Create tabs-nav
@@ -410,7 +410,7 @@ class AlxTabs extends WP_Widget {
 if ( ! function_exists( 'typecore_register_widget_tabs' ) ) {
 
 	function typecore_register_widget_tabs() { 
-		register_widget( 'AlxTabs' );
+		register_widget( 'TypecoreTabs' );
 	}
 	
 }

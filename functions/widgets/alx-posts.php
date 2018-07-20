@@ -1,22 +1,22 @@
 <?php
 /*
-	AlxPosts Widget
+	TypecorePosts Widget
 	
 	License: GNU General Public License v3.0
 	License URI: http://www.gnu.org/licenses/gpl-3.0.html
 	
 	Copyright: (c) 2013 Alexander "Alx" Agnarson - http://alxmedia.se
 	
-		@package AlxPosts
+		@package TypecorePosts
 		@version 1.0
 */
 
-class AlxPosts extends WP_Widget {
+class TypecorePosts extends WP_Widget {
 
 /*  Constructor
 /* ------------------------------------ */
 	function __construct() {
-		parent::__construct( false, 'AlxPosts', array('description' => 'Display posts from a category', 'classname' => 'widget_typecore_posts') );;	
+		parent::__construct( false, 'Typecore Posts', array('description' => 'Display posts from a category', 'classname' => 'widget_typecore_posts') );;	
 	}
 	
 /*  Widget
@@ -190,7 +190,7 @@ class AlxPosts extends WP_Widget {
 if ( ! function_exists( 'typecore_register_widget_posts' ) ) {
 
 	function typecore_register_widget_posts() { 
-		register_widget( 'AlxPosts' );
+		register_widget( 'TypecorePosts' );
 	}
 	
 }
