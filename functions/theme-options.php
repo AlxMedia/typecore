@@ -74,15 +74,6 @@ Kirki::add_field( 'typecore_theme', array(
 ) );
 // General: Mobile Sidebar
 Kirki::add_field( 'typecore_theme', array(
-	'type'			=> 'switch',
-	'settings'		=> 'mobile-sidebar-hide',
-	'label'			=> esc_attr__( 'Mobile Sidebar Content', 'typecore' ),
-	'description'	=> esc_attr__( 'Sidebar content on low-resolution mobile devices (320px)', 'typecore' ),
-	'section'		=> 'general',
-	'default'		=> 'on',
-) );
-// General: Mobile Sidebar
-Kirki::add_field( 'typecore_theme', array(
 	'type'			=> 'radio',
 	'settings'		=> 'mobile-sidebar-hide',
 	'label'			=> esc_attr__( 'Mobile Sidebar Content', 'typecore' ),
