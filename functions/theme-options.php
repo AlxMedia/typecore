@@ -15,7 +15,6 @@ Kirki::add_config( 'typecore', array(
 Kirki::add_panel( 'options', array(
     'priority'    => 10,
     'title'       => esc_attr__( 'Theme Options', 'typecore' ),
-    'description' => esc_attr__( '', 'typecore' ),
 ) );
 
 /*  Add Sections
@@ -23,49 +22,41 @@ Kirki::add_panel( 'options', array(
 Kirki::add_section( 'general', array(
     'priority'    => 10,
     'title'       => esc_attr__( 'General', 'typecore' ),
-    'description' => esc_attr__( '', 'typecore' ),
 	'panel'       => 'options',
 ) );
 Kirki::add_section( 'blog', array(
     'priority'    => 20,
     'title'       => esc_attr__( 'Blog', 'typecore' ),
-    'description' => esc_attr__( '', 'typecore' ),
 	'panel'       => 'options',
 ) );
 Kirki::add_section( 'header', array(
     'priority'    => 30,
     'title'       => esc_attr__( 'Header', 'typecore' ),
-    'description' => esc_attr__( '', 'typecore' ),
 	'panel'       => 'options',
 ) );
 Kirki::add_section( 'footer', array(
     'priority'    => 40,
     'title'       => esc_attr__( 'Footer', 'typecore' ),
-    'description' => esc_attr__( '', 'typecore' ),
 	'panel'       => 'options',
 ) );
 Kirki::add_section( 'layout', array(
     'priority'    => 50,
     'title'       => esc_attr__( 'Layout', 'typecore' ),
-    'description' => esc_attr__( '', 'typecore' ),
 	'panel'       => 'options',
 ) );
 Kirki::add_section( 'sidebars', array(
     'priority'    => 60,
     'title'       => esc_attr__( 'Sidebars', 'typecore' ),
-    'description' => esc_attr__( '', 'typecore' ),
 	'panel'       => 'options',
 ) );
 Kirki::add_section( 'social', array(
     'priority'    => 70,
     'title'       => esc_attr__( 'Social Links', 'typecore' ),
-    'description' => esc_attr__( '', 'typecore' ),
 	'panel'       => 'options',
 ) );
 Kirki::add_section( 'styling', array(
     'priority'    => 80,
     'title'       => esc_attr__( 'Styling', 'typecore' ),
-    'description' => esc_attr__( '', 'typecore' ),
 	'panel'       => 'options',
 ) );
 
@@ -782,7 +773,6 @@ Kirki::add_field( 'typecore_theme', array(
 		'social-target'	=> array(
 			'type'			=> 'checkbox',
 			'label'			=> esc_attr__( 'Open in new window', 'typecore' ),
-			'description'	=> esc_attr__( '', 'typecore' ),
 			'default'		=> false,
 		),
 	)
@@ -868,7 +858,6 @@ Kirki::add_field( 'typecore_theme', array(
 	'type'			=> 'radio',
 	'settings'		=> 'sidebar-padding',
 	'label'			=> esc_attr__( 'Sidebar Width', 'typecore' ),
-	'description'	=> esc_attr__( '', 'typecore' ),
 	'section'		=> 'styling',
 	'default'		=> '30',
 	'choices'		=> array(
@@ -881,7 +870,6 @@ Kirki::add_field( 'typecore_theme', array(
 	'type'			=> 'color',
 	'settings'		=> 'color-1',
 	'label'			=> esc_attr__( 'Primary Color', 'typecore' ),
-	'description'	=> esc_attr__( '', 'typecore' ),
 	'section'		=> 'styling',
 	'default'		=> '#e64338',
 ) );
@@ -890,7 +878,6 @@ Kirki::add_field( 'typecore_theme', array(
 	'type'			=> 'color',
 	'settings'		=> 'color-bubble',
 	'label'			=> esc_attr__( 'Comments Bubble', 'typecore' ),
-	'description'	=> esc_attr__( '', 'typecore' ),
 	'section'		=> 'styling',
 	'default'		=> '#f7e696',
 ) );
@@ -899,7 +886,6 @@ Kirki::add_field( 'typecore_theme', array(
 	'type'			=> 'color',
 	'settings'		=> 'color-mobile-menu',
 	'label'			=> esc_attr__( 'Mobile Menu Background', 'typecore' ),
-	'description'	=> esc_attr__( '', 'typecore' ),
 	'section'		=> 'styling',
 	'default'		=> '#e64338',
 ) );
@@ -908,7 +894,6 @@ Kirki::add_field( 'typecore_theme', array(
 	'type'			=> 'color',
 	'settings'		=> 'color-topbar-menu',
 	'label'			=> esc_attr__( 'Topbar Menu Background', 'typecore' ),
-	'description'	=> esc_attr__( '', 'typecore' ),
 	'section'		=> 'styling',
 	'default'		=> '#e64338',
 ) );
@@ -917,7 +902,6 @@ Kirki::add_field( 'typecore_theme', array(
 	'type'			=> 'color',
 	'settings'		=> 'color-header',
 	'label'			=> esc_attr__( 'Header Background', 'typecore' ),
-	'description'	=> esc_attr__( '', 'typecore' ),
 	'section'		=> 'styling',
 	'default'		=> '#23282d',
 ) );
@@ -926,7 +910,6 @@ Kirki::add_field( 'typecore_theme', array(
 	'type'			=> 'color',
 	'settings'		=> 'color-header-menu',
 	'label'			=> esc_attr__( 'Header Menu Background', 'typecore' ),
-	'description'	=> esc_attr__( '', 'typecore' ),
 	'section'		=> 'styling',
 	'default'		=> '',
 ) );
@@ -935,7 +918,6 @@ Kirki::add_field( 'typecore_theme', array(
 	'type'			=> 'color',
 	'settings'		=> 'color-footer-menu',
 	'label'			=> esc_attr__( 'Footer Menu Background', 'typecore' ),
-	'description'	=> esc_attr__( '', 'typecore' ),
 	'section'		=> 'styling',
 	'default'		=> '',
 ) );
@@ -944,7 +926,6 @@ Kirki::add_field( 'typecore_theme', array(
 	'type'			=> 'color',
 	'settings'		=> 'color-footer',
 	'label'			=> esc_attr__( 'Footer Background', 'typecore' ),
-	'description'	=> esc_attr__( '', 'typecore' ),
 	'section'		=> 'styling',
 	'default'		=> '#e64338',
 ) );
