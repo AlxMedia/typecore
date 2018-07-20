@@ -19,7 +19,7 @@
 		</h3><!--/.post-title-->
 		
 		<div class="post-meta group">
-			<p class="post-date"><?php the_time('j M, Y'); ?></p>
+			<p class="post-date"><?php the_time( get_option('date_format') ); ?></p>
 		</div><!--/.post-meta-->
 		
 	</div><!--/.post-inner-->	
