@@ -16,7 +16,7 @@ class TypecoreTabs extends WP_Widget {
 /*  Constructor
 /* ------------------------------------ */
 	function __construct() {
-		parent::__construct( false, 'Typecore Tabs', array('description' => 'List posts, comments, and/or tags with or without tabs.', 'classname' => 'widget_typecore_tabs') );;	
+		parent::__construct( false, 'Alx Tabs', array('description' => 'List posts, comments, and/or tags with or without tabs.', 'classname' => 'widget_typecore_tabs') );;	
 	}
 	
 	public function typecore_get_defaults() {

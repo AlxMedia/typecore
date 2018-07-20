@@ -16,7 +16,7 @@ class TypecorePosts extends WP_Widget {
 /*  Constructor
 /* ------------------------------------ */
 	function __construct() {
-		parent::__construct( false, 'Typecore Posts', array('description' => 'Display posts from a category', 'classname' => 'widget_typecore_posts') );;	
+		parent::__construct( false, 'Alx Posts', array('description' => 'Display posts from a category', 'classname' => 'widget_typecore_posts') );;	
 	}
 	
 	public function typecore_get_defaults() {
