@@ -350,33 +350,6 @@ Kirki::add_field( 'typecore_theme', array(
 	'section'		=> 'header',
 	'default'		=> 'on',
 ) );
-// Header: Custom Logo
-Kirki::add_field( 'typecore_theme', array(
-	'type'			=> 'image',
-	'settings'		=> 'custom-logo',
-	'label'			=> esc_attr__( 'Custom Logo', 'typecore' ),
-	'description'	=> esc_attr__( 'Upload your custom logo image, 120px height recommended', 'typecore' ),
-	'section'		=> 'header',
-	'default'		=> '',
-) );
-// Header: Site Description
-Kirki::add_field( 'typecore_theme', array(
-	'type'			=> 'switch',
-	'settings'		=> 'site-description',
-	'label'			=> esc_attr__( 'Site Description', 'typecore' ),
-	'description'	=> esc_attr__( 'The description that appears next to your logo', 'typecore' ),
-	'section'		=> 'header',
-	'default'		=> 'on',
-) );
-// Header: Header Image
-Kirki::add_field( 'typecore_theme', array(
-	'type'			=> 'image',
-	'settings'		=> 'header-image',
-	'label'			=> esc_attr__( 'Header Image', 'typecore' ),
-	'description'	=> esc_attr__( 'Upload a header image. This will disable header title/logo and description.', 'typecore' ),
-	'section'		=> 'header',
-	'default'		=> '',
-) );
 // Footer: Ads
 Kirki::add_field( 'typecore_theme', array(
 	'type'			=> 'switch',
@@ -1001,21 +974,5 @@ Kirki::add_field( 'typecore_theme', array(
 		'min'	=> '0',
 		'max'	=> '15',
 		'step'	=> '1',
-	),
-) );
-// Styling: Body Background
-Kirki::add_field( 'typecore_theme', array(
-	'type'			=> 'background',
-	'settings'		=> 'body-background',
-	'label'			=> esc_attr__( 'Body Background', 'typecore' ),
-	'description'	=> esc_attr__( 'Set background color and/or upload your own background image', 'typecore' ),
-	'section'		=> 'styling',
-	'default'     => array(
-		'background-color'      => '',
-		'background-image'      => '',
-		'background-repeat'     => 'no-repeat',
-		'background-position'   => 'center center',
-		'background-size'       => 'cover',
-		'background-attachment' => 'fixed',
 	),
 ) );

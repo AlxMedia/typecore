@@ -23,16 +23,16 @@
 				<div class="nav-wrap container"><?php wp_nav_menu(array('theme_location'=>'mobile','menu_class'=>'nav container-inner group','container'=>'','menu_id' => '','fallback_cb'=> false)); ?></div>
 				
 				<?php if ( get_theme_mod( 'header-search', 'on' ) == 'on' ): ?>
-				<div class="container">
-					<div class="container-inner">		
-						<div class="toggle-search"><i class="fa fa-search"></i></div>
-						<div class="search-expand">
-							<div class="search-expand-inner">
-								<?php get_search_form(); ?>
+					<div class="container">
+						<div class="container-inner">		
+							<div class="toggle-search"><i class="fa fa-search"></i></div>
+							<div class="search-expand">
+								<div class="search-expand-inner">
+									<?php get_search_form(); ?>
+								</div>
 							</div>
-						</div>
-					</div><!--/.container-inner-->
-				</div><!--/.container-->
+						</div><!--/.container-inner-->
+					</div><!--/.container-->
 				<?php endif; ?>
 				
 			</nav><!--/#nav-mobile-->
@@ -45,16 +45,16 @@
 				<div class="nav-wrap container"><?php wp_nav_menu(array('theme_location'=>'topbar','menu_class'=>'nav container-inner group','container'=>'','menu_id' => '','fallback_cb'=> false)); ?></div>
 				
 				<?php if ( get_theme_mod( 'header-search', 'on' ) == 'on' ): ?>
-				<div class="container">
-					<div class="container-inner">		
-						<div class="toggle-search"><i class="fa fa-search"></i></div>
-						<div class="search-expand">
-							<div class="search-expand-inner">
-								<?php get_search_form(); ?>
+					<div class="container">
+						<div class="container-inner">		
+							<div class="toggle-search"><i class="fa fa-search"></i></div>
+							<div class="search-expand">
+								<div class="search-expand-inner">
+									<?php get_search_form(); ?>
+								</div>
 							</div>
-						</div>
-					</div><!--/.container-inner-->
-				</div><!--/.container-->
+						</div><!--/.container-inner-->
+					</div><!--/.container-->
 				<?php endif; ?>
 				
 			</nav><!--/#nav-topbar-->
@@ -62,21 +62,26 @@
 		
 		<div class="container group">
 			<div class="container-inner">
-				<?php if ( get_theme_mod('header-image','') == '' ): ?>
-				<div class="group pad">
-					<?php echo typecore_site_title(); ?>
-					<?php if ( get_theme_mod( 'site-description', 'on' ) == 'on' ): ?><p class="site-description"><?php bloginfo( 'description' ); ?></p><?php endif; ?>
-					<?php if ( get_theme_mod('header-ads','off') == 'on' ): ?>
-					<div id="header-ads">
-						<?php dynamic_sidebar( 'header-ads' ); ?>
-					</div><!--/#header-ads-->
-					<?php endif; ?>
-				</div>
+				<?php if ( get_header_image() == '' ) : ?>
+					<div class="group pad">
+						<?php echo typecore_site_title(); ?>
+						<?php if ( display_header_text() == true ): ?>
+							<p class="site-description"><?php bloginfo( 'description' ); ?></p>
+						<?php endif; ?>
+						<?php if ( get_theme_mod('header-ads','off') == 'on' ): ?>
+						<div id="header-ads">
+							<?php dynamic_sidebar( 'header-ads' ); ?>
+						</div><!--/#header-ads-->
+						<?php endif; ?>
+					</div>
 				<?php endif; ?>
-				<?php if ( get_theme_mod('header-image','') ): ?>
-					<a href="<?php echo esc_url( home_url('/') ); ?>" rel="home">
-						<img class="site-image" src="<?php echo esc_url( get_theme_mod('header-image') ); ?>" alt="<?php get_bloginfo('name'); ?>">
-					</a>
+				
+				<?php if ( get_header_image() ) : ?>
+					<div class="site-header">
+						<a href="<?php echo esc_url( home_url('/') ); ?>" rel="home">
+							<img class="site-image" src="<?php header_image(); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>">
+						</a>
+					</div>
 				<?php endif; ?>
 
 			</div><!--/.container-inner-->

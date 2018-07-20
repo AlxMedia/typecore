@@ -243,28 +243,10 @@ a,
 			if ( get_theme_mod('image-border-radius') != '0' ) {
 				$styles .= 'img { -webkit-border-radius: '.esc_attr( get_theme_mod('image-border-radius') ).'px; border-radius: '.esc_attr( get_theme_mod('image-border-radius') ).'px; }'."\n";
 			}
-			// body background
-			if ( get_theme_mod('body-background','') != '' ) {
-				
-				$body_background = get_theme_mod('body-background');
-				$body_color = esc_attr( $body_background['background-color'] );
-				$body_image = esc_url( $body_background['background-image'] );
-				$body_position = esc_attr( $body_background['background-position'] );
-				$body_attachment = esc_attr( $body_background['background-attachment'] );
-				$body_repeat = esc_attr( $body_background['background-repeat'] );
-				$body_size = esc_attr( $body_background['background-size'] );
-				
-				if ( $body_image && $body_size == "" ) {
-					$styles .= 'body { background: '.$body_color.' url('.$body_image.') '.$body_attachment.' '.$body_position.' '.$body_repeat.'; }'."\n";
-				} elseif ( $body_image && $body_size != "" ) {
-					$styles .= 'body { background: '.$body_color.' url('.$body_image.') '.$body_attachment.' '.$body_position.' '.$body_repeat.'; background-size: '.$body_size.'; }'."\n";
-				} elseif ( $body_background['background-color'] ) {
-					$styles .= 'body { background-color: '.$body_color.'; }'."\n";
-				} else {
-					$styles .= '';
-				}
+			// header text color
+			if ( get_theme_mod( 'header_textcolor' ) != '' ) {
+				$styles .= '.site-title a, .site-description { color: #'.esc_attr( get_theme_mod( 'header_textcolor' ) ).'; }'."\n";
 			}
-			
 			wp_add_inline_style( 'typecore-style', $styles );
 		}
 	}
