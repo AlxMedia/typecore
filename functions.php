@@ -352,26 +352,6 @@ if ( ! function_exists( 'typecore_site_title' ) ) {
 }
 
 
-/*  Page title
-/* ------------------------------------ */
-if ( ! function_exists( 'typecore_page_title' ) ) {
-
-	function typecore_page_title() {
-		global $post;
-
-		$heading = esc_attr( get_post_meta($post->ID,'_heading',true) );
-		$subheading = esc_attr( get_post_meta($post->ID,'_subheading',true) );
-		$title = $heading?$heading:the_title();
-		if($subheading) {
-			$title = $title.' <span>'.$subheading.'</span>';
-		}
-
-		return $title;
-	}
-	
-}
-
-
 /*  Blog title
 /* ------------------------------------ */
 if ( ! function_exists( 'typecore_blog_title' ) ) {

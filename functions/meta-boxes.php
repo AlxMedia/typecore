@@ -25,16 +25,6 @@ function typecore_get_meta_box( $meta_boxes ) {
 		'autosave' => false,
 		'fields' => array(
 			array(
-				'id' => $prefix . 'heading',
-				'type' => 'text',
-				'name' => esc_html__( 'Heading', 'typecore' ),
-			),
-			array(
-				'id' => $prefix . 'subheading',
-				'type' => 'text',
-				'name' => esc_html__( 'Subheading', 'typecore' ),
-			),
-			array(
 				'id' => $prefix . 'sidebar_primary',
 				'name' => esc_html__( 'Primary Sidebar', 'typecore' ),
 				'type' => 'select',
