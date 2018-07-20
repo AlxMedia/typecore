@@ -19,7 +19,7 @@
 				
 			</article>
 			
-			<?php if ( get_theme_mod( 'page-comments', 'off' ) == 'on' ) { comments_template('/comments.php',true); } ?>
+			<?php if ( comments_open() || get_comments_number() ) :	comments_template( '/comments.php', true ); endif; ?>
 			
 		<?php endwhile; ?>
 		
