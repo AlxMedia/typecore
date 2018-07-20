@@ -19,11 +19,29 @@ class TypecorePosts extends WP_Widget {
 		parent::__construct( false, 'Typecore Posts', array('description' => 'Display posts from a category', 'classname' => 'widget_typecore_posts') );;	
 	}
 	
+	public function typecore_get_defaults() {
+		return array(
+			'title'			=> '',
+			// Posts
+			'posts_thumb'	=> 1,
+			'posts_category'=> 1,
+			'posts_date'	=> 1,
+			'posts_num'		=> '4',
+			'posts_cat_id'	=> '0',
+			'posts_orderby'	=> 'date',
+			'posts_time'	=> '0',
+		);
+	}
+	
 /*  Widget
 /* ------------------------------------ */
 	public function widget($args, $instance) {
 		extract( $args );
-		$instance['title']?NULL:$instance['title']='';
+		
+		$defaults = $this -> typecore_get_defaults();
+
+		$instance = wp_parse_args( (array) $instance, $defaults );
+
 		$title = apply_filters('widget_title',$instance['title']);
 		$output = $before_widget."\n";
 		if($title)

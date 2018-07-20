@@ -18,6 +18,36 @@ class TypecoreTabs extends WP_Widget {
 	function __construct() {
 		parent::__construct( false, 'Typecore Tabs', array('description' => 'List posts, comments, and/or tags with or without tabs.', 'classname' => 'widget_typecore_tabs') );;	
 	}
+	
+	public function typecore_get_defaults() {
+		return array(
+			'title'				=> '',
+			'tabs_category'		=> 1,
+			'tabs_date'			=> 1,
+		// Recent posts
+			'recent_enable'		=> 1,
+			'recent_thumbs'		=> 1,
+			'recent_cat_id'		=> '0',
+			'recent_num'		=> '5',
+		// Popular posts
+			'popular_enable'	=> 1,
+			'popular_thumbs'	=> 1,
+			'popular_cat_id'	=> '0',
+			'popular_time'		=> '0',
+			'popular_num'		=> '5',
+		// Recent comments
+			'comments_enable'	=> 1,
+			'comments_avatars'	=> 1,
+			'comments_num'		=> '5',
+		// Tags
+			'tags_enable'		=> 1,
+		// Order
+			'order_recent'		=> '1',
+			'order_popular'		=> '2',
+			'order_comments'	=> '3',
+			'order_tags'		=> '4',
+		);
+	}
 
 /*  Create tabs-nav
 /* ------------------------------------ */
@@ -47,7 +77,11 @@ class TypecoreTabs extends WP_Widget {
 /* ------------------------------------ */
 	public function widget($args, $instance) {
 		extract( $args );
-		$instance['title']?NULL:$instance['title']='';
+		
+		$defaults = $this -> typecore_get_defaults();
+
+		$instance = wp_parse_args( (array) $instance, $defaults );
+
 		$title = apply_filters('widget_title',$instance['title']);
 		$output = $before_widget."\n";
 		if($title)
