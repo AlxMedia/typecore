@@ -534,22 +534,6 @@ if ( ! function_exists( 'typecore_body_class' ) ) {
 add_filter( 'body_class', 'typecore_body_class' );
 
 
-/*  Custom rss feed
-/* ------------------------------------ */
-if ( ! function_exists( 'typecore_feed_link' ) ) {
-
-	function typecore_feed_link( $output, $feed ) {
-		// Do not redirect comments feed
-		if ( strpos( $output, 'comments' ) )
-			return $output;
-		// Return feed url
-		return esc_attr( get_theme_mod('rss-feed',$output) );
-	}
-	
-}
-add_filter( 'feed_link', 'typecore_feed_link', 10, 2 );
-
-
 /*  Excerpt ending
 /* ------------------------------------ */
 if ( ! function_exists( 'typecore_excerpt_more' ) ) {

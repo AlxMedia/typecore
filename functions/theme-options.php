@@ -114,15 +114,6 @@ Kirki::add_field( 'typecore_theme', array(
 		's1-s2'		=> esc_attr__( 'Hide both sidebars', 'typecore' ),
 	),
 ) );
-// General: RSS Feed
-Kirki::add_field( 'typecore_theme', array(
-	'type'			=> 'text',
-	'settings'		=> 'rss-feed',
-	'label'			=> esc_attr__( 'FeedBurner URL', 'typecore' ),
-	'description'	=> esc_attr__( 'Enter your full FeedBurner URL (or any other preferred feed URL) if you wish to use FeedBurner over the standard WordPress feed e.g. http://feeds.feedburner.com/yoururlhere', 'typecore' ),
-	'section'		=> 'general',
-	'default'		=> '',
-) );
 // General: Post Comments
 Kirki::add_field( 'typecore_theme', array(
 	'type'			=> 'switch',
