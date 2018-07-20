@@ -2,7 +2,7 @@
 Contributors: alxmedia
 Requires at least: 4.9
 Tested up to: 4.9
-Version: 1.0.5
+Version: 1.0.6
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Tags: one-column, two-columns, three-columns, right-sidebar, left-sidebar, custom-colors, custom-menu, featured-images, flexible-header, full-width-template, post-formats, sticky-post, theme-options, threaded-comments, translation-ready
@@ -81,6 +81,9 @@ Right sidebar images
 4. ID 407108 - https://pixabay.com/en/smartphone-movie-taking-pictures-407108/ - CC0 1.0 Universal (CC0 1.0)
 
 == Changelog ==
+
+= 1.0.6 - 2018-07-20 =
+* Numerous required fixes for wordpress.org
 
 = 1.0.5 - 2018-07-16 =
 * Added styling option to center layout
