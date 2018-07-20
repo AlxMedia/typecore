@@ -688,35 +688,6 @@ if ( ! function_exists( 'typecore_html_js_class' ) ) {
 add_action( 'wp_head', 'typecore_html_js_class', 1 );
 
 
-/*  IE js header
-/* ------------------------------------ */
-if ( ! function_exists( 'typecore_ie_js_header' ) ) {
-
-	function typecore_ie_js_header () {
-		echo '<!--[if lt IE 9]>'. "\n";
-		echo '<script src="' . esc_url( get_template_directory_uri() . '/js/ie/html5.js' ) . '"></script>'. "\n";
-		echo '<script src="' . esc_url( get_template_directory_uri() . '/js/ie/selectivizr.js' ) . '"></script>'. "\n";
-		echo '<![endif]-->'. "\n";
-	}
-	
-}
-add_action( 'wp_head', 'typecore_ie_js_header' );
-
-
-/*  IE js footer
-/* ------------------------------------ */
-if ( ! function_exists( 'typecore_ie_js_footer' ) ) {
-
-	function typecore_ie_js_footer () {
-		echo '<!--[if lt IE 9]>'. "\n";
-		echo '<script src="' . esc_url( get_template_directory_uri() . '/js/ie/respond.js' ) . '"></script>'. "\n";
-		echo '<![endif]-->'. "\n";
-	}
-	
-}
-add_action( 'wp_footer', 'typecore_ie_js_footer', 20 );	
-
-
 /*  TGM plugin activation
 /* ------------------------------------ */
 if ( ! function_exists( 'typecore_plugins' ) ) {

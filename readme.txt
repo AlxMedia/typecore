@@ -50,18 +50,6 @@ FitVids, Copyright Chris Coyier
 License: WTFPL
 Source: http://fitvidsjs.com/
 
-HTML5 Shiv, Copyright Alexander Farkas
-License: GPLv2 or later
-Source: https://github.com/aFarkas/html5shiv
-
-Respond.js, Copyright Scott Jehl
-License: MIT / GPLv2 or later
-Source: https://github.com/scottjehl/Respond
-
-Selectivizr, Copyright Keith Clark
-License: MIT
-Source: http://selectivizr.com/
-
 Screenshot images
 License: CC0 1.0 Universal (CC0 1.0)
 Source: http://pixabay.com/
