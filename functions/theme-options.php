@@ -63,15 +63,6 @@ Kirki::add_section( 'styling', array(
 /*  Add Fields
 /* ------------------------------------ */
 
-// General: Custom CSS
-Kirki::add_field( 'typecore_theme', array(
-	'type'			=> 'switch',
-	'settings'		=> 'custom',
-	'label'			=> esc_attr__( 'Custom Stylesheet', 'typecore' ),
-	'description'	=> esc_attr__( 'Load custom stylesheet (custom.css)', 'typecore' ),
-	'section'		=> 'general',
-	'default'		=> 'off',
-) );
 // General: Responsive Layout
 Kirki::add_field( 'typecore_theme', array(
 	'type'			=> 'switch',

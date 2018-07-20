@@ -196,7 +196,6 @@ if ( ! function_exists( 'typecore_styles' ) ) {
 	function typecore_styles() {
 		wp_enqueue_style( 'typecore-style', get_stylesheet_uri() );
 		if ( get_theme_mod('responsive','on') =='on' ) { wp_enqueue_style( 'typecore-responsive', get_template_directory_uri().'/responsive.css' ); }
-		if ( get_theme_mod('custom','off') == 'on' ) { wp_enqueue_style( 'typecore-custom', get_template_directory_uri().'/custom.css' ); }
 		wp_enqueue_style( 'typecore-font-awesome', get_template_directory_uri().'/fonts/font-awesome.min.css' );
 	}
 	
