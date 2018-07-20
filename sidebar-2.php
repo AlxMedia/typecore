@@ -1,4 +1,4 @@
-<?php $sidebar = alx_sidebar_secondary(); ?>
+<?php $sidebar = typecore_sidebar_secondary(); ?>
 
 <div class="sidebar s2">
 	

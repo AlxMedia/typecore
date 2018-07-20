@@ -1,4 +1,4 @@
-<?php $related = alx_related_posts(); ?>
+<?php $related = typecore_related_posts(); ?>
 
 <?php if ( $related->have_posts() ): ?>
 

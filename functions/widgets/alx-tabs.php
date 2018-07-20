@@ -16,7 +16,7 @@ class AlxTabs extends WP_Widget {
 /*  Constructor
 /* ------------------------------------ */
 	function __construct() {
-		parent::__construct( false, 'AlxTabs', array('description' => 'List posts, comments, and/or tags with or without tabs.', 'classname' => 'widget_alx_tabs') );;	
+		parent::__construct( false, 'AlxTabs', array('description' => 'List posts, comments, and/or tags with or without tabs.', 'classname' => 'widget_typecore_tabs') );;	
 	}
 
 /*  Create tabs-nav
@@ -407,11 +407,11 @@ class AlxTabs extends WP_Widget {
 
 /*  Register widget
 /* ------------------------------------ */
-if ( ! function_exists( 'alx_register_widget_tabs' ) ) {
+if ( ! function_exists( 'typecore_register_widget_tabs' ) ) {
 
-	function alx_register_widget_tabs() { 
+	function typecore_register_widget_tabs() { 
 		register_widget( 'AlxTabs' );
 	}
 	
 }
-add_action( 'widgets_init', 'alx_register_widget_tabs' );
+add_action( 'widgets_init', 'typecore_register_widget_tabs' );

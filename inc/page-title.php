@@ -1,7 +1,7 @@
 <div class="page-title pad group">
 
 	<?php if ( is_home() ) : ?>
-		<h2><?php echo alx_blog_title(); ?></h2>
+		<h2><?php echo typecore_blog_title(); ?></h2>
 
 	<?php elseif ( is_single() ): ?>
 		<ul class="meta-single group">
@@ -12,7 +12,7 @@
 		</ul>
 		
 	<?php elseif ( is_page() ): ?>
-		<h2><?php echo alx_page_title(); ?></h2>
+		<h2><?php echo typecore_page_title(); ?></h2>
 
 	<?php elseif ( is_search() ): ?>
 		<h1>

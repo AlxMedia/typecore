@@ -18,7 +18,7 @@
 <?php if ( has_post_format( 'gallery' ) ): // Gallery ?>
 	
 	<div class="post-format">
-		<?php $images = alx_post_images(); if ( !empty($images) ): ?>
+		<?php $images = typecore_post_images(); if ( !empty($images) ): ?>
 		
 		<div class="flex-container">
 			<div class="flexslider" id="flexslider-<?php the_ID(); ?>">

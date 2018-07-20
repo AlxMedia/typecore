@@ -5,9 +5,9 @@
 
 /*  Convert hexadecimal to rgb
 /* ------------------------------------ */
-if ( ! function_exists( 'alx_hex2rgb' ) ) {
+if ( ! function_exists( 'typecore_hex2rgb' ) ) {
 
-	function alx_hex2rgb( $hex, $array=false ) {
+	function typecore_hex2rgb( $hex, $array=false ) {
 		$hex = str_replace("#", "", $hex);
 
 		if ( strlen($hex) == 3 ) {
@@ -30,9 +30,9 @@ if ( ! function_exists( 'alx_hex2rgb' ) ) {
 
 /*  Google fonts
 /* ------------------------------------ */
-if ( ! function_exists( 'alx_enqueue_google_fonts' ) ) {
+if ( ! function_exists( 'typecore_enqueue_google_fonts' ) ) {
 
-	function alx_enqueue_google_fonts () {
+	function typecore_enqueue_google_fonts () {
 		if ( get_theme_mod('dynamic-styles', 'on') == 'on' ) {
 			if ( get_theme_mod( 'font' ) == 'titillium-web-ext' ) { wp_enqueue_style( 'titillium-web-ext', '//fonts.googleapis.com/css?family=Titillium+Web:400,400italic,300italic,300,600&subset=latin,latin-ext' ); }		
 			if ( get_theme_mod( 'font' ) == 'droid-serif' )	{ wp_enqueue_style( 'droid-serif', '//fonts.googleapis.com/css?family=Droid+Serif:400,400italic,700' ); }				
@@ -57,19 +57,19 @@ if ( ! function_exists( 'alx_enqueue_google_fonts' ) ) {
 	}	
 	
 }
-add_action( 'wp_enqueue_scripts', 'alx_enqueue_google_fonts' ); 
+add_action( 'wp_enqueue_scripts', 'typecore_enqueue_google_fonts' ); 
 
 
 /*  Dynamic css output
 /* ------------------------------------ */
-if ( ! function_exists( 'alx_dynamic_css' ) ) {
+if ( ! function_exists( 'typecore_dynamic_css' ) ) {
 
-	function alx_dynamic_css() {
+	function typecore_dynamic_css() {
 		if ( get_theme_mod('dynamic-styles', 'on') == 'on' ) {
 		
 			// rgb values
 			$color_1 = get_theme_mod('color-1');
-			$color_1_rgb = alx_hex2rgb($color_1);
+			$color_1_rgb = typecore_hex2rgb($color_1);
 			
 			// start output
 			$styles = '';
@@ -270,4 +270,4 @@ a,
 	}
 	
 }
-add_action( 'wp_enqueue_scripts', 'alx_dynamic_css' );
+add_action( 'wp_enqueue_scripts', 'typecore_dynamic_css' );
