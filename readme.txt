@@ -83,7 +83,19 @@ Right sidebar images
 == Changelog ==
 
 = 1.0.6 - 2018-07-20 =
-* Numerous required fixes for wordpress.org
+* Added support for custom-logo
+* Added support for custom-header
+* Added support for custom-background
+* Updated meta dates to use wordpress settings
+* Changed function names from alx_ to typecore_
+* Fixed undefined index notices/errors for Alx Tabs and Alx Posts widgets
+* Fixed all theme sniffer errors
+* Removed settings for page/post comments on/off, already exist in core
+* Removed custom.css option, already exist in core
+* Removed feedburner url option, plugin territory
+* Removed heading/subheading page fields, not allowed
+* Removed IE8 compatibility javascript and css
+* Numerous other required fixes for wordpress.org
 
 = 1.0.5 - 2018-07-16 =
 * Added styling option to center layout
