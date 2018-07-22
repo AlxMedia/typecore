@@ -4,7 +4,7 @@
 	if ( $layout != 'col-1c'):
 ?>
 	
-	<div class="sidebar s1 dark">
+	<div class="sidebar s1 <?php if ( get_theme_mod( 'light', 'off' ) != 'on' ) echo 'dark'; ?>">
 		
 		<a class="sidebar-toggle" title="<?php esc_attr_e('Expand Sidebar','typecore'); ?>"><i class="fa icon-sidebar-toggle"></i></a>
 		

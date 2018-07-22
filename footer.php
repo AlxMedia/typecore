@@ -29,7 +29,7 @@
 					   is_active_sidebar( 'footer-3' ) ||
 					   is_active_sidebar( 'footer-4' ) ) && $total > 0 ) 
 		{ ?>		
-		<div class="container dark" id="footer-widgets">
+		<div class="container <?php if ( get_theme_mod( 'light', 'off' ) != 'on' ) echo 'dark'; ?>" id="footer-widgets">
 			<div class="container-inner">
 				
 				<div class="pad group">

@@ -786,6 +786,15 @@ Kirki::add_field( 'typecore_theme', array(
 	'section'		=> 'styling',
 	'default'		=> 'on',
 ) );
+// Styling: Light Layout
+Kirki::add_field( 'typecore_theme', array(
+	'type'			=> 'switch',
+	'settings'		=> 'light',
+	'label'			=> esc_attr__( 'Light Layout', 'typecore' ),
+	'description'	=> esc_attr__( 'Light colors', 'typecore' ),
+	'section'		=> 'styling',
+	'default'		=> 'off',
+) );
 // Styling: Centered Layout
 Kirki::add_field( 'typecore_theme', array(
 	'type'			=> 'switch',

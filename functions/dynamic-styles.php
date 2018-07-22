@@ -168,7 +168,9 @@ a,
 .comment-tabs li.active a,
 .wp-pagenavi a:hover,
 .wp-pagenavi a:active,
-.wp-pagenavi span.current { border-bottom-color: '.esc_attr( get_theme_mod('color-1') ).'!important; }					
+.wp-pagenavi span.current { border-bottom-color: '.esc_attr( get_theme_mod('color-1') ).'!important; }
+
+.s1 .alx-tabs-nav li.active a { border-top-color: '.esc_attr( get_theme_mod('color-1') ).'!important; }
 				'."\n";
 			}
 			// comments bubble color
