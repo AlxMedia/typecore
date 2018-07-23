@@ -41,6 +41,9 @@
 #commentform { background: #eee; }
 .sharrre .count:after { border-top-color: #eee; }
 
+.front-widgets { background: transparent; border-top: 0; border-bottom: 0; }
+.front-widgets .widget > h3 { border-color: #eee; }
+
 #nav-footer.nav-container { background: #eee; border-top: 1px solid #ddd; }
 
 #footer-bottom #back-to-top { background: #eee; color: #777; }
