@@ -60,6 +60,9 @@
 @media only screen and (max-width: 1079px) {
 	.s3 { border-top: 1px solid #ddd; -webkit-box-shadow: none; box-shadow: none; }
 }
+@media only screen and (max-width: 719px) {
+	.featured .post-title { background: #333; }
+}
 @media only screen and (max-width: 479px) {
 	.s1 { background: #fff; }
 }
