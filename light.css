@@ -87,14 +87,14 @@
 @media only screen and (min-width: 720px) {
 	#nav-header .nav li a { color: #777; }	
 	#nav-header .nav > li > a:hover, 
-	#nav-header .nav > li:hover > a { background: transparent; }
+	#nav-header .nav > li:hover > a { background: #e5e5e5; }
 	#nav-header .nav li > a:hover, 
 	#nav-header .nav li:hover > a, 
 	#nav-header .nav li.current_page_item > a, 
 	#nav-header .nav li.current-menu-item > a,
 	#nav-header .nav li.current-menu-ancestor > a,
 	#nav-header .nav li.current-post-parent > a { color: #444; }
-	#nav-header .nav ul { background: #eee; }
+	#nav-header .nav ul { background: #e5e5e5; }
 	#nav-header .nav ul li { box-shadow: 0 1px 0 rgba(0,0,0,0.06); -webkit-box-shadow: 0 1px 0 rgba(0,0,0,0.06); }
 }
 @media only screen and (max-width: 719px) {
@@ -114,14 +114,14 @@
 @media only screen and (min-width: 720px) {
 	#nav-footer .nav li a { color: #777; }	
 	#nav-footer .nav > li > a:hover, 
-	#nav-footer .nav > li:hover > a { background-color: #eee; }
+	#nav-footer .nav > li:hover > a { background-color: #e5e5e5; }
 	#nav-footer .nav li > a:hover, 
 	#nav-footer .nav li:hover > a, 
 	#nav-footer .nav li.current_page_item > a, 
 	#nav-footer .nav li.current-menu-item > a,
 	#nav-footer .nav li.current-menu-ancestor > a,
 	#nav-footer .nav li.current-post-parent > a { color: #444; }
-	#nav-footer .nav ul { background: #eee; bottom: 50px; }
+	#nav-footer .nav ul { background: #e5e5e5; bottom: 50px; }
 	#nav-footer .nav ul li { -webkit-box-shadow: 0 1px 0 rgba(0,0,0,0.05); box-shadow: 0 1px 0 rgba(0,0,0,0.05); }	
 }
 @media only screen and (max-width: 719px) {	

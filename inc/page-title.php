@@ -41,13 +41,13 @@
 		<h1><i class="fa fa-tags"></i><?php esc_html_e('Tagged:','typecore'); ?> <span><?php echo single_tag_title('', false); ?></span></h1>
 		
 	<?php elseif ( is_day() ): ?>
-		<h1><i class="fa fa-calendar"></i><?php esc_html_e('Daily Archive:','typecore'); ?> <span><?php echo get_the_time('F j, Y'); ?></span></h1>
+		<h1><i class="fa fa-calendar"></i><?php esc_html_e('Daily Archive:','typecore'); ?> <span><?php echo esc_html( get_the_time('F j, Y') ); ?></span></h1>
 		
 	<?php elseif ( is_month() ): ?>
-		<h1><i class="fa fa-calendar"></i><?php esc_html_e('Monthly Archive:','typecore'); ?> <span><?php echo get_the_time('F Y'); ?></span></h1>
+		<h1><i class="fa fa-calendar"></i><?php esc_html_e('Monthly Archive:','typecore'); ?> <span><?php echo esc_html( get_the_time('F Y') ); ?></span></h1>
 			
 	<?php elseif ( is_year() ): ?>
-		<h1><i class="fa fa-calendar"></i><?php esc_html_e('Yearly Archive:','typecore'); ?> <span><?php echo get_the_time('Y'); ?></span></h1>
+		<h1><i class="fa fa-calendar"></i><?php esc_html_e('Yearly Archive:','typecore'); ?> <span><?php echo esc_html( get_the_time('Y') ); ?></span></h1>
 	
 	<?php else: ?>
 		<h2><?php the_title(); ?></h2>

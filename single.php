@@ -17,7 +17,7 @@
 					
 					<div class="clear"></div>
 					
-					<div class="entry themeform <?php if( function_exists( 'alx_ext_sharrre_template' ) ) { echo 'share'; } ?>">	
+					<div class="entry themeform <?php if( function_exists( 'alx_ext_sharrre_template' ) && get_theme_mod('enable_social_share') ) { echo 'share'; } ?>">	
 						<div class="entry-inner">
 							<?php the_content(); ?>
 							<?php wp_link_pages(array('before'=>'<div class="post-pages">'.esc_html__('Pages:','typecore'),'after'=>'</div>')); ?>

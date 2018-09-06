@@ -66,14 +66,14 @@
 					<div class="grid one-half">
 						
 						<?php if ( get_theme_mod('footer-logo') ): ?>
-							<img id="footer-logo" src="<?php echo esc_url( get_theme_mod('footer-logo') ); ?>" alt="<?php get_bloginfo('name'); ?>">
+							<img id="footer-logo" src="<?php echo esc_url( get_theme_mod('footer-logo') ); ?>" alt="<?php echo esc_attr( get_bloginfo('name')); ?>">
 						<?php endif; ?>
 						
 						<div id="copyright">
 							<?php if ( get_theme_mod( 'copyright' ) ): ?>
 								<p><?php echo esc_html( get_theme_mod( 'copyright' ) ); ?></p>
 							<?php else: ?>
-								<p><?php bloginfo(); ?> &copy; <?php echo date( 'Y' ); ?>. <?php esc_html_e( 'All Rights Reserved.', 'typecore' ); ?></p>
+								<p><?php bloginfo(); ?> &copy; <?php echo esc_html( date_i18n( esc_html__( 'Y', 'typecore' ) ) ); ?>. <?php esc_html_e( 'All Rights Reserved.', 'typecore' ); ?></p>
 							<?php endif; ?>
 						</div><!--/#copyright-->
 						

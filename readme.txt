@@ -2,9 +2,9 @@
 Contributors: alxmedia
 Requires at least: 4.9
 Tested up to: 4.9
-Version: 1.1.0
-License: GPLv2 or later
-License URI: https://www.gnu.org/licenses/gpl-2.0.html
+Version: 1.1.1
+License: GPLv3
+License URI: http://www.gnu.org/licenses/gpl-3.0.html
 Tags: one-column, two-columns, three-columns, right-sidebar, left-sidebar, custom-colors, custom-menu, featured-images, flexible-header, full-width-template, post-formats, sticky-post, theme-options, threaded-comments, translation-ready
 
 == Description ==
@@ -20,6 +20,7 @@ Typecore is a responsive 100% high resolution theme for blogs and magazines. Uni
 
 == Copyright ==
 
+Typecore WordPress Theme, Copyright 2018 AlxMedia
 Typecore is distributed under the terms of the GNU GPL
 
 This program is free software: you can redistribute it and/or modify
@@ -34,8 +35,8 @@ GNU General Public License for more details.
 
 Typecore bundles the following third-party resources:
 
-Font Awesome icons, Copyright Dave Gandy
-License: SIL Open Font License, version 1.1.
+Font Awesome, Copyright Dave Gandy
+License: SIL OFL 1.1 (Fonts); MIT (CSS)
 Source: http://fontawesome.com/
 
 Titillium font, Copyright Accademia di Belle Arti di Urbino
@@ -49,6 +50,10 @@ Source: http://flexslider.woothemes.com/
 FitVids, Copyright Chris Coyier
 License: WTFPL
 Source: http://fitvidsjs.com/
+
+Kirki, Copyright Aristeides Stathopoulos
+License: MIT
+Source: https://github.com/aristath/kirki
 
 Screenshot images
 License: CC0 1.0 Universal (CC0 1.0)
@@ -81,6 +86,17 @@ Right sidebar images
 4. ID 407108 - https://pixabay.com/en/smartphone-movie-taking-pictures-407108/ - CC0 1.0 Universal (CC0 1.0)
 
 == Changelog ==
+
+= 1.1.1 - 2018-09-06 =
+* Moved plugin territory features to companion plugin
+* Added missing style.css tags
+* Updated style.css edit warning
+* Updated .pot language file
+* Fixed gallery widget styling
+* Fixed translation issues
+* Fixed missing escaping issues
+* Fixed broken layout options
+* Added missing credits in readme
 
 = 1.1.0 - 2018-07-26 =
 * Updated theme screenshot
