@@ -1285,7 +1285,6 @@ box-shadow: 0 2px 3px rgba(0,0,0,0.15); }
 .dark .widget a { color: #ccd2d8; }
 .dark .widget a:hover { color: #e64338; }
 .dark .widget > h3 {  }
-.dark .widget > h3 > span { background: #fff; }
 .dark .widget > h3,
 .dark .widget > h3 a,
 .dark .widget > h3 a:hover { color: #fff; }
