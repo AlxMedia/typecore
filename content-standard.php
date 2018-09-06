@@ -2,7 +2,7 @@
 	<div class="post-inner post-hover">
 		
 		<div class="post-thumbnail">
-			<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
+			<a href="<?php the_permalink(); ?>">
 				<?php if ( has_post_thumbnail() ): ?>
 					<?php the_post_thumbnail('typecore-standard'); ?>
 				<?php elseif ( get_theme_mod('placeholder','on') == 'on' ): ?>
@@ -25,7 +25,7 @@
 			</div><!--/.post-meta-->
 			
 			<h2 class="post-title">
-				<a href="<?php the_permalink(); ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>
+				<a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a>
 			</h2><!--/.post-title-->
 			
 			<?php if (get_theme_mod('excerpt-length','24') != '0'): ?>
