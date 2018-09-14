@@ -87,24 +87,6 @@ Kirki::add_field( 'typecore_theme', array(
 		's1-s2'		=> esc_html__( 'Hide both sidebars', 'typecore' ),
 	),
 ) );
-// General: Post Comments
-Kirki::add_field( 'typecore_theme', array(
-	'type'			=> 'switch',
-	'settings'		=> 'post-comments',
-	'label'			=> esc_html__( 'Post Comments', 'typecore' ),
-	'description'	=> esc_html__( 'Comments on posts', 'typecore' ),
-	'section'		=> 'general',
-	'default'		=> 'on',
-) );
-// General: Page Comments
-Kirki::add_field( 'typecore_theme', array(
-	'type'			=> 'switch',
-	'settings'		=> 'page-comments',
-	'label'			=> esc_html__( 'Page Comments', 'typecore' ),
-	'description'	=> esc_html__( 'Comments on pages', 'typecore' ),
-	'section'		=> 'general',
-	'default'		=> 'off',
-) );
 // General: Recommended Plugins
 Kirki::add_field( 'typecore_theme', array(
 	'type'			=> 'switch',
