@@ -170,8 +170,8 @@ class TypecorePosts extends WP_Widget {
 		<p style="padding-top: 0.3em;">
 			<label style="width: 100%; display: inline-block;" for="<?php echo esc_attr( $this->get_field_id("posts_order") ); ?>"><?php esc_html_e( 'Order:', 'typecore' ); ?></label>
 			<select style="width: 100%;" id="<?php echo esc_attr( $this->get_field_id("posts_order") ); ?>" name="<?php echo esc_attr( $this->get_field_name("posts_order") ); ?>">
-			  <option value="dsc"<?php selected( $instance["posts_order"], "dsc" ); ?>><?php esc_html_e( 'Newest First', 'typecore' ); ?></option>
-			  <option value="asc"<?php selected( $instance["posts_order"], "asc" ); ?>><?php esc_html_e( 'Oldest First', 'typecore' ); ?></option>
+			  <option value="dsc"<?php selected( $instance["posts_order"], "dsc" ); ?>><?php esc_html_e( 'Newest first', 'typecore' ); ?></option>
+			  <option value="asc"<?php selected( $instance["posts_order"], "asc" ); ?>><?php esc_html_e( 'Oldest first', 'typecore' ); ?></option>
 			</select>
 		</p>
 		<p style="padding-top: 0.3em;">
