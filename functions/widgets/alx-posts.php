@@ -29,6 +29,7 @@ class TypecorePosts extends WP_Widget {
 			'posts_num'		=> '4',
 			'posts_cat_id'	=> '0',
 			'posts_orderby'	=> 'date',
+			'posts_order'	=> 'dsc',
 			'posts_time'	=> '0',
 		);
 	}
@@ -57,7 +58,7 @@ class TypecorePosts extends WP_Widget {
 			'cat'					=> absint( $instance['posts_cat_id'] ),
 			'ignore_sticky_posts'	=> true,
 			'orderby'				=> esc_attr( $instance['posts_orderby'] ),
-			'order'					=> 'dsc',
+			'order'					=> esc_attr( $instance['posts_order'] ),
 			'date_query' => array(
 				array(
 					'after' => esc_attr( $instance['posts_time'] ),
@@ -114,6 +115,7 @@ class TypecorePosts extends WP_Widget {
 		$instance['posts_num'] = absint($new['posts_num']);
 		$instance['posts_cat_id'] = absint($new['posts_cat_id']);
 		$instance['posts_orderby'] = sanitize_text_field($new['posts_orderby']);
+		$instance['posts_order'] = sanitize_text_field($new['posts_order']);
 		$instance['posts_time'] = sanitize_text_field($new['posts_time']);
 		return $instance;
 	}
@@ -131,6 +133,7 @@ class TypecorePosts extends WP_Widget {
 			'posts_num' 		=> '4',
 			'posts_cat_id' 		=> '0',
 			'posts_orderby' 	=> 'date',
+			'posts_order' 	    => 'dsc',
 			'posts_time' 		=> '0',
 		);
 		$instance = wp_parse_args( (array) $instance, $defaults );
@@ -159,9 +162,16 @@ class TypecorePosts extends WP_Widget {
 		<p style="padding-top: 0.3em;">
 			<label style="width: 100%; display: inline-block;" for="<?php echo esc_attr( $this->get_field_id("posts_orderby") ); ?>"><?php esc_html_e( 'Order by:', 'typecore' ); ?></label>
 			<select style="width: 100%;" id="<?php echo esc_attr( $this->get_field_id("posts_orderby") ); ?>" name="<?php echo esc_attr( $this->get_field_name("posts_orderby") ); ?>">
-			  <option value="date"<?php selected( $instance["posts_orderby"], "date" ); ?>><?php esc_html_e( 'Most recent', 'typecore' ); ?></option>
+			  <option value="date"<?php selected( $instance["posts_orderby"], "date" ); ?>><?php esc_html_e( 'Date', 'typecore' ); ?></option>
 			  <option value="comment_count"<?php selected( $instance["posts_orderby"], "comment_count" ); ?>><?php esc_html_e( 'Most commented', 'typecore' ); ?></option>
 			  <option value="rand"<?php selected( $instance["posts_orderby"], "rand" ); ?>><?php esc_html_e( 'Random', 'typecore' ); ?></option>
+			</select>
+		</p>
+		<p style="padding-top: 0.3em;">
+			<label style="width: 100%; display: inline-block;" for="<?php echo esc_attr( $this->get_field_id("posts_order") ); ?>"><?php esc_html_e( 'Order:', 'typecore' ); ?></label>
+			<select style="width: 100%;" id="<?php echo esc_attr( $this->get_field_id("posts_order") ); ?>" name="<?php echo esc_attr( $this->get_field_name("posts_order") ); ?>">
+			  <option value="dsc"<?php selected( $instance["posts_order"], "dsc" ); ?>><?php esc_html_e( 'Newest first', 'typecore' ); ?></option>
+			  <option value="asc"<?php selected( $instance["posts_order"], "asc" ); ?>><?php esc_html_e( 'Oldest first', 'typecore' ); ?></option>
 			</select>
 		</p>
 		<p style="padding-top: 0.3em;">
