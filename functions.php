@@ -73,6 +73,10 @@ if ( ! function_exists( 'typecore_setup' ) ) {
 		add_image_size( 'typecore-standard', 320, 320, true );
 		add_image_size( 'typecore-medium', 520, 245, true );
 		add_image_size( 'typecore-large', 720, 340, true );
+		
+		// Thumbnail sizes custom widgets
+		add_image_size( 'alx-small', 160, 160, true );
+		add_image_size( 'alx-medium', 520, 245, true );
 
 		// Custom menu areas
 		register_nav_menus( array(
