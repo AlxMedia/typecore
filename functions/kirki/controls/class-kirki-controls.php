@@ -5,7 +5,7 @@
  * @package     Kirki
  * @subpackage  Controls
  * @copyright   Copyright (c) 2017, Aristeides Stathopoulos
- * @license     http://opensource.org/licenses/https://opensource.org/licenses/MIT
+ * @license    https://opensource.org/licenses/MIT
  * @since       3.0.17
  */
 
@@ -25,6 +25,7 @@ class Kirki_Controls {
 		'code',
 		'color',
 		'generic',
+		'image',
 		'number',
 		'radio',
 		'select',
@@ -47,7 +48,6 @@ class Kirki_Controls {
 	 * @since 3.0.17
 	 */
 	public function __construct() {
-
 		if ( ! $this->views_path ) {
 			$this->views_path = wp_normalize_path( dirname( KIRKI_PLUGIN_FILE ) . '/controls/views/' );
 		}
