@@ -11,6 +11,9 @@
  *  Load theme files
 /* ------------------------------------------------------------------------- */	
 
+// Load Kirki
+include( get_template_directory() . '/functions/kirki/kirki.php' );
+
 if ( ! function_exists( 'typecore_load' ) ) {
 	
 	function typecore_load() {
@@ -18,13 +21,8 @@ if ( ! function_exists( 'typecore_load' ) ) {
 		load_theme_textdomain( 'typecore', get_template_directory().'/languages' );
 		
 		// Load theme options and meta boxes
-		include( get_template_directory() . '/functions/kirki/kirki.php' );
 		include( get_template_directory() . '/functions/theme-options.php' );
 		include( get_template_directory() . '/functions/meta-boxes.php' );
-		
-		// Load custom widgets
-		include( get_template_directory() . '/functions/widgets/alx-tabs.php' );
-		include( get_template_directory() . '/functions/widgets/alx-posts.php' );
 
 		// Load dynamic styles
 		include( get_template_directory() . '/functions/dynamic-styles.php' );
@@ -658,21 +656,6 @@ if ( ! function_exists( 'typecore_admin_panel_css' ) ) {
 
 }
 add_action( 'admin_head', 'typecore_admin_panel_css' );
-
-
-/*  Admin panel widget css
-/* ------------------------------------ */
-if ( ! function_exists( 'typecore_admin_panel_widget_css' ) ) {
-	
-	function typecore_admin_panel_widget_css( $hook ) {
-		if ( 'widgets.php' != $hook ) {
-			return;
-		}
-		wp_enqueue_style( 'typecore-widgets-admin', get_template_directory_uri().'/functions/widgets/widgets.css' );
-	}
-
-}
-add_action( 'admin_enqueue_scripts', 'typecore_admin_panel_widget_css' );
 
 
 /*  TGM plugin activation

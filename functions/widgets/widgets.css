@@ -1,9 +1,0 @@
-/* widgets admin styling */
-.widget .widget-inside .alx-options-tabs .postform,
-.widget .widget-inside .alx-options-posts .postform { width: 100%; }
-.widget .widget-inside .alx-options-tabs p,
-.widget .widget-inside .alx-options-posts p { margin: 3px 0; }
-.widget .widget-inside .alx-options-tabs hr,
-.widget .widget-inside .alx-options-posts hr { margin: 20px 0 10px; }
-.widget .widget-inside .alx-options-tabs h4,
-.widget .widget-inside .alx-options-posts h4 { margin-bottom: 10px; }

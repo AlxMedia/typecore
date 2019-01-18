@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Typecore\n"
-"POT-Creation-Date: 2018-09-21 21:41+0200\n"
+"POT-Creation-Date: 2019-01-18 15:43+0100\n"
 "PO-Revision-Date: 2018-09-21 21:27+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -10,7 +10,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.1.1\n"
+"X-Generator: Poedit 2.2\n"
 "X-Poedit-KeywordsList: __;_e;_x;_ex;_n;_nx;_n_noop;_nx_noop;"
 "translate_nooped_plural;number_format_i18n;date_i18n;esc_html__;esc_html_e;"
 "esc_html_x;esc_attr__;esc_attr_e;esc_attr_x\n"
@@ -61,103 +61,103 @@ msgstr ""
 msgid "Theme by"
 msgstr ""
 
-#: functions.php:79
+#: functions.php:81
 msgid "Mobile"
 msgstr ""
 
-#: functions.php:80
+#: functions.php:82
 msgid "Topbar"
 msgstr ""
 
-#: functions.php:81 functions/theme-options.php:34
+#: functions.php:83 functions/theme-options.php:34
 msgid "Header"
 msgstr ""
 
-#: functions.php:82 functions/theme-options.php:39
+#: functions.php:84 functions/theme-options.php:39
 msgid "Footer"
 msgstr ""
 
-#: functions.php:159
+#: functions.php:161
 msgid "Primary"
 msgstr ""
 
-#: functions.php:159 functions.php:160
+#: functions.php:161 functions.php:162
 msgid "Normal full width sidebar"
 msgstr ""
 
-#: functions.php:160
+#: functions.php:162
 msgid "Secondary"
 msgstr ""
 
-#: functions.php:162 functions/theme-options.php:292
+#: functions.php:164 functions/theme-options.php:292
 msgid "Header Ads"
 msgstr ""
 
-#: functions.php:163 functions/theme-options.php:319
+#: functions.php:165 functions/theme-options.php:319
 msgid "Footer Ads"
 msgstr ""
 
-#: functions.php:163
+#: functions.php:165
 msgid "Footer ads area"
 msgstr ""
 
-#: functions.php:165
+#: functions.php:167
 msgid "Frontpage Top 1"
 msgstr ""
 
-#: functions.php:165 functions.php:166 functions.php:167 functions.php:168
+#: functions.php:167 functions.php:168 functions.php:169 functions.php:170
 msgid "Frontpage area"
 msgstr ""
 
-#: functions.php:166
+#: functions.php:168
 msgid "Frontpage Top 2"
 msgstr ""
 
-#: functions.php:167
+#: functions.php:169
 msgid "Frontpage Bottom 1"
 msgstr ""
 
-#: functions.php:168
+#: functions.php:170
 msgid "Frontpage Bottom 2"
 msgstr ""
 
-#: functions.php:170
+#: functions.php:172
 msgid "Footer 1"
 msgstr ""
 
-#: functions.php:170 functions.php:171 functions.php:172 functions.php:173
+#: functions.php:172 functions.php:173 functions.php:174 functions.php:175
 msgid "Widgetized footer"
 msgstr ""
 
-#: functions.php:171
+#: functions.php:173
 msgid "Footer 2"
 msgstr ""
 
-#: functions.php:172
+#: functions.php:174
 msgid "Footer 3"
 msgstr ""
 
-#: functions.php:173
+#: functions.php:175
 msgid "Footer 4"
 msgstr ""
 
-#: functions.php:683
+#: functions.php:670
 msgid "Alx Extensions"
 msgstr ""
 
-#: functions.php:687
+#: functions.php:674
 msgid "Meta Box"
 msgstr ""
 
-#: functions.php:691
+#: functions.php:678
 msgid "Regenerate Thumbnails"
 msgstr ""
 
-#: functions.php:695
+#: functions.php:682
 msgid "WP-PageNavi"
 msgstr ""
 
-#: functions.php:699
+#: functions.php:686
 msgid "Responsive Lightbox"
 msgstr ""
 
@@ -895,171 +895,6 @@ msgstr ""
 msgid "Give your thumbnails and layout images rounded corners"
 msgstr ""
 
-#: functions/widgets/alx-posts.php:19
-msgid "Alx Posts"
-msgstr ""
-
-#: functions/widgets/alx-posts.php:19
-msgid "Display posts from a category"
-msgstr ""
-
-#: functions/widgets/alx-posts.php:141 functions/widgets/alx-tabs.php:317
-msgid "Title:"
-msgstr ""
-
-#: functions/widgets/alx-posts.php:145
-msgid "List Posts"
-msgstr ""
-
-#: functions/widgets/alx-posts.php:149 functions/widgets/alx-tabs.php:329
-#: functions/widgets/alx-tabs.php:349
-msgid "Show thumbnails"
-msgstr ""
-
-#: functions/widgets/alx-posts.php:152 functions/widgets/alx-tabs.php:332
-#: functions/widgets/alx-tabs.php:352 functions/widgets/alx-tabs.php:382
-msgid "Items to show"
-msgstr ""
-
-#: functions/widgets/alx-posts.php:156 functions/widgets/alx-tabs.php:336
-#: functions/widgets/alx-tabs.php:356 inc/page-title.php:38
-msgid "Category:"
-msgstr ""
-
-#: functions/widgets/alx-posts.php:157 functions/widgets/alx-tabs.php:337
-#: functions/widgets/alx-tabs.php:357
-msgid "All"
-msgstr ""
-
-#: functions/widgets/alx-posts.php:160
-msgid "Order by:"
-msgstr ""
-
-#: functions/widgets/alx-posts.php:162
-msgid "Most recent"
-msgstr ""
-
-#: functions/widgets/alx-posts.php:163
-msgid "Most commented"
-msgstr ""
-
-#: functions/widgets/alx-posts.php:164
-msgid "Random"
-msgstr ""
-
-#: functions/widgets/alx-posts.php:168
-msgid "Posts from:"
-msgstr ""
-
-#: functions/widgets/alx-posts.php:170 functions/widgets/alx-tabs.php:362
-msgid "All time"
-msgstr ""
-
-#: functions/widgets/alx-posts.php:171 functions/widgets/alx-tabs.php:363
-msgid "This year"
-msgstr ""
-
-#: functions/widgets/alx-posts.php:172 functions/widgets/alx-tabs.php:364
-msgid "This month"
-msgstr ""
-
-#: functions/widgets/alx-posts.php:173 functions/widgets/alx-tabs.php:365
-msgid "This week"
-msgstr ""
-
-#: functions/widgets/alx-posts.php:174 functions/widgets/alx-tabs.php:366
-msgid "Past 24 hours"
-msgstr ""
-
-#: functions/widgets/alx-posts.php:179
-msgid "Post Info"
-msgstr ""
-
-#: functions/widgets/alx-posts.php:183 functions/widgets/alx-tabs.php:419
-msgid "Show categories"
-msgstr ""
-
-#: functions/widgets/alx-posts.php:187 functions/widgets/alx-tabs.php:423
-msgid "Show dates"
-msgstr ""
-
-#: functions/widgets/alx-tabs.php:19
-msgid "Alx Tabs"
-msgstr ""
-
-#: functions/widgets/alx-tabs.php:19
-msgid "List posts, comments, and/or tags with or without tabs."
-msgstr ""
-
-#: functions/widgets/alx-tabs.php:57 functions/widgets/alx-tabs.php:321
-msgid "Recent Posts"
-msgstr ""
-
-#: functions/widgets/alx-tabs.php:58
-msgid "Popular Posts"
-msgstr ""
-
-#: functions/widgets/alx-tabs.php:59 functions/widgets/alx-tabs.php:371
-msgid "Recent Comments"
-msgstr ""
-
-#: functions/widgets/alx-tabs.php:60 functions/widgets/alx-tabs.php:387
-#: functions/widgets/alx-tabs.php:410
-msgid "Tags"
-msgstr ""
-
-#: functions/widgets/alx-tabs.php:221
-msgid "says:"
-msgstr ""
-
-#: functions/widgets/alx-tabs.php:325
-msgid "Enable recent posts"
-msgstr ""
-
-#: functions/widgets/alx-tabs.php:341
-msgid "Most Popular"
-msgstr ""
-
-#: functions/widgets/alx-tabs.php:345
-msgid "Enable most popular posts"
-msgstr ""
-
-#: functions/widgets/alx-tabs.php:360
-msgid "Post with most comments from:"
-msgstr ""
-
-#: functions/widgets/alx-tabs.php:375
-msgid "Enable recent comments"
-msgstr ""
-
-#: functions/widgets/alx-tabs.php:379
-msgid "Show avatars"
-msgstr ""
-
-#: functions/widgets/alx-tabs.php:391
-msgid "Enable tags"
-msgstr ""
-
-#: functions/widgets/alx-tabs.php:395
-msgid "Tab Order"
-msgstr ""
-
-#: functions/widgets/alx-tabs.php:398
-msgid "Recent posts"
-msgstr ""
-
-#: functions/widgets/alx-tabs.php:402
-msgid "Most popular"
-msgstr ""
-
-#: functions/widgets/alx-tabs.php:406
-msgid "Recent comments"
-msgstr ""
-
-#: functions/widgets/alx-tabs.php:415
-msgid "Tab Info"
-msgstr ""
-
 #: inc/page-title.php:23
 msgid "Search result"
 msgstr ""
@@ -1078,6 +913,10 @@ msgstr ""
 
 #: inc/page-title.php:35
 msgid "Author:"
+msgstr ""
+
+#: inc/page-title.php:38
+msgid "Category:"
 msgstr ""
 
 #: inc/page-title.php:41

@@ -2,7 +2,7 @@
 Contributors: alxmedia
 Requires at least: 5.0
 Tested up to: 5.0
-Version: 1.1.3
+Version: 1.1.4
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 Tags: blog, one-column, two-columns, three-columns, right-sidebar, left-sidebar, custom-colors, custom-menu, featured-images, flexible-header, full-width-template, post-formats, sticky-post, theme-options, threaded-comments, translation-ready, custom-logo, custom-header, custom-background
@@ -86,6 +86,9 @@ Right sidebar images
 4. ID 407108 - https://pixabay.com/en/smartphone-movie-taking-pictures-407108/ - CC0 1.0 Universal (CC0 1.0)
 
 == Changelog ==
+
+= 1.1.4 - 2019-01-18 =
+* Removed custom widgets from theme
 
 = 1.1.3 - 2019-01-15 =
 * Added custom image sizes for alx-posts and alx-tabs widgets (now loading from alx-extensions plugin instead)
