@@ -2,7 +2,7 @@
 Contributors: alxmedia
 Requires at least: 5.0
 Tested up to: 5.0
-Version: 1.1.4
+Version: 1.1.5
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 Tags: blog, one-column, two-columns, three-columns, right-sidebar, left-sidebar, custom-colors, custom-menu, featured-images, flexible-header, full-width-template, post-formats, sticky-post, theme-options, threaded-comments, translation-ready, custom-logo, custom-header, custom-background
@@ -17,6 +17,10 @@ Typecore is a responsive 100% high resolution theme for blogs and magazines. Uni
 2. Type in Typecore in the search form and press the 'Enter' key on your keyboard.
 3. Click on the 'Activate' button to use your new theme right away.
 4. Navigate to Appearance > Customize in your admin panel and customize to taste.
+
+== Documentation ==
+
+http://alxmedia.se/documentation/
 
 == Copyright ==
 
@@ -86,6 +90,10 @@ Right sidebar images
 4. ID 407108 - https://pixabay.com/en/smartphone-movie-taking-pictures-407108/ - CC0 1.0 Universal (CC0 1.0)
 
 == Changelog ==
+
+= 1.1.5 - 2019-01-22 =
+* Removed outdated documentation files from the theme
+* Added new documentation link to readme.txt
 
 = 1.1.4 - 2019-01-18 =
 * Removed custom widgets from theme
