@@ -20,7 +20,7 @@ Typecore is a responsive 100% high resolution theme for blogs and magazines. Uni
 
 == Documentation ==
 
-http://alxmedia.se/documentation/
+http://alx.media/documentation/
 
 == Copyright ==
 
