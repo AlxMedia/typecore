@@ -61,33 +61,32 @@ Source: https://github.com/aristath/kirki
 
 Screenshot images
 License: CC0 1.0 Universal (CC0 1.0)
-Source: http://pixabay.com/
+Source: https://stocksnap.io
 
 Left sidebar images
-1. ID 95032 - https://pixabay.com/en/utah-mountain-biking-bike-biking-95032/ - CC0 1.0 Universal (CC0 1.0)
-2. ID 690547 - https://pixabay.com/en/people-hat-toque-jacket-warm-690547/ - CC0 1.0 Universal (CC0 1.0)
-3. ID 77552 - https://pixabay.com/en/motorcycle-zero-s-action-77552/ - CC0 1.0 Universal (CC0 1.0)
-4. ID 677770 - https://pixabay.com/en/person-male-man-looking-sitting-677770/ - CC0 1.0 Universal (CC0 1.0)
-5. ID 690230 - https://pixabay.com/en/grapes-bunch-fruit-person-holding-690230/ - CC0 1.0 Universal (CC0 1.0)
-6. ID 593155 - https://pixabay.com/en/scooter-italy-vintage-old-green-593155/ - CC0 1.0 Universal (CC0 1.0)
-7. ID 407108 - https://pixabay.com/en/smartphone-movie-taking-pictures-407108/ - CC0 1.0 Universal (CC0 1.0)
-8. ID 77552 - https://pixabay.com/en/motorcycle-zero-s-action-77552/ - CC0 1.0 Universal (CC0 1.0)
+1. https://stocksnap.io/photo/23H66MTGXA - CC0 1.0 Universal (CC0 1.0)
+2. https://stocksnap.io/photo/Y01VDYAX63 - CC0 1.0 Universal (CC0 1.0)
+3. https://stocksnap.io/photo/DGYLV0KMUY - CC0 1.0 Universal (CC0 1.0)
+4. https://stocksnap.io/photo/UYYDN7X5IS - CC0 1.0 Universal (CC0 1.0)
+5. https://stocksnap.io/photo/UEQ0178WUT - CC0 1.0 Universal (CC0 1.0)
+6. https://stocksnap.io/photo/TNK87N7464 - CC0 1.0 Universal (CC0 1.0)
+7. https://stocksnap.io/photo/SA20YXQRC4 - CC0 1.0 Universal (CC0 1.0)
 
 Content images
-1. ID 95032 - https://pixabay.com/en/utah-mountain-biking-bike-biking-95032/ - CC0 1.0 Universal (CC0 1.0)
-2. ID 690230 - https://pixabay.com/en/grapes-bunch-fruit-person-holding-690230/ - CC0 1.0 Universal (CC0 1.0)
-3. ID 801924 - https://pixabay.com/en/camera-photography-lens-equipment-801924/ - CC0 1.0 Universal (CC0 1.0)
-4. ID 930715 - https://pixabay.com/en/superbike-motorsport-fast-speed-930715/ - CC0 1.0 Universal (CC0 1.0)
-5. ID 95032 - https://pixabay.com/en/utah-mountain-biking-bike-biking-95032/ - CC0 1.0 Universal (CC0 1.0)
-6. ID 642118 - https://pixabay.com/en/woman-photo-taking-picture-642118/ - CC0 1.0 Universal (CC0 1.0)
-7. ID 77552 - https://pixabay.com/en/motorcycle-zero-s-action-77552/ - CC0 1.0 Universal (CC0 1.0)
-8. ID 677770 - https://pixabay.com/en/person-male-man-looking-sitting-677770/ - CC0 1.0 Universal (CC0 1.0)
+1. https://stocksnap.io/photo/23H66MTGXA - CC0 1.0 Universal (CC0 1.0)
+2. https://stocksnap.io/photo/Y01VDYAX63 - CC0 1.0 Universal (CC0 1.0)
+3. https://stocksnap.io/photo/DGYLV0KMUY - CC0 1.0 Universal (CC0 1.0)
+4. https://stocksnap.io/photo/UYYDN7X5IS - CC0 1.0 Universal (CC0 1.0)
+5. https://stocksnap.io/photo/23H66MTGXA - CC0 1.0 Universal (CC0 1.0)
+6. https://stocksnap.io/photo/UEQ0178WUT - CC0 1.0 Universal (CC0 1.0)
+7. https://stocksnap.io/photo/UYYDN7X5IS - CC0 1.0 Universal (CC0 1.0)
+8. https://stocksnap.io/photo/UEQ0178WUT - CC0 1.0 Universal (CC0 1.0)
 
 Right sidebar images
-1. ID 642118 - https://pixabay.com/en/woman-photo-taking-picture-642118/ - CC0 1.0 Universal (CC0 1.0)
-2. ID 90051 - https://pixabay.com/en/peacock-bird-feather-close-up-90051/ - CC0 1.0 Universal (CC0 1.0)
-3. ID 593155 - https://pixabay.com/en/scooter-italy-vintage-old-green-593155/ - CC0 1.0 Universal (CC0 1.0)
-4. ID 407108 - https://pixabay.com/en/smartphone-movie-taking-pictures-407108/ - CC0 1.0 Universal (CC0 1.0)
+1. https://stocksnap.io/photo/TNK87N7464 - CC0 1.0 Universal (CC0 1.0)
+2. https://stocksnap.io/photo/SA20YXQRC4 - CC0 1.0 Universal (CC0 1.0)
+3. https://stocksnap.io/photo/RKS9M8PY0X - CC0 1.0 Universal (CC0 1.0)
+4. https://stocksnap.io/photo/EPNK1H7KBP - CC0 1.0 Universal (CC0 1.0)
 
 == Changelog ==
 
