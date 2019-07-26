@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Typecore\n"
-"POT-Creation-Date: 2019-02-17 14:47+0100\n"
+"POT-Creation-Date: 2019-07-26 21:10+0200\n"
 "PO-Revision-Date: 2018-09-21 21:27+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -10,7 +10,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.2\n"
+"X-Generator: Poedit 2.2.3\n"
 "X-Poedit-KeywordsList: __;_e;_x;_ex;_n;_nx;_n_noop;_nx_noop;"
 "translate_nooped_plural;number_format_i18n;date_i18n;esc_html__;esc_html_e;"
 "esc_html_x;esc_attr__;esc_attr_e;esc_attr_x\n"
@@ -155,10 +155,6 @@ msgstr ""
 
 #: functions.php:682
 msgid "WP-PageNavi"
-msgstr ""
-
-#: functions.php:686
-msgid "Responsive Lightbox"
 msgstr ""
 
 #: functions/meta-boxes.php:21
@@ -909,6 +905,10 @@ msgstr ""
 
 #: functions/theme-options.php:921
 msgid "Give your thumbnails and layout images rounded corners"
+msgstr ""
+
+#: header.php:17
+msgid "Skip to content"
 msgstr ""
 
 #: inc/page-title.php:23

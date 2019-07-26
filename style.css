@@ -1,7 +1,7 @@
 /*
 Theme Name: Typecore
 Theme URI: http://alx.media/themes/typecore/
-Version: 1.1.7
+Version: 1.1.8
 Description: <a href="http://alx.media/themes/typecore/">Typecore</a> is a responsive 100% high resolution theme for blogs and magazines. Unique toggle sidebars give a great browsing and reading experience on both tablet and mobile. The feature list is long: Unlimited topbar, header, footer and accent colors, unlimited widget areas, 0-2 sidebars to the left or right that can be uniquely specified for each page or post, 300px / 220px fixed width sidebars, 0-4 footer widget columns, almost zero layout images, related posts and post nav, featured story or slider, 10 post formats, good SEO, 2 flexible custom widgets, localisation support, social links, logo upload and many more useful admin panel features.
 Author: Alexander Agnarson
 Author URI: http://alx.media
@@ -166,6 +166,7 @@ input, textarea, button, select, label { font-family: inherit; }
 .themeform label { font-size: 14px; }
 .themeform input::-moz-focus-inner, 
 .themeform button::-moz-focus-inner { border: 0; padding: 0; }
+.themeform input[type="search"],
 .themeform input[type="text"],
 .themeform input[type="password"],
 .themeform input[type="email"],
@@ -184,6 +185,7 @@ input, textarea, button, select, label { font-family: inherit; }
 .themeform input[type="checkbox"] { -moz-appearance: checkbox; -webkit-appearance: checkbox; }
 .themeform input[type="radio"] { -moz-appearance: radio; -webkit-appearance: radio; }
 .themeform label { font-weight: 600; color: #444; }
+.themeform input[type="search"],
 .themeform input[type="text"], 
 .themeform input[type="password"], 
 .themeform input[type="email"],
@@ -192,6 +194,7 @@ input, textarea, button, select, label { font-family: inherit; }
 .themeform input[type="number"],
 .themeform select,
 .themeform textarea { background: #fff; border: 2px solid #ddd; color: #777; display: block; max-width: 100%; outline: none; padding: 7px 8px; }
+.themeform input[type="search"]:focus,
 .themeform input[type="text"]:focus, 
 .themeform input[type="password"]:focus, 
 .themeform input[type="email"]:focus,
@@ -201,9 +204,17 @@ input, textarea, button, select, label { font-family: inherit; }
 .themeform select:focus,
 .themeform textarea:focus { border-color: #ccc; color: #444; -webkit-box-shadow: 0 0 3px rgba(0,0,0,0.1); box-shadow: 0 0 3px rgba(0,0,0,0.1); }
 .themeform label .required { color: #e64338; }
+.themeform input[type="button"],
+.themeform input[type="reset"],
 .themeform input[type="submit"],
+.themeform button[type="button"],
+.themeform button[type="reset"],
 .themeform button[type="submit"] { background: #e64338; color: #fff; padding: 8px 14px; font-weight: 600; display: inline-block; border: none; cursor: pointer; -webkit-border-radius: 3px; border-radius: 3px; }
+.themeform input[type="button"]:hover,
+.themeform input[type="reset"]:hover,
 .themeform input[type="submit"]:hover,
+.themeform button[type="button"]:hover,
+.themeform button[type="reset"]:hover,
 .themeform button[type="submit"]:hover { background: #444; }
 
 .themeform.searchform div { position: relative; }
@@ -1508,7 +1519,7 @@ box-shadow: 0 1px 0 rgba(0,0,0,0.04); }
 /* ------------------------------------ */
 .wp-pagenavi { text-align: right; font-weight: 600; line-height: 20px; float: none; margin-right: -2px; text-align: center; }
 .wp-pagenavi a,
-.wp-pagenavi span { color: #aaa; font-size: 16px; padding: 7px 8px; display: inline; margin: 0 2px; }
+.wp-pagenavi span { color: #aaa; font-size: 16px; padding: 7px 8px; display: inline-block; margin: 0 2px 10px; }
 .wp-pagenavi span.pages { font-size: 17px; font-weight: 300; display: block; margin-bottom: 1em!important; border: none!important; }
 .wp-pagenavi span.pages:before { content: "\f15c"; font-family: FontAwesome; margin-right: 6px; }
 .wp-pagenavi span.extend { border: none!important; border-bottom: 3px solid transparent; border-top: 1px solid transparent; }
@@ -1607,3 +1618,13 @@ html[xmlns] .slides { display: block; }
   .flex-direction-nav .flex-prev { opacity: .7; right: 0; }
   .flex-direction-nav .flex-next { opacity: .7; right: 0; }
 }
+
+
+/* ------------------------------------------------------------------------- *
+ *  Accessibility
+/* ------------------------------------------------------------------------- */
+/* Text meant only for screen readers. */
+.screen-reader-text{ border: 0; clip: rect(1px, 1px, 1px, 1px); clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute!important; width: 1px; word-wrap: normal!important; }
+.screen-reader-text:focus { background-color: #fff; border-radius: 3px; box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.1); clip: auto!important; clip-path: none; color: #333; display: block; font-size: 14px; font-size: 0.875rem; font-weight: bold; height: auto; right: 5px; line-height: normal; padding: 15px 23px 14px; text-decoration: none; top: 5px; width: auto; z-index: 100000; }
+/* Do not show the outline on the skip link target. */
+#page[tabindex="-1"]:focus{ outline: 0; }

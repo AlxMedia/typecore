@@ -12,6 +12,10 @@
 
 <body <?php body_class(); ?>>
 
+<?php if ( function_exists( 'wp_body_open' ) ) { wp_body_open(); } ?>
+
+<a class="skip-link screen-reader-text" href="#page"><?php _e( 'Skip to content', 'typecore' ); ?></a>
+
 <div id="wrapper">
 
 	<header id="header" class="group">
