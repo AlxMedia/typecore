@@ -50,7 +50,7 @@
 		
 		<?php if ( has_nav_menu( 'footer' ) ): ?>
 			<nav class="nav-container group" id="nav-footer">
-				<div class="nav-toggle"><i class="fa fa-bars"></i></div>
+				<div class="nav-toggle"><i class="fas fa-bars"></i></div>
 				<div class="nav-text"><!-- put your mobile menu text here --></div>
 				<div class="nav-wrap"><?php wp_nav_menu( array('theme_location'=>'footer','menu_class'=>'nav container-inner group','container'=>'','menu_id'=>'','fallback_cb'=>false) ); ?></div>
 			</nav><!--/#nav-footer-->
@@ -59,7 +59,7 @@
 		<div class="container" id="footer-bottom">
 			<div class="container-inner">
 				
-				<a id="back-to-top" href="#"><i class="fa fa-angle-up"></i></a>
+				<a id="back-to-top" href="#"><i class="fas fa-angle-up"></i></a>
 				
 				<div class="pad group">
 					

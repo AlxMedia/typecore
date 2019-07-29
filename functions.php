@@ -202,7 +202,7 @@ if ( ! function_exists( 'typecore_styles' ) ) {
 		wp_enqueue_style( 'typecore-style', get_stylesheet_uri() );
 		if ( get_theme_mod('responsive','on') =='on' ) { wp_enqueue_style( 'typecore-responsive', get_template_directory_uri().'/responsive.css' ); }
 		if ( get_theme_mod('light','off') == 'on' ) { wp_enqueue_style( 'typecore-light', get_template_directory_uri().'/light.css' ); }
-		wp_enqueue_style( 'typecore-font-awesome', get_template_directory_uri().'/fonts/font-awesome.min.css' );
+		wp_enqueue_style( 'typecore-font-awesome', get_template_directory_uri().'/fonts/all.min.css' );
 	}
 	
 }
@@ -342,7 +342,7 @@ if ( ! function_exists( 'typecore_social_links' ) ) {
 					if ( isset($item['social-target']) && !empty($item['social-target']) ) 
 						{ $target = 'target="_blank"'; } else $target = '';
 					if ( isset($item['social-icon']) && !empty($item['social-icon']) ) 
-						{ $icon = 'class="fa ' .esc_attr( $item['social-icon'] ). '"'; } else $icon = '';
+						{ $icon = 'class="fab ' .esc_attr( $item['social-icon'] ). '"'; } else $icon = '';
 					if ( isset($item['social-color']) && !empty($item['social-color']) ) 
 						{ $color = 'style="color: ' .esc_attr( $item['social-color'] ). ';"'; } else $color = '';
 					
