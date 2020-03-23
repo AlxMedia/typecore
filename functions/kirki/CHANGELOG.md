@@ -1,3 +1,15 @@
+## 3.1.0 - 2020-03-01
+
+### Changed
+* Completely refactored the google-fonts downloader. Fonts now get stored in `wp-content/fonts/{font-family}/{file}`.
+* Updated Google-Fonts lists.
+
+### Removed
+* Removed the `branding` module.
+* Removed the `styling` module.
+* Removed the `telemetry` module.
+* Removed the `Kirki_Fonts_Helper` class.
+
 ## 3.0.45 - 2019-09-01
 
 ### Fixed
