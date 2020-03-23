@@ -101,25 +101,6 @@ hr { border: 0; background: #ddd; border-bottom: 1px solid #fff; height: 2px; ma
 /* ------------------------------------ */
 .fa, .fab, .fal, .far, .fas { width: 1em; text-align: center; }
 
-/* temporary font awesome 5 fix for alx-extensions plugin */
-.sharrre-header .share .fa:before,
-.sharrre-footer .share .fa:before { font-family: "Font Awesome 5 Brands"; font-style: normal; font-variant: normal; text-rendering: auto; line-height: 1; }
-.sharrre-header .fa-twitter:before { content: "\f099"; }
-.sharrre-header .fa-facebook-square:before { content: "\f082"; }
-.sharrre-header .fa-pinterest:before { content: "\f0d2"; }
-.sharrre-header .fa-linkedin-square:before { content: "\f08c"; }
-.sharrre-header .count .fa:before,
-.sharrre-footer .count .fa:before,
-.alx-tabs-nav i:before { font-family: "Font Awesome 5 Free"; font-weight: 900; font-style: normal; font-variant: normal; text-rendering: auto; line-height: 1; }
-.sharrre-header .count .fa-plus:before { content: "\f067"; }
-.sharrre-footer .count .fa-plus:before { content: "\f067"; }
-.sharrre-footer .fa-twitter:before { content: "\f099"; }
-.sharrre-footer .fa-facebook-square:before { content: "\f082"; }
-.alx-tabs-nav .fa-clock-o:before { content: "\f017"; }
-.alx-tabs-nav .fa-star:before { content: "\f005"; }
-.alx-tabs-nav .fa-comments-o:before { content: "\f086"; }
-.alx-tabs-nav .fa-tags:before { content: "\f02c"; }
-
 /*  base : fonts
 /* ------------------------------------ */
 body { font-family: "Titillium", Arial, sans-serif; }
