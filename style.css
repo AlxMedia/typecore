@@ -334,7 +334,7 @@ h1, h2, h3, h4, h5, h6 { color: #444; font-weight: 600; -ms-word-wrap: break-wor
 .container { margin: 0 auto; }
 .container-inner { max-width: 1460px; min-width: 100%; width: 100%; margin: 0; left: 0; }
 .main { background-color: #eee!important; margin-left: 80px; position: relative; }
-.main-inner { position: relative; min-height: 600px; /* instead of sticky footer */ }
+.main-inner { position: relative; overflow-x: hidden; /* Chrome fix */ min-height: 600px; /* instead of sticky footer */  }
 .content { width: 100%; position: relative; }
 .pad { padding: 30px 30px 20px; }
 
