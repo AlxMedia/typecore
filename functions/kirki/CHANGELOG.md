@@ -1,3 +1,30 @@
+## 3.1.4 - July 11, 2020
+
+* Tweak: Updated Google-Fonts lists.
+* Tweak: Tooltip styling.
+* Fixed: Error in the WordPress customizer with WordPress 5.5.
+
+## 3.1.3 - May 19, 2020
+
+* Tweak: Updated Google-Fonts lists.
+* Tweak: Slightly tweaked some of the default control styles.
+
+## 3.1.2 - 2020-04-20
+
+### Fixed
+* Added back `font-display:swap` to Google Fonts.
+
+### Changed
+* Updated Google-Fonts lists.
+
+## 3.1.1 - 2020-04-05
+
+### Changed
+* Updated Google-Fonts lists.
+
+### Fixed
+* False-positive error in Envato theme-check.
+
 ## 3.1.0 - 2020-03-01
 
 ### Changed
