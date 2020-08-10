@@ -2,6 +2,15 @@
 .customize-control-kirki-background {
   position: relative;
 }
+.customize-control-kirki-background .iris-picker-inner {
+  display: grid;
+  grid-template-columns: 1fr 20px 20px;
+  grid-gap: 7px;
+}
+.customize-control-kirki-background .iris-picker-inner > * {
+  width: 100% !important;
+  margin-left: 0 !important;
+}
 .customize-control-kirki-background .background-attachment h4,
 .customize-control-kirki-background .background-color h4,
 .customize-control-kirki-background .background-position h4,
@@ -86,30 +95,23 @@
   background-image: -webkit-linear-gradient(left, red, #ff7f00, yellow, #80ff00, lime, #00ff80, aqua, #007fff, blue, #7f00ff, fuchsia, #ff0080, red) !important;
   widows: 100% !important;
 }
-.customize-control-kirki-color .iris-picker .iris-square-handle {
-  z-index: 8;
-}
-.customize-control-kirki-color .iris-picker.iris-border {
+.customize-control-kirki-color .kirki-input-container[data-has-alpha=false] .iris-picker.iris-border {
   width: 100% !important;
 }
-.customize-control-kirki-color .iris-picker-inner {
-  display: grid;
-  grid-template-columns: 1fr 20px;
-  grid-gap: 7px;
-}
-.customize-control-kirki-color .iris-picker-inner > * {
-  width: 100% !important;
-  margin-left: 0 !important;
-  margin-right: 0 !important;
+.customize-control-kirki-color .kirki-input-container[data-has-alpha=false] .iris-picker .iris-square {
+  margin-right: 7px !important;
 }
 .customize-control-kirki-color .kirki-input-container[data-has-alpha=true] .iris-picker-inner {
+  display: grid;
   grid-template-columns: 1fr 20px 20px;
+  grid-gap: 7px;
+}
+.customize-control-kirki-color .kirki-input-container[data-has-alpha=true] .iris-picker-inner > * {
+  width: 100% !important;
+  margin-left: 0 !important;
 }
 .customize-control-kirki-color .iris-only-strip {
   width: 100% !important;
-}
-.customize-control-kirki-color .iris-only-strip .iris-picker-inner {
-  grid-template-columns: 1fr;
 }
 
 .customize-control-kirki-dashicons {
@@ -245,6 +247,18 @@
   box-shadow: none;
 }
 
+.customize-control-kirki-multicolor .wp-picker-holder {
+  margin-bottom: 7px;
+}
+.customize-control-kirki-multicolor .iris-picker-inner {
+  display: grid;
+  grid-template-columns: 1fr 20px 20px;
+  grid-gap: 7px;
+}
+.customize-control-kirki-multicolor .iris-picker-inner > * {
+  width: 100% !important;
+  margin-left: 0 !important;
+}
 .customize-control-kirki-multicolor .multicolor-single-color-wrapper {
   display: flex;
   justify-content: space-between;
