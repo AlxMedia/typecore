@@ -802,3 +802,8 @@ function typecore_skip_link_focus_fix() {
 	<?php
 }
 add_action( 'wp_print_footer_scripts', 'typecore_skip_link_focus_fix' );
+
+
+/*  Disable wp lazy load, fix for flexslider
+/* ------------------------------------ */
+add_filter('wp_lazy_loading_enabled', '__return_false');
