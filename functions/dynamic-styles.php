@@ -95,10 +95,10 @@ if ( ! function_exists( 'typecore_dynamic_css' ) ) {
 			// container width
 			if ( get_theme_mod('container-width','1460') != '1460' ) {			
 				if ( get_theme_mod( 'boxed' ) ) { 
-					$styles .= '.boxed #wrapper, .container-inner { max-width: '.esc_attr( get_theme_mod('container-width') ).'px; }'."\n";
+					$styles .= '.boxed #wrapper, .container-inner, #header .nav-menu:not(.mobile) { max-width: '.esc_attr( get_theme_mod('container-width') ).'px; }'."\n";
 				}
 				else {
-					$styles .= '.container-inner { max-width: '.esc_attr( get_theme_mod('container-width') ).'px; }'."\n";
+					$styles .= '.container-inner, #header .nav-menu:not(.mobile) { max-width: '.esc_attr( get_theme_mod('container-width') ).'px; }'."\n";
 				}
 			}
 			// sidebar padding

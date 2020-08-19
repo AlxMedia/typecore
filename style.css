@@ -1,7 +1,7 @@
 /*
 Theme Name: Typecore
 Theme URI: http://alx.media/themes/typecore/
-Version: 1.2.7
+Version: 1.2.8
 Requires at least: 5.0
 Requires PHP: 5.6
 Tested up to: 5.5
@@ -71,7 +71,7 @@ table { border-collapse: collapse; border-spacing: 0; }
 body { background: #fff; font-size: 16px; line-height: 1.5em; color: #555; font-weight: 300; }
 ::selection { background: #e64338; color: #fff; }
 ::-moz-selection { background: #e64338; color: #fff; }
-a { color: #e64338; text-decoration: none; outline: 0; }
+a { color: #e64338; text-decoration: none; }
 a:hover { color: #444; }
 img { max-width: 100%; height: auto; }
 a,
