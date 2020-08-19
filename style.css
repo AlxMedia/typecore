@@ -1,7 +1,7 @@
 /*
 Theme Name: Typecore
 Theme URI: http://alx.media/themes/typecore/
-Version: 1.2.8
+Version: 1.2.9
 Requires at least: 5.0
 Requires PHP: 5.6
 Tested up to: 5.5
@@ -820,6 +820,8 @@ box-shadow: -1px 0 0 rgba(255,255,255,0.1); }
 .center #page .container-inner { margin: 0 auto; position: relative; }
 .center #page .container-inner:after { content:""; position: absolute; z-index: -1; background: #23282d; left: -9999px; right: 50%; top: 0; bottom: 0; }
 .center.boxed #page .container-inner:after { display: none; }
+.center .nav-menu:not(.mobile) { margin: 0 auto; }
+.center #footer .nav-menu:not(.mobile) .menu { justify-content: center; }
 
 
 /* ------------------------------------------------------------------------- *
