@@ -584,14 +584,14 @@ box-shadow: -1px 0 0 rgba(255,255,255,0.1); }
 .toggle-search.active #svg-search { display: none; }
 .toggle-search.active #svg-close { display: block; }
 
-#header-menu-topbar,
-#header-menu-mobile { background: #e64338; position: relative; z-index: 4; }
+#wrap-nav-topbar,
+#wrap-nav-mobile { background: #e64338; position: relative; z-index: 4; }
 
 @media only screen and (min-width: 720px) {
-	.mobile-menu #header-menu-mobile { display: none; }
+	.mobile-menu #wrap-nav-mobile { display: none; }
 }
 @media only screen and (max-width: 719px) {
-	.mobile-menu #header-menu-topbar { display: none; } 
+	.mobile-menu #wrap-nav-topbar { display: none; } 
 }
 
 /* ------------------------------------------------------------------------- *
@@ -626,8 +626,8 @@ box-shadow: -1px 0 0 rgba(255,255,255,0.1); }
 @media only screen and (min-width: 1025px) {
 	/* fixed nav */
 	.full-width.topbar-enabled #header { padding-top: 50px; }
-	.full-width #header-menu-topbar { position: fixed; top: 0; left: 0; right: 0; width: 100%; z-index: 999; }
-	.full-width.admin-bar #header-menu-topbar { top: 32px; }
+	.full-width #wrap-nav-topbar { position: fixed; top: 0; left: 0; right: 0; width: 100%; z-index: 999; }
+	.full-width.admin-bar #wrap-nav-topbar { top: 32px; }
 }
 
 /* menu base */
@@ -750,12 +750,12 @@ box-shadow: -1px 0 0 rgba(255,255,255,0.1); }
 #header .nav-menu:not(.mobile) .menu ul span { border-bottom: 1px solid rgba(0,0,0,0.06); }
 #header .nav-menu:not(.mobile) .menu ul li:last-child span { border-bottom: 0; }
 
-#header-menu-topbar .nav-menu:not(.mobile) .menu ul { background: #e64338; }
-#header-menu-topbar .nav-menu:not(.mobile) .menu ul:after { border-bottom-color: #e64338; }
-#header-menu-topbar .nav-menu:not(.mobile) ul ul a { color: rgba(255,255,255,0.9); }
-#header-menu-topbar .nav-menu:not(.mobile) .menu ul ul:after { border-right-color: #e64338; border-bottom-color: transparent; }
-#header-menu-topbar .nav-menu:not(.mobile) ul ul button .svg-icon { fill: rgba(255,255,255,0.4); }
-#header-menu-topbar .nav-menu:not(.mobile) ul ul button.active { background: rgba(255,255,255,0.1); }
+#wrap-nav-topbar .nav-menu:not(.mobile) .menu ul { background: #e64338; }
+#wrap-nav-topbar .nav-menu:not(.mobile) .menu ul:after { border-bottom-color: #e64338; }
+#wrap-nav-topbar .nav-menu:not(.mobile) ul ul a { color: rgba(255,255,255,0.9); }
+#wrap-nav-topbar .nav-menu:not(.mobile) .menu ul ul:after { border-right-color: #e64338; border-bottom-color: transparent; }
+#wrap-nav-topbar .nav-menu:not(.mobile) ul ul button .svg-icon { fill: rgba(255,255,255,0.4); }
+#wrap-nav-topbar .nav-menu:not(.mobile) ul ul button.active { background: rgba(255,255,255,0.1); }
 
 #nav-header-nav.nav-menu.mobile { border-top: 1px solid rgba(255,255,255,0.07); }
 #nav-header-nav.nav-menu.mobile .menu-header-container { border-top: 1px solid rgba(255,255,255,0.07); }

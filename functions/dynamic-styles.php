@@ -190,18 +190,18 @@ a,
 			// mobile menu color
 			if ( get_theme_mod('color-mobile-menu','#e64338') != '#e64338' ) {
 				$styles .= '
-#header-menu-mobile .search-expand,
-#header-menu-mobile { background-color: '.esc_attr( get_theme_mod('color-mobile-menu') ).'; }		
+#wrap-nav-mobile .search-expand,
+#wrap-nav-mobile { background-color: '.esc_attr( get_theme_mod('color-mobile-menu') ).'; }		
 				'."\n";
 			}			
 			// topbar menu color
 			if ( get_theme_mod('color-topbar-menu','#e64338') != '#e64338' ) {
 				$styles .= '
-#header-menu-topbar .search-expand,
-#header-menu-topbar { background-color: '.esc_attr( get_theme_mod('color-topbar-menu') ).'; }
-#header-menu-topbar .nav-menu:not(.mobile) .menu ul { background: '.esc_attr( get_theme_mod('color-topbar-menu') ).'; }
-#header-menu-topbar .nav-menu:not(.mobile) .menu ul:after { border-bottom-color: '.esc_attr( get_theme_mod('color-topbar-menu') ).'; }
-#header-menu-topbar .nav-menu:not(.mobile) .menu ul ul:after { border-right-color: '.esc_attr( get_theme_mod('color-topbar-menu') ).';	}		
+#wrap-nav-topbar .search-expand,
+#wrap-nav-topbar { background-color: '.esc_attr( get_theme_mod('color-topbar-menu') ).'; }
+#wrap-nav-topbar .nav-menu:not(.mobile) .menu ul { background: '.esc_attr( get_theme_mod('color-topbar-menu') ).'; }
+#wrap-nav-topbar .nav-menu:not(.mobile) .menu ul:after { border-bottom-color: '.esc_attr( get_theme_mod('color-topbar-menu') ).'; }
+#wrap-nav-topbar .nav-menu:not(.mobile) .menu ul ul:after { border-right-color: '.esc_attr( get_theme_mod('color-topbar-menu') ).';	}		
 				'."\n";
 			}
 			// header color
