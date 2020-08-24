@@ -91,6 +91,7 @@ Right sidebar images
 
 = 1.3.0 - 2020-08-24 =
 * Fixed markup of header and footer menus
+* Fixed light style menus
 
 = 1.2.9 - 2020-08-19 =
 * Fixed menu margin with centered layout
