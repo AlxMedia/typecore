@@ -49,7 +49,9 @@
 		<?php } ?>
 		
 		<?php if ( has_nav_menu('footer') ): ?>
-			<?php \AlxMedia\Nav::nav_menu(array('theme_location'=>'footer','menu_id' => 'nav-footer','fallback_cb'=> false)); ?>
+			<div id="wrap-nav-footer" class="wrap-nav">
+				<?php \AlxMedia\Nav::nav_menu(array('theme_location'=>'footer','menu_id' => 'nav-footer','fallback_cb'=> false)); ?>
+			</div>
 		<?php endif; ?>
 		
 		<div class="container" id="footer-bottom">
