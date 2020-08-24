@@ -736,10 +736,10 @@ box-shadow: -1px 0 0 rgba(255,255,255,0.1); }
 .nav-menu.mobile ul ul { background: rgba(0,0,0,0.08); }
 .nav-menu.mobile ul li .menu-item-wrapper,
 .nav-menu.mobile ul ul li .menu-item-wrapper { border-bottom: 1px solid rgba(255,255,255,0.14); }
-.nav-menu.mobile > div > ul > li:first-child .menu-item-wrapper {  }
 .nav-menu.mobile ul li a { color: #fff; }
 .nav-menu.mobile ul button,
 .nav-menu.mobile ul ul button { border-left: 1px solid rgba(255,255,255,0.14); }
+.nav-menu.mobile > div > ul { border-top: 1px solid rgba(255,255,255,0.14); }
 
 /* menu header styling */
 #header .nav-menu:not(.mobile) { max-width: 1460px; }
@@ -804,10 +804,10 @@ box-shadow: -1px 0 0 rgba(255,255,255,0.1); }
 #footer .nav-menu.mobile ul ul { background: rgba(255,255,255,0.04); }
 #footer .nav-menu.mobile ul li .menu-item-wrapper,
 #footer .nav-menu.mobile ul ul li .menu-item-wrapper { border-bottom: 1px solid rgba(255,255,255,0.07); }
-#footer .nav-menu.mobile > div > ul > li:first-child .menu-item-wrapper { border-top: 1px solid rgba(255,255,255,0.07); }
 #footer .nav-menu.mobile ul li a { color: rgba(255,255,255,0.7); }
 #footer .nav-menu.mobile ul button,
 #footer .nav-menu.mobile ul ul button { border-left: 1px solid rgba(255,255,255,0.07); }
+#footer .nav-menu.mobile > div > ul { border-top: 1px solid rgba(255,255,255,0.07); }
 
 
 /* ------------------------------------------------------------------------- *
