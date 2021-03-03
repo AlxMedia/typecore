@@ -1,10 +1,10 @@
 /*
 Theme Name: Typecore
 Theme URI: http://alx.media/themes/typecore/
-Version: 1.3.0
+Version: 1.3.1
 Requires at least: 5.0
 Requires PHP: 5.6
-Tested up to: 5.5
+Tested up to: 5.6
 Description: <a href="http://alx.media/themes/typecore/">Typecore</a> is a responsive 100% high resolution theme for blogs and magazines. Unique toggle sidebars give a great browsing and reading experience on both tablet and mobile. The feature list is long: Unlimited topbar, header, footer and accent colors, unlimited widget areas, 0-2 sidebars to the left or right that can be uniquely specified for each page or post, 300px / 220px fixed width sidebars, 0-4 footer widget columns, almost zero layout images, related posts and post nav, featured story or slider, 10 post formats, good SEO, 2 flexible custom widgets, localisation support, social links, logo upload and many more useful admin panel features. Demo: http://demo.alx.media/x/?theme=Typecore
 Author: Alexander Agnarson
 Author URI: http://alx.media
@@ -582,7 +582,8 @@ box-shadow: -1px 0 0 rgba(255,255,255,0.1); }
 .toggle-search .svg-icon { fill: #fff; margin: 0 auto; }
 .toggle-search #svg-close { display: none; }
 .toggle-search.active #svg-search { display: none; }
-.toggle-search.active #svg-close { display: block; }
+.toggle-search.active #svg-close { display: block; fill: rgba(255,255,255,0.7); }
+.toggle-search:focus #svg-close { fill: #fff; }
 
 #wrap-nav-topbar,
 #wrap-nav-mobile { background: #e64338; position: relative; z-index: 4; }
@@ -653,13 +654,13 @@ box-shadow: -1px 0 0 rgba(255,255,255,0.1); }
 .nav-menu:not(.mobile) { position: relative; z-index: 3; }
 .nav-menu:not(.mobile) .menu { flex-wrap: wrap; justify-content: left; }
 .nav-menu:not(.mobile) .menu ul.active,
-.nav-menu:not(.mobile) .menu li.hover > ul { overflow: visible; width: 180px; opacity: 1; transform: translateY(0); transition: opacity 0.15s linear, transform 0.15s linear; }
-.nav-menu:not(.mobile) .menu ul .sub-menu { left: 200px; top: 0; }
+.nav-menu:not(.mobile) .menu li.hover > ul { overflow: visible; width: 200px; opacity: 1; transform: translateY(0); transition: opacity 0.15s linear, transform 0.15s linear; }
+.nav-menu:not(.mobile) .menu ul .sub-menu { left: 220px; top: 0; }
 .nav-menu:not(.mobile) .menu { position: relative; }
 .nav-menu:not(.mobile) .menu ul { font-size: 15px; opacity: 0; padding: 10px 0; position: absolute; top: calc(100% + 16px); transition: opacity 0.15s linear, transform 0.15s linear, right 0s 0.15s; transform: translateY(6px); z-index: 1; }
 .nav-menu:not(.mobile) .menu ul li { position: relative; }
 .nav-menu:not(.mobile) .menu ul a { display: block; padding: 10px 20px; transition: background-color 0.15s linear; width: 100%; }
-.nav-menu:not(.mobile) .menu li.menu-item-has-children.focus > ul {	min-width: 180px; max-width: 180px; max-height: 300vh; overflow: visible; opacity: 1; transform: translateY(0); transition: opacity 0.15s linear, transform 0.15s linear; }
+.nav-menu:not(.mobile) .menu li.menu-item-has-children.focus > ul {	min-width: 200px; max-width: 200px; max-height: 300vh; overflow: visible; opacity: 1; transform: translateY(0); transition: opacity 0.15s linear, transform 0.15s linear; }
 .nav-menu:not(.mobile) .menu li.menu-item-has-children.focus > ul:focus-within { opacity: 1!important; }
 .nav-menu:not(.mobile) .menu li ul.sub-menu:not(.active) { opacity: 0; }
 .nav-menu:not(.mobile) .menu li.hover ul.sub-menu:not(.active) { opacity: 1; }
@@ -694,6 +695,12 @@ box-shadow: -1px 0 0 rgba(255,255,255,0.1); }
 .nav-menu.mobile ul ul li a { padding: 12px 0 12px 40px; }
 .nav-menu.mobile ul ul ul li a { padding: 12px 0 12px 60px; }
 .nav-menu.mobile ul button { margin: 10px 0; padding: 0 20px; }
+
+/* menu mobile fix */
+.nav-menu.mobile > div > ul.menu,
+.nav-menu.mobile.toggled > div > ul.menu ul.sub-menu { visibility: hidden; transition: all 0.3s ease; }
+.nav-menu.mobile.toggled > div > ul.menu,
+.nav-menu.mobile.toggled > div > ul.menu ul.sub-menu.active { visibility: visible; }
 
 /* menu styling */
 .menu-toggle-icon span { background: #fff; }
@@ -743,10 +750,8 @@ box-shadow: -1px 0 0 rgba(255,255,255,0.1); }
 
 /* menu header styling */
 #header .nav-menu:not(.mobile) { max-width: 1460px; }
-#header .nav-menu:not(.mobile) .menu-mobile-container,
-#header .nav-menu:not(.mobile) .menu-topbar-container,
-#header .nav-menu:not(.mobile) .menu-header-container { padding: 0 30px; }
-#header .nav-menu:not(.mobile) .menu-header-container { border-top: 1px solid rgba(255,255,255,0.07); }
+#header .nav-menu:not(.mobile) > div { padding: 0 30px; }
+#header .nav-menu:not(.mobile)#nav-header-nav { border-top: 1px solid rgba(255,255,255,0.07); }
 #header .nav-menu:not(.mobile) ul ul a { transition: all 0.3s ease; }
 #header .nav-menu:not(.mobile) .menu ul span { border-bottom: 1px solid rgba(0,0,0,0.06); }
 #header .nav-menu:not(.mobile) .menu ul li:last-child span { border-bottom: 0; }

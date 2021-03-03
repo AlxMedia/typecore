@@ -91,15 +91,17 @@ add_action( 'after_setup_theme', 'typecore_setup' );
 
 /*  Custom navigation
 /* ------------------------------------ */
-require_once 'functions/nav.php';
-$nav = new \AlxMedia\Nav();
-$nav->enqueue(
-	[
-		'script' => 'js/nav.js',
-		'inline' => false,
-	]
-);
-$nav->init();
+add_action( 'wp', function() {
+	require_once 'functions/nav.php';
+	$nav = new \Typecore\Nav();
+	$nav->enqueue(
+		[
+			'script' => 'js/nav.js',
+			'inline' => false,
+		]
+	);
+	$nav->init();
+} );
 
 
 /*  Custom logo

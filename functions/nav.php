@@ -3,7 +3,7 @@
  * An accessible and mobile-friendly implementation for navigation menus.
  */
 
-namespace AlxMedia;
+namespace Typecore;
 
 /**
  * Object containing all methods and hooks to modify default menus.
@@ -46,7 +46,7 @@ class Nav {
 	 *
 	 * @var string
 	 */
-	protected $handle_prefix = 'alexmedia-nav';
+	protected $handle_prefix = 'typecore-nav';
 
 	/**
 	 * Init.
@@ -56,6 +56,9 @@ class Nav {
 	 * @return void
 	 */
 	public function init() {
+		if ( apply_filters( 'typecore_disable_nav_mods', false ) ) {
+			return;
+		}
 		add_filter( 'walker_nav_menu_start_el', [ $this, 'add_nav_sub_menu_buttons' ], 10, 4 );
 		add_filter( 'nav_menu_item_title', [ $this, 'nav_menu_item_title' ], 10, 4 );
 	}
