@@ -1536,20 +1536,6 @@ box-shadow: 0 1px 0 rgba(0,0,0,0.04); }
 .wp-pagenavi a:active,
 .wp-pagenavi span.current { background: none; border: none; border-bottom: 3px solid #e64338; border-top: 1px solid #f1f1f1; }
 
-/*  plugin : contact form 7
-/* ------------------------------------ */
-.wpcf7 p { font-weight: 600; margin-bottom: 10px; }
-.wpcf7 span { display: block; margin-top: 10px; }
-.wpcf7 textarea { width: 100%; }
-.wpcf7 input[type="text"],
-.wpcf7 input[type="password"], 
-.wpcf7 input[type="email"],
-.wpcf7 input[type="url"],
-.wpcf7 input[type="tel"],
-.wpcf7 input[type="number"],
-.wpcf7 select,
-.wpcf7 textarea { background: #fff; }
-
 
 /* ------------------------------------------------------------------------- *
  *  Flexslider
