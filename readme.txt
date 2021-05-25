@@ -94,6 +94,9 @@ Right sidebar images
 
 == Changelog ==
 
+= 1.3.2 - 2021-05-25 =
+* Fixed compatibility issue with custom nav and various security plugins
+
 = 1.3.1 - 2021-03-03 =
 * Fixed: nav menu spacing in header
 * Fixed: mobile menu tabbing will enter in the menu even when it's closed
