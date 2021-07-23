@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Typecore\n"
-"POT-Creation-Date: 2021-05-25 13:44+0200\n"
+"POT-Creation-Date: 2021-07-23 18:41+0200\n"
 "PO-Revision-Date: 2018-09-21 21:27+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -61,99 +61,99 @@ msgstr ""
 msgid "Theme by"
 msgstr ""
 
-#: functions.php:81
+#: functions.php:84
 msgid "Mobile"
 msgstr ""
 
-#: functions.php:82
+#: functions.php:85
 msgid "Topbar"
 msgstr ""
 
-#: functions.php:83 functions/theme-options.php:52
+#: functions.php:86 functions/theme-options.php:52
 msgid "Header"
 msgstr ""
 
-#: functions.php:84 functions/theme-options.php:57
+#: functions.php:87 functions/theme-options.php:57
 msgid "Footer"
 msgstr ""
 
-#: functions.php:178
+#: functions.php:181
 msgid "Primary"
 msgstr ""
 
-#: functions.php:178 functions.php:179
+#: functions.php:181 functions.php:182
 msgid "Normal full width sidebar"
 msgstr ""
 
-#: functions.php:179
+#: functions.php:182
 msgid "Secondary"
 msgstr ""
 
-#: functions.php:181 functions/theme-options.php:301
+#: functions.php:184 functions/theme-options.php:301
 msgid "Header Ads"
 msgstr ""
 
-#: functions.php:182 functions/theme-options.php:328
+#: functions.php:185 functions/theme-options.php:328
 msgid "Footer Ads"
 msgstr ""
 
-#: functions.php:182
+#: functions.php:185
 msgid "Footer ads area"
 msgstr ""
 
-#: functions.php:184
+#: functions.php:187
 msgid "Frontpage Top 1"
 msgstr ""
 
-#: functions.php:184 functions.php:185 functions.php:186 functions.php:187
+#: functions.php:187 functions.php:188 functions.php:189 functions.php:190
 msgid "Frontpage area"
 msgstr ""
 
-#: functions.php:185
+#: functions.php:188
 msgid "Frontpage Top 2"
 msgstr ""
 
-#: functions.php:186
+#: functions.php:189
 msgid "Frontpage Bottom 1"
 msgstr ""
 
-#: functions.php:187
+#: functions.php:190
 msgid "Frontpage Bottom 2"
 msgstr ""
 
-#: functions.php:189
+#: functions.php:192
 msgid "Footer 1"
 msgstr ""
 
-#: functions.php:189 functions.php:190 functions.php:191 functions.php:192
+#: functions.php:192 functions.php:193 functions.php:194 functions.php:195
 msgid "Widgetized footer"
 msgstr ""
 
-#: functions.php:190
+#: functions.php:193
 msgid "Footer 2"
 msgstr ""
 
-#: functions.php:191
+#: functions.php:194
 msgid "Footer 3"
 msgstr ""
 
-#: functions.php:192
+#: functions.php:195
 msgid "Footer 4"
 msgstr ""
 
-#: functions.php:687
+#: functions.php:690
 msgid "Alx Extensions"
 msgstr ""
 
-#: functions.php:691
+#: functions.php:694
 msgid "Meta Box"
 msgstr ""
 
-#: functions.php:695
+#: functions.php:698
 msgid "Regenerate Thumbnails"
 msgstr ""
 
-#: functions.php:699
+#: functions.php:702
 msgid "WP-PageNavi"
 msgstr ""
 

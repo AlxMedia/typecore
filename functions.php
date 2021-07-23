@@ -66,6 +66,9 @@ if ( ! function_exists( 'typecore_setup' ) ) {
 		// Enable support for selective refresh of widgets in customizer
 		add_theme_support( 'customize-selective-refresh-widgets' );
 		
+		// Disable support for widgets block editor
+		remove_theme_support( 'widgets-block-editor' );
+		
 		// Thumbnail sizes
 		add_image_size( 'typecore-small', 160, 160, true );
 		add_image_size( 'typecore-standard', 320, 320, true );
