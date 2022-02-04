@@ -1609,6 +1609,12 @@ html[xmlns] .slides { display: block; }
   .flex-direction-nav .flex-next { opacity: .7; right: 0; }
 }
 
+/* fix */
+.flexslider#flexslider-featured .slides > li { display: block; height: 1px; width: 1px; }
+.flexslider#flexslider-featured .flex-viewport .slides > li { display: block; height: auto; }
+.flexslider#flexslider-featured .slides > li > article { overflow: hidden; height: 0; width: 0; }
+.flexslider#flexslider-featured .flex-viewport .slides > li > article { height: auto; width: auto; }
+
 
 /* ------------------------------------------------------------------------- *
  *  Accessibility
