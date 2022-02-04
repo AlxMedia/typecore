@@ -96,7 +96,6 @@ Right sidebar images
 
 = 1.3.7 - 2022-01-24 =
 * Updated to Kirki 4.0
-* Fixed Flexslider issue with WordPress 5.9
 
 = 1.3.6 - 2021-08-25 =
 * Added missing theme tags for wordpress.org
