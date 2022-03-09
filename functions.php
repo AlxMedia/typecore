@@ -827,3 +827,9 @@ add_action( 'wp_print_footer_scripts', 'typecore_skip_link_focus_fix' );
 /*  Disable wp lazy load, fix for flexslider
 /* ------------------------------------ */
 add_filter('wp_lazy_loading_enabled', '__return_false');
+
+function typecore_disable_lazy_load_featured_images($attr, $attachment = null) {
+	$attr['loading'] = 'eager';
+	return $attr;
+}
+add_filter('wp_get_attachment_image_attributes', 'typecore_disable_lazy_load_featured_images');
