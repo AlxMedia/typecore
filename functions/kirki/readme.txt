@@ -1,9 +1,9 @@
 === Kirki Customizer Framework ===
 Contributors: davidvongries, aristath, dannycooper, wplemon, igmoweb
 Tags: customizer, options framework, theme, mods, toolkit, gutenberg
-Requires at least: 4.9
-Tested up to: 5.8
-Stable tag: 3.1.9
+Requires at least: 5.2
+Tested up to: 5.9
+Stable tag: 4.0.22
 License: MIT
 License URI: https://opensource.org/licenses/MIT
 
@@ -31,13 +31,15 @@ With over **30 custom controls** ranging from simple sliders to complex typograp
 ### Controls ###
 
 * [Background Customizer Control](https://kirki.org/docs/controls/background)
-* [Checkbox Customizer Control](https://kirki.org/docs/controls/checkbox)
 * [Code Customizer Control](https://kirki.org/docs/controls/code)
-* [Color Palette Customizer Control](https://kirki.org/docs/controls/color-palette)
+* [Checkbox Customizer Control](https://kirki.org/docs/controls/checkbox)
 * [Color Customizer Control](https://kirki.org/docs/controls/color)
+* [Color Palette Customizer Control](https://kirki.org/docs/controls/color-palette)
 * [Custom Customizer Control](https://kirki.org/docs/controls/custom)
 * [Dashicons Customizer Control](https://kirki.org/docs/controls/dashicons)
 * [Date Customizer Control](https://kirki.org/docs/controls/date)
+* [Dimension Customizer Control](https://kirki.org/docs/controls/dimension)
+* [Dimensions Customizer Control](https://kirki.org/docs/controls/dimensions)
 * [Dropdown Pages Customizer Control](https://kirki.org/docs/controls/dropdown-pages)
 * [Editor Customizer Control](https://kirki.org/docs/controls/editor)
 * [Generic Customizer Control](https://kirki.org/docs/controls/generic)
@@ -46,14 +48,13 @@ With over **30 custom controls** ranging from simple sliders to complex typograp
 * [Multiple Checkbox Customizer Control](https://kirki.org/docs/controls/multicheck)
 * [Multicolor Customizer Control](https://kirki.org/docs/controls/multicolor)
 * [Number Customizer Control](https://kirki.org/docs/controls/number)
+* [Radio Customizer Control](https://kirki.org/docs/controls/radio)
 * [Radio Buttonset Customizer Control](https://kirki.org/docs/controls/radio-buttonset)
 * [Radio Image Customizer Control](https://kirki.org/docs/controls/radio-image)
-* [Radio Customizer Control](https://kirki.org/docs/controls/radio)
 * [Repeater Customizer Control](https://kirki.org/docs/controls/repeater)
 * [Select Customizer Control](https://kirki.org/docs/controls/select)
 * [Slider Customizer Control](https://kirki.org/docs/controls/slider)
 * [Sortable Customizer Control](https://kirki.org/docs/controls/sortable)
-* [Spacing Customizer Control](https://kirki.org/docs/controls/spacing)
 * [Switch Customizer Control](https://kirki.org/docs/controls/switch)
 * [Text Customizer Control](https://kirki.org/docs/controls/text)
 * [Textarea Customizer Control](https://kirki.org/docs/controls/textarea)
@@ -87,8 +88,4 @@ If you want to integrate Kirki in your theme or plugin, please read the instruct
 
 == Changelog ==
 
-= 3.1.9 - July 19, 2021 =
-
-* Fixed: Styling issue in Switch control.
-
-[See the previous changelogs here](https://github.com/kirki-framework/kirki/blob/master/CHANGELOG.md).
+[See the changelogs here](https://github.com/kirki-framework/kirki/blob/master/CHANGELOG.md).

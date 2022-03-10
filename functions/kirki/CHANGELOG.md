@@ -1,6 +1,94 @@
+### 4.0.22 - February 17, 2022 ###
+Bugfix:
+- **module-css** & **module-postmessage**: Fix bug where CSS output didn't work when `'option_type' => 'option'` and `'option_name'` is provided. This fixed issue #2466 and issue #2465
+
+### 4.0.21 - February 9, 2022 ###
+Bugfixes:
+- **control-react-colorful**: Fix warning as reported in [WordPress support forum](https://wordpress.org/support/topic/newest-version-upgrade-4-0-19-cause-a-lot-of-troubles/)
+- **control-base**: Fix the RTL issue as reported in [WordPress support forum](https://wordpress.org/support/topic/version-4-update-broke-rtl-view/)
+- **module-css**: Fix issue #2448 where it didn't check for callable as the value type of `active_callback` and missing validation for callable & string. This might also fix some css output issue.
+- **module-css**: Fix issue #2449 where there was notice caused by accessing non-existing property
+- **module-css**: Remove `:root` selector when inside gutenberg post editing. This fixes issue #2461
+- **module-postmessage**: Handle the wrong formatted "output" argument. Suggested in issue #2462
+- **control-react-select**: Fix issue where `'multiple' => false` didn't work (as reported in #2458) and selection limit didn't work
+- **control-react-colorful**: Fix issue where `palettes` choice didn't work as mentioned in issue #2455
+- **control-react-colorful**: Fix issue where suffix wasn't implemented as reported in [WordPress support forum](https://wordpress.org/support/topic/the-suffix-argument-doesnt-work-in-color-field-outputs/)
+- **field-multicolor**: Fix issue where `palettes` didn't work in multicolor as mentioned in issue #2455
+- **field-multicolor**: Fix issue where the CSS output class wasn't executed due to the missing of `parent_type` choice in the Generic field. This fixes issue #2460
+- **field-typography**: Fix bug where defining an array of google font names inside google's choice didn't work as reported in issue #2459
+
+### 4.0.20 - February 8, 2022 ###
+Bugfix:
+- Patch for warning reported in [WordPress support](https://wordpress.org/support/topic/newest-version-upgrade-4-0-19-cause-a-lot-of-troubles/)
+
+### 4.0.19 - February 7, 2022 ###
+Improvement:
+- `module-tooltips`: Adjust tooltip positioning to handle the dynamic content height and to respect the control's section height.
+
+Bugfix:
+- `control-palette` (not `control-color-palette`): it was missing
+- `control-react-colorful`: CSS output on instant preview (postMessage) didn't work when `property` is not set in the `output` argument's item.
+
+### 4.0.18 - January 25, 2022 ###
+Bugfix:
+- `module-tooltips`: Tooltip was displayed repeatedly inside repeater field
+
+### 4.0.17 - January 25, 2022 ###
+Bugfixes:
+- `control-checkbox`: There was notice messages where `$args['default']` can be undefined
+- `control-generic`: On number control, it was possible break the min & max by manually inputting the number
+
+### 4.0.16 - January 24, 2022 ###
+* Fix issue where switch control didn't handle the default value correctly.
+
+### 4.0.15 - January 18, 2022 ###
+* Fix issue where _html entities_ are not rendered in some control's label and description.
+
+### 4.0.14 - January 14, 2022 ###
+* Fix issue where the description in some controls can't contain HTML.
+
+### 4.0.13 - January 12, 2022 ###
+* Fix CSS output bug when Kirki fields are registered through `kirki_fields` (or `kirki/fields`) filter hook.
+
+### 4.0.12 - January 11, 2022 ###
+* Fix SVG upload on image control.
+
+### 4.0.11 - January 10, 2022 ###
+* Include section icons module (was missing)
+
+### 4.0.10 - January 10, 2022 ###
+* Fix issue where CSS output didn't respect active_callback's default value.
+
+### 4.0.9 - January 05, 2022 ###
+* Fix CSS output issue when a theme register their Kirki controls inside `init` hook.
+
+### 4.0.8 - January 05, 2022 ###
+* Fix CSS output issue where it doesn't respect `active_callback`
+
+### 4.0.7 - January 04, 2022 ###
+* Fix issue when using `option_type` as `option` without specifying the `option_name`
+
+### 4.0.6 - January 03, 2022 ###
+* Fix `active_callback` issue when using nested condition
+
+### 4.0.5 - Dezember 31, 2021 ###
+* Fix `toggleClass` usage when using `js_vars`
+
+### 4.0.4 - Dezember 31, 2021 ###
+* Allow string (numeric) as the choices value in slider control
+* Fix the compatibility issue when using Kirki::get_option to get the value of fields registered using new API.
+
+### 4.0.3 - Dezember 30, 2021 ###
+
+* Fixed: Fatal error caused by wrong folder name
+
+### 4.0 - Dezember 29, 2021 ###
+
+* Kirki 4.0 Release
+
 ## 3.1.9 - July 19, 2021
 
-* Fixed: Fixed: Styling issue in Switch control.
+* Fixed: Styling issue in Switch control.
 
 ## 3.1.8 - July 1, 2021
 
