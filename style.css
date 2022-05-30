@@ -88,6 +88,7 @@ a img {
 transition: opacity 0.2s ease; }
 address,cite,em { font-style: italic; }
 strong { font-weight: 600; }
+ol, ul { box-sizing: content-box; }
 .left,.alignleft { float: left; }
 .right,.alignright { float: right; }
 .aligncenter { margin-left: auto; margin-right: auto; }
