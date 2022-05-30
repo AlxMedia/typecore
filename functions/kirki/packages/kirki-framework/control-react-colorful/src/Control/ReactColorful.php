@@ -42,7 +42,7 @@ class ReactColorful extends Base {
 	 * @since 1.0
 	 * @var string
 	 */
-	public static $control_ver = '1.0.14';
+	public static $control_ver = '1.0.15';
 
 	/**
 	 * The color mode.
@@ -96,6 +96,10 @@ class ReactColorful extends Base {
 
 		// Value.
 		$this->json['value'] = empty( $this->value() ) ? '' : ( 'hue' === $this->mode ? absint( $this->value() ) : $this->value() );
+
+		if ( is_string( $this->json['value'] ) ) {
+			$this->json['value'] = strtolower( $this->json['value'] );
+		}
 
 		// Mode.
 		$this->json['mode'] = $this->mode;
