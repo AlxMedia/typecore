@@ -16,7 +16,7 @@ Kirki::add_section( 'morelink', array(
 	'title'       => esc_html__( 'AlxMedia', 'typecore' ),
 	'type'        => 'link',
 	'button_text' => esc_html__( 'View More Themes', 'typecore' ),
-	'button_url'  => 'http://alx.media/themes/',
+	'button_url'  => 'https://agnarson.com/wpthemes/',
 	'priority'    => 13,
 ) );
 Kirki::add_section( 'reviewlink', array(

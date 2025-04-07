@@ -4,7 +4,7 @@
 	License: GNU General Public License v3.0
 	License URI: http://www.gnu.org/licenses/gpl-3.0.html
 	
-	Copyright: (c) 2013 Alexander "Alx" Agnarson, http://alx.media
+	Copyright: (c) 2013 Alexander "Alx" Agnarson, https://agnarson.com
 */
 
 "use strict";
